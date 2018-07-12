@@ -1,0 +1,24 @@
+<style>
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  object {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+</style>
+
+<object id="obj">
+
+  <script>
+    var objElm = document.getElementById("obj");
+    var params = (new URL(document.location)).searchParams;
+    var subSite = params.get("subsite");
+    var page = params.get("page");
+    objElm.setAttribute("data", "Subsites/" + subSite + "/Shared/_layout.html?page=" + page);
+  </script>
