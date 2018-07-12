@@ -26,7 +26,6 @@ function makeCorsRequest(url, elmId) {
   // Response handlers.
   xhr.onload = function() {
     var xmlDoc = xhr.response;
-    console.log(xmlDoc);
     document.getElementById(elmId).innerHTML = xmlDoc;
   };
 
