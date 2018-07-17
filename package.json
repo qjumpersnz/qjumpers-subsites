@@ -1,0 +1,20 @@
+{
+  "name": "qjumpers-subsites",
+  "version": "1.0.0",
+  "description": "Project for QJumpers sub-sites",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "http-server -p 8080"
+  },
+  "keywords": [
+    "QJumpers",
+    "sub-site",
+    "subsite"
+  ],
+  "author": "Andrew Ford andrew@qjumpers.co.nz",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}
