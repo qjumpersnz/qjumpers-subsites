@@ -20,5 +20,11 @@
     var params = (new URL(document.location)).searchParams;
     var subSite = params.get("subsite");
     var page = params.get("page");
-    objElm.setAttribute("data", "Subsites/" + subSite + "/Shared/_Layout.html?page=" + page);
+
+    if (subSite !== null && page !== null) {
+      objElm.setAttribute("data", "Subsites/" + subSite + "/Shared/_Layout.html?page=" + page);
+    }
+    else {
+      alert("Please ensure you have the correct parameters in the querystring e.g. /?subsite=InghamDriven&page=list");
+    }
   </script>
