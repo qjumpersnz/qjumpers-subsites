@@ -292,20 +292,21 @@
     font-weight: 400;
     text-align: center;
 }
-.qjumpers .btn-border, .qjumpers .btn-add, .qjumpers .btn-remove {
+.qjumpers .btn-border, .qjumpers .btn-add, .qjumpers .array-item-remove {
     color: #000;
     background: transparent;
 }
-.qjumpers .btn-add, .qjumpers .btn-remove {
+.qjumpers .btn-add, .qjumpers .array-item-remove {
     text-transform: uppercase;
 }
 .qjumpers .btn-add {
     padding: 14px;
 }
-.qjumpers .btn-remove {
+.qjumpers .array-item-remove {
     padding: 9px;
+    font-weight: 400 !important;
 }
-.qjumpers .btn-border:hover, .qjumpers .btn-add:hover, .qjumpers .btn-remove:hover {
+.qjumpers .btn-border:hover, .qjumpers .btn-add:hover, .qjumpers .array-item-remove:hover {
     color: #fff;
     background: #000;
 }
@@ -466,15 +467,15 @@
 .qjumpers .alert-warning {
     background: transparent;
     font-size: 14px;
+    border: 0;
+    padding-left: 0;
 }
 .qjumpers .alert-warning .btn-info {
     padding: 9px 17px;
     background: #000;
     min-width: 100px;
     margin-right: 15px;
-}
-.qjumpers .alert-warning {
-    border: 0;
+    border: 1px solid #000;
 }
 .qjumpers .alert-warning .btn-info:hover {
     background: transparent;
@@ -518,6 +519,26 @@
     height: 1px;
     background: currentColor;
 }
+
+/* Education & Employment history */
+.qjumpers .control-label[for="root_employment"], .qjumpers .control-label[for="root_qualification"], .qjumpers .control-label[for="root_referee"] {
+    padding-bottom: 9px;
+    border-bottom: 1px solid #e7e7e7;
+    margin-bottom: 30px;
+}
+.qjumpers .field-array .array-item-toolbox, .qjumpers .field-array .array-item-toolbox {
+    margin-top: auto;
+    padding-bottom: 15px;
+}
+.qjumpers .rw-btn-calendar.rw-btn {
+    margin: 0;
+}
+.qjumpers .array-item {
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
 @media screen and (max-width: 1100px) {
     .container {
         width: 100% !important;

@@ -1,0 +1,27 @@
+/**
+ * $APP OVERRIDES
+ */
+
+/*
+	Liquid Fire animation override
+	- there's a translateY(0) that busts our z-index on the hidden accounts
+	(this is a known Webkit bug)
+*/
+.liquid-container {
+  transform: none !important;
+  transform: translate3d(0, 0, 30)!important;
+  overflow: visible;
+}
+
+.liquid-child {
+  overflow: visible;
+}
+
+.liquid-container.hide-overflow, .liquid-child.hide-overflow {
+  overflow: hidden;
+}
+
+
+.LiquidFire-fluid-spacer {
+	width: auto!important;
+}
