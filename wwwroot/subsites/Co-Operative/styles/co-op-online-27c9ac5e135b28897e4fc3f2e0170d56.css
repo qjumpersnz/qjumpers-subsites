@@ -664,9 +664,28 @@ h6+.Select, h6+.input {
 
 @font-face {
     font-family: icon;
-    src: url(../fonts/icomoon.woff@p3nvjr) format("woff");
+    src: url('/wwwroot/subsites/Co-Operative/fonts/icomoon.woff@p3nvjr') format("woff");
     font-weight: 400;
     font-style: normal
+}
+
+@font-face {
+    font-family: 'Gotham Rounded Medium';
+    src: url("/wwwroot/subsites/Co-Operative/fonts/gothamrnd-medium.woff") format("woff"), url("/wwwroot/subsites/Co-Operative/fonts/gothamrnd-medium.ttf") format("truetype")
+}
+
+@font-face {
+    font-family: 'Gotham Rounded Book';
+    src: url("/wwwroot/subsites/Co-Operative/fonts/gothamrnd-book.woff") format("woff"), url("/wwwroot/subsites/Co-Operative/fonts/gothamrnd-book.ttf") format("truetype")
+}
+
+body {
+    font-family: 'Gotham Rounded Book', sans-serif;
+    color: #333
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Gotham Rounded Medium', sans-serif
 }
 
 .custom-checkbox--icon:before, .ember-power-select-status-icon, .icon, .join-us-confirmation-thumbnail, .k-btn-next-month, .k-btn-previous-month, .prev-next-acc .next::before, .prev-next-acc .prev::before, [class^=list--gallery] a::before, [class^=icon] {
@@ -1936,25 +1955,25 @@ h5+.table--striped {
 }
 
 .Hero.Hero .Hero-heading, .SupportingDocsHero-subTitle, .page-title .h1, .page-title h1, .public-site .board .h1, .public-site .board h1, .public-site h2, .u-textLight {
-    font-family: "Gotham A", "Gotham B", sans-serif;
+    font-family: "Gotham Rounded Book", sans-serif;
     font-weight: 300!important;
     font-style: normal
 }
 
 .MobileMenu li.is-active a:not(.MobileMenu-affordance), .MobileMenu-sub.MobileMenu-sub a, .Modal h2, .RatesTable-datepicker p, .Tabs>li>a, .TermDepositSummary-wrapper .sidebar .sidebar--main-menu-items, .TermDepositSummary-wrapper h4, .btn--extra-tiny, .heading__sub, .kalendae__wrapper .custom-checkbox--label, .lead, .list--select-form .custom-checkbox--label, .multi-check-list label, .public-site .h2__sub, .public-site .h3, .public-site h3, .sidebar .TermDepositSummary-wrapper .sidebar--main-menu-items, .sidebar .sidebar--public .sidebar--main-menu-items, .sidebar .team .sidebar--main-menu-items span, .sidebar--public .sidebar .sidebar--main-menu-items, .sidebar--public h4, .table--striped .note, .tabular-payments .type--stacked, .tabular-transactions .type--stacked, .team .sidebar .sidebar--main-menu-items span, .team h4 span, .u-textBook, body {
-    font-family: "Gotham A", "Gotham B", sans-serif;
+    font-family: "Gotham Rounded Book", sans-serif;
     font-weight: 400!important;
     font-style: normal
 }
 
 .Accordion-heading, .AccountActions, .AccountDisplay-text-name, .AccountSummary-balance, .AccountSummary-country-currency, .AccountSummary-name, .AlertSettingItem-configure, .BankingNav li.is-active>a, .BankingNav-miniMegaMenu-list-heading, .BoardNav-stepName, .Hamburger, .Loader--big-text, .LoanRepayment-results .ResultsTable>ul.ResultsTable--header>li, .MobileMenu li>a, .MobileMenu-currentSection, .MobileMenu-sectionHeader.MobileMenu-sectionHeader a, .Modal-contacts .footer-link, .Modal-contacts .sidebar .sidebar--main-menu-items, .Modal-contacts h4, .Nav-primary-list>li.active a, .Nav-secondary-list>li.active>a, .NavButton, .NoticeBlock-lead, .PersonalisationTile--preApprovedPersonalLoan p, .PersonalisationTile--termDepositOffer .rate-and-button h6, .PersonalisationTile--termDepositOffer .special, .ProcessSteps-title, .QuoteTable-title, .RatesTable .RatesTable-rate.RatesTable-personal, .RatesTable .RatesTable-rate.RatesTable-special, .RatesTable .RatesTable-term, .RatesTable--choose .RatesTable-rate, .RatesTable--choose .RatesTable-term, .RatesTable-heading, .RatesTable-inadequate span, .RatesTable-personal.RatesTable-interest:not(.RatesTable-none), .RatesTable-special.RatesTable-interest:not(.RatesTable-none), .RatesTable-sub-heading, .RatesTable-super-heading, .RequestCallback, .Select-dropdown-greyLink, .SettingItem-card-owner, .Tabs--mobile>li a.is-active-mobile, .Tile__special em, .ToggleSliderWithText-text-name, .UpcomingPayments-toggle, .Upload--drop p, .Upload-item p, .UserProfile-button, .UserProfile-select header .sidebar .sidebar--main-menu-items, .UserProfile-select header h4, .avatar, .branch-details dt, .btn, .cal-date .day, .checkbox-item, .cms-plain-content ol>li:before, .confirm__pcr small, .contact-us-form label, .current--image p, .ember-image-drop p.Upload-placeholder, .error-note, .form-grid__label, .form-grid__value .dd-value, .h1, .h1 .title, .h3, .herald .lead, .inline-tip, .input--cal-date input, .input--dollar input, .input--frequency input, .join-us-other-products-item, .join-us__link, .k-caption, .k-days span, .k-header span, .kalendae-alert, .lead.lead--border, .list--downloads>li p, .list--faqs>li>a, .list--form .error-note, .list--form .label, .list--select-form label, .mega-footer dt, .nav__login, .nav__search__input-wrapper input, .nav__tertiary>li.active a, .new--image p, .news__details, .notice--moderate, .notice>div, .ol--terms ol>li:before, .ol--terms>li:before, .other-ways-to-join ul li, .pdf-statements-table-th, .personal-loan-landing .lead, .public-site .h1__sub, .quote__credit, .read-more, .reference-details input, .row dt, .s-r__pagination a, .sidebar .Modal-contacts .sidebar--main-menu-items, .sidebar .UserProfile-select header .sidebar--main-menu-items, .sidebar .sidebar--main-menu-items, .sidebar--public li a.active, .strong, .table--accounts th, .table--payees .cell-error, .table--striped .table--striped__sub-header th, .table--striped th, .toggler, .tooltip, .trans-message, .u-textMedium, .unswitchable, .webview .SelectItem-personal, .webview .SelectItem-special, [class*=tabular-] header, [type=submit], h1, h1 .title, h2, h3, h4, h5, h6, strong {
-    font-family: "Gotham A", "Gotham B", sans-serif;
+    font-family: "Gotham Rounded Book", sans-serif;
     font-weight: 500!important;
     font-style: normal
 }
 
 .AccountInfo dt, .AccountInfo p, .AccountSummary-balance, .AccountSummary-country-currency, .AccountSummary-name, .BillingSummary dd, .ExchangeRateCalc-label, .JS--todo::after, .Mail, .Mail-messageCount, .PaymentOverview header, .RateTile-perannum, .Slot--highlighted::after, .TermDepositSummary-wrapper h6, .Tile-rate-lead, .Tile-rate-perannum, .Tile-rate-qualifier, .article-summaries h5, .b, .fieldset label, .form-label, .grid--calculator .Tile-calculator .Tile-calculator-qualifier, .herald .herald-mmm ul li>div h2, .list--prop-val>li.total, .neg, .news-listing h5, .noUi-pips, .pos, .quote-close, .quote-open, .rating-tile .sidebar .sidebar--main-menu-items, .rating-tile h4, .sidebar .rating-tile .sidebar--main-menu-items, .table--payees header, .u-textBold, .vehicleBanner__tile .calculator-rate__perannum, .vehicleBanner__tile .calculator-rate__qualifier, .vehicleBanner__tile .lead, b, body.highlight-test-ids [data-test-id]::after {
-    font-family: "Gotham A", "Gotham B", sans-serif;
+    font-family: "Gotham Rounded Book", sans-serif;
     font-weight: 700!important;
     font-style: normal
 }
@@ -4367,7 +4386,7 @@ header[role=banner] {
 .row {
     height: auto;
     padding-top: 12px;
-    display: block!important;
+    /*display: block!important;*/
     border-top: 1px solid #ececec
 }
 
@@ -6896,7 +6915,7 @@ html:not(.has-touch) .has-tooltip:hover .tooltip {
     color: #fff;
     font-size: .75rem;
     line-height: 1.5;
-    font-family: "Gotham A", "Gotham B", sans-serif;
+    font-family: "Gotham Rounded Book", sans-serif;
     font-weight: 700
 }
 
@@ -11223,7 +11242,7 @@ html:not(.ie9) .Modal-notification.fadeout {
         padding-right: 15px
     }
     .Modal.is-visible h2 {
-        font-family: "Gotham A", "Gotham B", sans-serif;
+        font-family: "Gotham Rounded Book", sans-serif;
         font-weight: 500!important;
         font-style: normal;
         font-size: 1.125rem;
@@ -12254,7 +12273,7 @@ input[type=range]::-webkit-slider-thumb {
         padding-top: 10px
     }
     .noUi-pips {
-        font-family: "Gotham A", "Gotham B", sans-serif;
+        font-family: "Gotham Rounded Book", sans-serif;
         font-size: 11px
     }
     .noUi-marker-horizontal.noUi-marker-large {
@@ -13762,7 +13781,7 @@ input[type=range]::-webkit-slider-thumb {
 
 .Tabs.Tabs--super a.active {
     color: #118c3a;
-    font-family: "Gotham A", "Gotham B", sans-serif;
+    font-family: "Gotham Rounded Book", sans-serif;
     font-weight: 500!important;
     background-color: rgba(255, 255, 255, .9)
 }
@@ -13855,7 +13874,7 @@ input[type=range]::-webkit-slider-thumb {
         display: block
     }
     .Tabs>li>a.is-active-desktop {
-        font-family: "Gotham A", "Gotham B", sans-serif;
+        font-family: "Gotham Rounded Book", sans-serif;
         font-weight: 500!important;
         font-style: normal;
         border-bottom: 0;
@@ -19453,7 +19472,7 @@ ul.join-us-icon-with-text li.join-us-icon-award {
 
 @media print {
     .account-owner-details dt, [class*=tabular-] header, main>header .h1, main>header h1 {
-        font-family: "Gotham A", "Gotham B", sans-serif;
+        font-family: "Gotham Rounded Book", sans-serif;
         font-weight: 400
     }
     .ButtonBar, .Hero, .Hero img, .Hero-image, .MailNotice, .MailNotice-arrow, .NoticeBlock, .h1 .avatar, .prev-next-acc, .print--none, .social-icons, .tabular-payments, h1 .avatar {
