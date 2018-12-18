@@ -291,11 +291,11 @@
 .job-detail {
     margin-bottom: 50px;
 }
-.qjumpers .job-detail .job-detail--sidebar .cta-wrap .btn.cta, .qjumpers btn, .qjumpers .form-actions .btn {
+.qjumpers button.btn.btn-info, .qjumpers button.btn.btn-info.btn-add.btn-text, .qjumpers button.btn.btn-danger.array-item-remove.btn-border.btn-text, .qjumpers .job-detail .job-detail--sidebar .cta-wrap .btn.cta, .qjumpers btn, .qjumpers .form-actions .btn, .qjumpers .FileUpload__dropZone___2Yw9t.btn {
     border: 0;
     outline: none;
     cursor: pointer;
-    text-align: left;
+    text-align: center;
     -webkit-font-smoothing: antialiased;
     min-width: 6.875rem;
     padding: 1rem 1.25rem;
@@ -312,16 +312,27 @@
     font-family: 'htrh',Arial;
 }
 
-.qjumpers .form-actions .btn span  {
+.qjumpers button.btn.btn-info:hover {
+    background: #475051;
+}
+.qjumpers button.btn.btn-info span,  .qjumpers button.btn.btn-info.btn-add.btn-text span,  .qjumpers .form-actions .btn span, .FileUpload__dropZone___2Yw9t.btn span, .qjumpers li.step-doing span.text span, .qjumpers .navbar-nav li.step-todo span:hover, .qjumpers button.btn.btn-danger.array-item-remove.btn-border.btn-text span {
     color: #fff;
 }
+
 .qjumpers .job-detail .job-detail--sidebar .cta-wrap .btn.cta {
     margin-top: 30px;
     position: absolute;
 }
 
+.qjumpers .FileUpload__dropZone___2Yw9t.btn {
+    width: 125px;
+}
 .qjumpers .cta-wrap.clearfix .clearfix {
     width: 200px;
+}
+
+.qjumpers span.rw-i.rw-i-calendar {
+    color: white;
 }
 
 .qjumpers .btn:hover, .qjumpers .job-detail .job-detail--sidebar .cta-wrap .btn.cta:hover, .qjumpers .form-actions .btn:hover{
@@ -755,3 +766,6 @@
     }
 }
 
+hr {
+    display: none;
+}

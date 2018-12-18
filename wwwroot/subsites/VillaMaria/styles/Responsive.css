@@ -1,0 +1,1801 @@
+.Filter-Trigger {
+	display: none;
+}
+
+.ContegroModal {
+	background: #ffffff !important;
+	z-index: 200000 !important;
+}
+
+@media screen and (max-width: 1919px) {
+	.home2017 #cS:before {
+		width: 660px;
+		height: 860px;
+	}
+	.OAW2017 #cS .Banner img {
+		max-width: 100%;
+	}
+}
+
+@media screen and (max-width: 1350px) {
+	.home2017 #cS:before {
+		width: 490px;
+		height: 650px;
+	}
+	.home2017 #cS {
+		padding: 80px 0 0 0
+	}
+	.home2017 #cS h2 {
+		font-size: 90px;
+	}
+	.home2017 #cS {
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		/* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;
+		/* Firefox, other Gecko */
+		box-sizing: border-box;
+		/* Opera/IE 8+ */
+		padding: 20px 10px 0 10px;
+	}
+	.home2017 #cS .owl-stage-outer.owl-height {
+		min-height: 500px;
+	}
+}
+
+/* ================ Template.css =================================*/
+
+/* iPad landscape */
+
+@media screen and (max-width: 1199px) {
+	#grid-overlay {
+		margin-left: -480px;
+		width: 960px;
+		background-image: url(../../templates/_images/grid-overlay/960.png);
+	}
+	#outerWrapper {}
+	#innerWrapper {
+		width: 944px;
+	}
+	#cPCWrapper {
+		width: 944px;
+		z-index: 0;
+	}
+	#cN {
+		height: 20px;
+		width: 944px;
+		margin-left: -472px;
+	}
+	#cN .Banner {
+		position: absolute;
+		top: -41px;
+		left: 50%;
+		margin-left: 442px;
+	}
+	#cN .Banner+.Banner {
+		margin-left: 403px;
+	}
+	#cN .Search {
+		position: absolute;
+		top: -41px;
+		left: 50%;
+		margin-left: 374px;
+	}
+	#cN .Search.display {
+		margin-left: 276px;
+	}
+	.Search .FormField input,
+	.Search .KeywordField input,
+	.Search.display .FormField input,
+	.Search.display .KeywordField input {
+		/* Text box */
+		-webkit-transition: none;
+		-moz-transition: none;
+		transition: none;
+	}
+	#outerWrapper.home .PageList .ListItem {
+		width: 464px;
+		margin: 0 16px 60px 0px;
+	}
+	#cFleft {
+		width: 183px;
+	}
+	#cFmiddle {
+		width: 246px;
+		margin: 0 0 0 112px;
+	}
+	#cFmiddle .FormBuilder {
+		width: 100%;
+	}
+	#cFright {
+		width: 368px;
+	}
+	#cFright .EventsList .ListItem {
+		width: 100%;
+		margin-left: 16px;
+		margin-right: 0;
+	}
+	.EventsList .ListItem {
+		margin: 0 16px 60px 0;
+		min-height: auto;
+	}
+	body.scrolled-over-210 #cN {}
+	body.scrolled-over-210 #cN>div {
+		width: 960px;
+	}
+	#cPC .Navigation {
+		width: 100%;
+	}
+	#cN .rmItem .rmStatic.subnav-about:before {
+		margin-left: -369px;
+	}
+	#cN .rmItem .rmStatic.subnav-wines:before {
+		margin-left: -274px;
+	}
+	#cN .rmItem .rmStatic.subnav-news-and-events:before {
+		margin-left: -181px;
+	}
+	#cN .rmItem .rmStatic.subnav-cafe-and-cellar-doors:before {
+		margin-left: -24px;
+	}
+	#cN .rmItem .rmStatic.subnav-about .rmItem {
+		left: -200px;
+	}
+	#cN .rmItem .rmStatic.subnav-wines .rmItem {
+		left: -110px;
+	}
+	#cN .rmItem .rmStatic.subnav-news-and-events .rmItem {
+		left: -21px;
+	}
+	#cN .rmItem .rmStatic.subnav-cafe-and-cellar-doors .rmItem {
+		left: 153px;
+	}
+	/* ================ FormBuilder.css =================================*/
+	#cFmiddle .FormBuilder input {
+		width: 175px;
+	}
+	#cFmiddle .FormBuilder input.EnquiryButton {}
+	.ProductList .ListPrimarySeparator+.CategorySummary+.ListItem+.ListItem+.ListItem {
+		margin-top: 20px;
+	}
+	.ProductList .ListPrimarySeparator:before,
+	.ProductCrossSell .ListPrimarySeparator:before,
+	.ProductCatalogueSearchResults .ListPrimarySeparator:before {
+		/* the line separator between sections... */
+		width: 960px;
+	}
+	#outerWrapper.contact #cSwrapper {
+		width: 960px;
+		margin-left: -480px;
+	}
+	#outerWrapper.contact ul.anchor-links li {
+		margin-right: 20px;
+	}
+	/* Buy section */
+	.checkout #cH,
+	.checkout #innerWrapper {
+		margin: 0 auto 0 auto;
+		padding: 0 0 84px 0;
+	}
+	#outerWrapper.checkout #cPC_2col_Right {
+		float: left;
+	}
+	#outerWrapper.product-detail #cS,
+	.product-detail #cS .CustomCode .BackLink {
+		width: 100%;
+	}
+	#cS .CustomCode .BackLink {
+		left: 0;
+		margin-left: 0;
+	}
+	#cN {
+		height: 20px;
+		width: 100%;
+		margin-left: 0;
+		left: 0;
+	}
+	.SlideDownShoppingBag {
+		position: absolute;
+		top: -57px;
+		left: 50%;
+		margin-left: 388px;
+	}
+	.Vineyards .ThumbnailTable {
+		margin: 0 auto;
+		float: none;
+	}
+	.Vineyards .ThumbnailTable+.HTMLContent {
+		margin: 0 auto;
+		float: none;
+	}
+	#outerWrapper.filter #cPC {
+		width: 710px;
+	}
+	.ProductDetails .ProductDetailsLeft {
+		margin: 0 30px 0 0;
+	}
+	.cellarclub #cS,
+	.ModuleColumns.CellarClubHeader,
+	.ModuleColumns.Packages {
+		max-width: 100%;
+	}
+	.ModuleColumns.Packages .ListThumbnail img {
+		max-width: 100%
+	}
+	.cellarclub #cS {
+		padding: 0 10px;
+		-webkit-box-sizing: border-box;
+		/* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;
+		/* Firefox, other Gecko */
+		box-sizing: border-box;
+		/* Opera/IE 8+ */
+	}
+	.ModuleColumns.CellarClubHeader {
+		overflow: hidden;
+	}
+	.cellarclub .LoginForm:after {
+		left: 42%;
+	}
+	.anotherworld #outerWrapper.about-us #cPC_3col_Right,
+	.anotherworld #outerWrapper.about-us #cPC_2col_Left,
+	.anotherworld #outerWrapper.about-us #cPC_2col_Right,
+	.Wedding #outerWrapper.about-us #cPC_3col_Right,
+	.Wedding #outerWrapper.about-us #cPC_2col_Left,
+	.Wedding #outerWrapper.about-us #cPC_2col_Right,
+	.Wedding #outerWrapper.about-us #cPC_3col_Left {
+		width: 100%;
+	}
+	.anotherworld iframe {
+		width: 100%;
+	}
+	.anotherworld #outerWrapper.about-us #cPC_2col_Left img {
+		width: 50% !important;
+		margin: 0 auto;
+	}
+	.anotherworld #outerWrapper.about-us #cPC_2col_Left {
+		text-align: center;
+	}
+	#ctl03_cPC_2col_Left_ctl00_HtmlContent {
+		float: left;
+	}
+	.anotherworld #ctl03_cS_ctl00_HtmlContent {
+		padding: 10px 20px;
+		width: 90% !important;
+		word-wrap: break-word;
+	}
+	.anotherworld #cS .HTMLContent {
+		width: 90%;
+		padding: 10px 20px;
+	}
+}
+
+/* iPad portait */
+
+@media screen and (max-width: 959px) {
+	.home2017 #cPCWrapper #cPC {
+		padding: 0;
+	}
+	.home2017 #cS h2 {
+		font-size: 60px
+	}
+	.home2017 #cPCWrapper {
+		padding: 0;
+	}
+	.SlideDownShoppingBag {
+		top: -50px;
+		left: 50%;
+		margin-left: 250px;
+	}
+	#grid-overlay {
+		margin-left: -345px;
+		width: 690px;
+		background-image: url(../../templates/_images/grid-overlay/690.png);
+	}
+	.HTMLContent img {
+		max-width: 100%;
+		height: auto!important;
+	}
+	body.scrolled-over-210 #cN:before {
+		/* the 1px high line... */
+		content: "";
+		width: 960px;
+		height: 1px;
+		background: #ccc8be;
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		margin-left: -480px;
+		z-index: 0;
+	}
+	body.scrolled-over-210 #cN>div {
+		width: 960px;
+		margin: 0 auto;
+	}
+	#mainWrapper {
+		width: 100%;
+	}
+	#innerWrapper {
+		width: 720px;
+	}
+	#cPCWrapper {
+		width: 720px;
+		z-index: 0;
+	}
+	.inner #innerWrapper {
+		width: 720px;
+	}
+	.inner #cPCWrapper {
+		width: 720px;
+	}
+	#innerWrapper.buy {
+		border-top: none;
+		margin: 60px auto 0;
+		padding: 0;
+	}
+	#SponsorLogo {
+		display: none;
+	}
+	#FooterSponsorLogo {
+		display: block;
+		margin: 30px 0 0 0;
+	}
+	#cN .Banner {
+		margin-left: 305px;
+		top: -35px;
+	}
+	#cN .Banner+.Banner {
+		margin-left: 264px;
+	}
+	#cN .Search {
+		margin-left: 236px;
+		margin-top: -3px;
+	}
+	#cN .Search.display {
+		margin-left: 138px;
+	}
+	#cN .rmItem .rmStatic.subnav-about:before {
+		margin-left: -329px;
+	}
+	#cN .rmItem .rmStatic.subnav-wines:before {
+		margin-left: -254px;
+	}
+	#cN .rmItem .rmStatic.subnav-news-and-events:before {
+		margin-left: -181px;
+	}
+	#cN .rmItem .rmStatic.subnav-cafe-and-cellar-doors:before {
+		margin-left: -24px;
+	}
+	#cN .rmItem .rmStatic.subnav-about .rmItem {
+		left: -160px;
+	}
+	#cN .rmItem .rmStatic.subnav-wines .rmItem {
+		left: -86px;
+	}
+	#cN .rmItem .rmStatic.subnav-news-and-events .rmItem {
+		left: -13px;
+	}
+	#cN .rmItem .rmStatic.subnav-cafe-and-cellar-doors .rmItem {
+		left: 143px;
+	}
+	#outerWrapper.cellardoor #cPC_4col_1,
+	#outerWrapper.cellardoor #cPC_4col_2,
+	#outerWrapper.cellardoor #cPC_4col_3,
+	#outerWrapper.cellardoor #cPC_4col_4,
+	#outerWrapper.cellardoor #cPC_1col_Right {
+		width: 100%;
+		float: none;
+	}
+	#outerWrapper.home .PageList .ListItem {
+		width: 100%;
+		margin: 0 auto 60px auto !important;
+		float: none;
+		max-width: 580px;
+		clear: both;
+	}
+	#outerWrapper.home .PageList .ListItem .ListTitle {
+		border: none;
+		left: 0;
+		right: 0;
+	}
+	#cFleft {
+		width: 210px;
+	}
+	#cFmiddle {
+		width: 210px;
+		margin: 0 0 0 20px;
+	}
+	#cFright {
+		width: 210px;
+	}
+	#cFright .EventsList .ListItem {
+		width: 210px;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	#FooterLinks {
+		width: 670px;
+	}
+	/* ================ FormBuilder.css =================================*/
+	#cFmiddle .FormBuilder input {
+		width: 140px;
+	}
+	#cFmiddle .FormBuilder input.EnquiryButton {}
+	/* ================ EventsCalendar.css =================================*/
+	.EventsList .ListHolder {
+		width: 100%;
+	}
+	/* ================ Navigation.css =================================*/
+	#cN .RadMenuStatic .rmHorizontal .rmText {
+		padding: 0 10px;
+	}
+	.RadMenuStatic .rmHorizontal .rmText {
+		padding: 0 10px;
+	}
+	body.scrolled-over-210 #cN>div {
+		width: 690px;
+	}
+	/* ================ ProductCatalogue.css =================================*/
+	.ProductDetails .ProductDetailsLeft,
+	.ProductDetails .ProductDetailsImage {
+		float: left;
+		width: 210px;
+	}
+	.ProductDetails .ProductDetailsRight {
+		width: 210px;
+	}
+	.ProductDetails .ProductDetailsImage .villa-maria-image-plugin img {
+		max-width: 300px!important;
+		height: auto;
+		margin-left: -20px!important;
+	}
+	.ProductDetails .tab_content {
+		float: right;
+	}
+	.ProductDetails .ProductDetailsLeft .WineTier,
+	.ProductDetails .ProductDetailsLeft .Vineyard,
+	.ProductDetails .ProductDetailsLeft .Type {
+		font-size: 42px;
+	}
+	.ProductDetails .ProductDetailsLeft .ListSummary {
+		font-size: 18px;
+	}
+	.ProductDetails .ListVariant1,
+	.ProductDetails .ListVariant2 {
+		margin: 12px 0 12px 0px;
+	}
+	#outerWrapper.product-detail .DocumentLibraryDocumentList {
+		height: 100px;
+		right: 0;
+		top: 0px;
+		width: 220px;
+	}
+	.ProductDetails .tabContentWrapper {
+		margin-left: -20px;
+		margin-top: 170px;
+	}
+	/* ================ BUY section Stockists maps =================================*/
+	#outerWrapper.stockists #cS .HTMLContent {
+		height: auto!important;
+	}
+	#outerWrapper.stockists #cS .CustomCode {
+		margin-left: -335px;
+		top: 370px;
+		width: 670px;
+	}
+	.ProductList .ListPrimarySeparator+.CategorySummary+.ListItem+.ListItem {
+		margin-top: 20px;
+	}
+	.ProductList .ListPrimarySeparator:before,
+	.ProductCrossSell .ListPrimarySeparator:before,
+	.ProductCatalogueSearchResults .ListPrimarySeparator:before {
+		/* the line separator between sections... */
+		width: 690px;
+	}
+	#outerWrapper.contact #cSwrapper {
+		display: none;
+	}
+	.ProductDetails .tab_content:first-child+.tab_content {
+		margin-top: 0;
+	}
+	#FooterLinks {
+		padding: 25px 0 0px 50px;
+	}
+	.rmItem.facebook a {
+		margin-left: 20px;
+	}
+	#cFWrapper {
+		background-position: calc(100% - -90px) 0;
+	}
+	#cPC_2col_Left,
+	#outerWrapper.about-us #cPC_2col_Right,
+	#outerWrapper #LeftContent,
+	#outerWrapper.NewsArticle #cPC,
+	#outerWrapper.cafe #cPC_2col_Right,
+	#outerWrapper.cafe #cPC_2col_Left_2,
+	#outerWrapper.cafe #cPC_2col_Right_2,
+	#outerWrapper.cafe #cPC_2col_Left_3,
+	#outerWrapper.cafe #cPC_2col_Left_4,
+	#outerWrapper.cafe #cPC_2col_Right_4,
+	#outerWrapper.cafe #Review,
+	#outerWrapper.contact #cPC_2col_Right,
+	#outerWrapper.contact .FormContainer,
+	#outerWrapper.sponsorships .FormContainer,
+	#outerWrapper.contact .EnquiryLabelGroup.MemoBox,
+	#outerWrapper.contact .EnquiryLabelGroup.YesNoTickBox,
+	#outerWrapper.contact .EnquiryLabelGroup.EmailSignup,
+	#outerWrapper.sponsorships .EnquiryLabelGroup.MemoBox,
+	#outerWrapper.sponsorships .EnquiryLabelGroup.YesNoTickBox,
+	#outerWrapper.sponsorships .EnquiryLabelGroup.EmailSignup,
+	.FormBuilder .MemoBox textarea,
+	#cPC_2col_Left,
+	#cS .HTMLContent,
+	.cellarclub #cPC_2col_Right {
+		width: 100% !important;
+		height: auto !important;
+		margin: 0 !important;
+	}
+	.anotherworld #cS .HTMLContent {
+		width: 90% !important;
+		padding: 10px 20px;
+	}
+	.EventsCalendarDetail .EventsContentWrapper .Description {
+		clear: both;
+		float: none;
+		width: 100%;
+		margin: 0px 0 0px 0;
+	}
+	.EventsCalendarDetail+.ShareContainer {
+		position: relative;
+		top: 0px;
+		left: 0;
+		margin: 50px 0 0 0;
+		width: 200px;
+		border-top: 1px solid #CCC8BE;
+		padding-top: 20px;
+	}
+	#outerWrapper.filter #LeftContent {
+		float: none;
+		width: 100%;
+	}
+	.Filter-Trigger {
+		display: block;
+		text-transform: uppercase;
+		height: 50px;
+		line-height: 3em;
+		border-bottom: 1px solid #CCC8BE;
+		border-top: 1px solid #CCC8BE;
+	}
+	.filteropen .Filter-Trigger {
+		border-bottom: none;
+	}
+	.Filter-Trigger:after {
+		content: "";
+		position: absolute;
+		background: url('../../Templates/_images/Product_downarrow.png') no-repeat 0 0;
+		-webkit-transform: rotate(180deg);
+		-moz-transform: rotate(180deg);
+		-ms-transform: rotate(180deg);
+		-o-transform: rotate(180deg);
+		transform: rotate(180deg);
+		width: 7px;
+		height: 7px;
+		right: 15px;
+		top: 23px;
+		-webkit-transition: all ease-in-out 0.2s;
+		-moz-transition: all ease-in-out 0.2s;
+		-o-transition: all ease-in-out 0.2s;
+		transition: all ease-in-out 0.2s;
+	}
+	.filteropen .Filter-Trigger:after {
+		content: "";
+		position: absolute;
+		-webkit-transform: rotate(0);
+		-moz-transform: rotate(0);
+		-ms-transform: rotate(0);
+		-o-transform: rotate(0);
+		transform: rotate(0);
+	}
+	#outerWrapper.filter .ProductList .ListHeader {
+		display: none;
+	}
+	#outerWrapper.filter #LeftContent .FilterContainer {
+		display: none;
+		position: absolute;
+		width: 100%;
+		z-index: 1000;
+		background: #f7f6f2
+	}
+	.filteropen #outerWrapper.filter #LeftContent .FilterContainer {
+		display: block;
+		padding: 20px 0 20px 0;
+		border-bottom: 1px solid #CCC8BE;
+	}
+	#outerWrapper.filter #cPC {
+		max-width: 100%;
+	}
+	.buy-online #cH {
+		padding: 0px 0 50px 0;
+	}
+	.ProductList .ListVariant1,
+	.ProductList .ListVariant2 {
+		margin: 0px 0px 4px 0px;
+	}
+	.anotherworld #cPC_1col_1 .CustomCode {
+		max-width: 90%;
+		display: inline-block;
+	}
+	.anotherworld #cPC_1col_1 .CustomCode iframe {
+		max-width: 100%;
+		max-height: none;
+	}
+}
+
+/* mobile */
+
+@media screen and (max-width:732px) {
+	#cN .RadMenuStatic .rmHorizontal .rmText {
+		padding: 0 9px;
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 697px) {
+	.home2017 #cS h2 {
+		padding: 0;
+		/* text-align: center; */
+	}
+	.home2017 #cS p {
+		padding: 0;
+		/* text-align: center */
+	}
+	.home2017 #cPCWrapper .Banner {
+		float: none;
+		width: 292px;
+		margin: 0 auto 10px;
+	}
+	.home2017 #cS h2 {
+		font-size: 40px;
+		margin: 0 0 0.5em 0;
+	}
+	.home2017 #cS p {
+		line-height: 1.1;
+		font-size: 16px;
+	}
+	.home2017 #cS:before {
+		opacity: 0.2
+	}
+	#outerWrapper.contact .FormContainer,
+	#outerWrapper.sponsorships .FormContainer,
+	.Newsletter .FormContainer,
+	.Firsttotry .FormContainer,
+	.anotherworld .FormContainer,
+	.Wedding .FormContainer
+	 {
+		width: 100%;
+	}
+	.anotherworld #VideoBannerContainer {
+		max-width: 100%;
+		height: 300px;
+	}
+	.anotherworld iframe {
+		max-width: 100% !important;
+	}
+	.anotherworld #VideoBanner {
+		height: 100%;
+	}
+	.LiquorLicense {
+		padding-top: 70px;
+	}
+	.anotherworld iframe {
+		height: autopx;
+	}
+	.Wedding .EnquiryLabelGroup.EmailSignup {
+		height: 300px;
+	}
+}
+
+@media screen and (max-width: 689px) {
+	.anotherworld #cPC_1col_1 .CustomCode {
+		max-width: 100%;
+		display: inline-block;
+	}
+	.anotherworld #outerWrapper.about-us #cPC_1col_1,
+	.anotherworld #outerWrapper.about-us #cPC_1col_2,
+	.anotherworld #outerWrapper.about-us #cPC_2col_3 {
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+	.anotherworld table td {
+		font-size: 18px;
+	}
+	.anotherworld #cPC_1col_1 .CustomCode iframe {
+		max-width: 100%;
+		max-height: none;
+	}
+	.anotherworld .EnquiryLabelGroup.EmailSignup,
+	.anotherworld .EnquiryLabelGroup.YesNoTickBox {
+		margin-bottom: 0px;
+	}
+	.ProfileManager label.EnquiryLabel {
+		width: 100%;
+		float: none;
+	}
+	.ProfileManager .EnquiryError {
+		width: 100%;
+		float: inherit
+	}
+	.member_login {
+		display: none !important;
+	}
+	.SlideDownShoppingBag {
+		margin-left: 83px;
+		top: -17px;
+	}
+	#grid-overlay {
+		margin-left: 0;
+		width: 100%;
+		left: 0;
+		background-image: url(../../templates/_images/grid-overlay/mobile.png);
+		border-left: 10px blue solid;
+		border-right: 10px green solid;
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+	#outerWrapper {
+		width: auto!important;
+		overflow-x: hidden;
+	}
+	#innerWrapper {
+		padding: 0 10px;
+		width: auto!important;
+		min-width: 300px;
+	}
+	#innerWrapper.buy {
+		border-top: none;
+		margin: 60px auto 0;
+		padding: 20px 0;
+	}
+	#cPCWrapper {
+		width: auto!important;
+		min-width: 300px;
+	}
+	#outerWrapper.cafe #cPC_2col_Right_3 {
+		display: none;
+	}
+	.cafe #cS {
+		display: none;
+	}
+	.cafe #innerWrapper {
+		border-top: none;
+	}
+	#outerWrapper.cafe #cPC_2col_Left_2 .contact_col,
+	#outerWrapper.cafe #cPC_2col_Right_2 .contact_col {
+		width: 100%;
+		float: left;
+	}
+	.Content img {
+		max-width: 100%;
+	}
+	.ShareContainer {
+		display: none;
+	}
+	.HTMLContent .milestones {
+		width: 90%;
+		height: auto;
+		margin: 0 auto;
+	}
+	#RegionImages .region-image-1,
+	#RegionImages .region-image-2,
+	#RegionImages .region-image-3 {
+		margin: 0px !important;
+	}
+	.CategoryList .ListItem {
+		width: 100%;
+	}
+	.ProductList .ListHolder,
+	.ProductCrossSell .ListHolder,
+	.ProductCatalogueSearchResults .ListHolder {
+		margin: 0;
+	}
+	.MobileShowNav {
+		display: block;
+		margin: 0 0 0 10px;
+		font-family: "nimbus-sans-extended", sans-serif;
+		font-size: 13px;
+		letter-spacing: 2px;
+		color: #646462;
+		text-transform: uppercase;
+		padding: 0 0 0 15px;
+		background-image: url(../../templates/_images/mobnav.png);
+		background-repeat: no-repeat;
+		background-position: left center
+	}
+	#cN {
+		height: 20px;
+		width: 100%!important;
+		left: 0%;
+		margin-left: 0px;
+		border: none;
+	}
+	#cN .Navigation {
+		display: none;
+		position: relative;
+		top: 16px;
+		background: #f7f6f2;
+	}
+	#cN .Navigation.display {
+		display: block;
+	}
+	#cN .RadMenuStatic .rmHorizontal .rmItem {
+		display: block;
+		float: none;
+	}
+	#cN .RadMenuStatic ul.rmRootGroup.rmHorizontal {
+		display: block;
+		text-align: left;
+	}
+	#cN .RadMenuStatic .rmHorizontal .rmLink {
+		display: block;
+		padding: 1em 0 !important;
+		text-align: left;
+		border-bottom: #ccc8be 1px solid;
+	}
+	#cN .rmLevel2 {
+		display: none;
+	}
+	#cN .rmItem .rmStatic,
+	#cN .rmItem .rmStatic.display {
+		position: relative;
+		top: 0;
+		left: 0 !important;
+		margin: 0 !important;
+		padding: 0 !important;
+		border: none;
+		background: none;
+	}
+	#cN .rmItem .rmStatic:before {
+		display: none !important;
+	}
+	#cN .rmItem .rmStatic.subnav-wines .rmItem {
+		left: 0 !important;
+		margin: 0 !important
+	}
+	#cN .rmItem .rmStatic .rmStatic,
+	#cN .rmItem .rmStatic.display .rmStatic,
+	#cN .rmVertical .rmGroup .rmLevel1 {
+		display: block !important;
+	}
+	#cN .rmItem .rmStatic.display {
+		display: block;
+		z-index: 5000000;
+		position: relative;
+		width: 100%;
+		top: 0;
+		left: 50%;
+		margin: 0 !important;
+		padding: 0 !important;
+		background: #F7F6F2;
+		border-top: none;
+		border-bottom: none;
+		padding: 2em 0;
+	}
+	#cN .rmItem .rmStatic:before {}
+	#cN .rmItem .rmStatic .rmItem {
+		padding-left: 0 !important;
+		left: 0 !important;
+		margin: 0 !important;
+	}
+	#cN .rmItem .rmStatic .rmItem .rmText {
+		padding: 0 10px 0 20px;
+		font-size: 12px;
+	}
+	#cN .rmStatic {
+		display: none;
+	}
+	#cN .Extend .rmStatic {
+		display: block;
+	}
+	#cN .RadMenuStatic .rmVertical .Upper>.rmLink:after {
+		content: "";
+		position: absolute;
+		right: 10px;
+		width: 25px;
+		height: 25px;
+		vertical-align: middle;
+		margin-top: -5px;
+		background: url(https://www.villamaria.co.nz/Templates/_images/Mobile_expand.png) no-repeat;
+		background-size: 50px auto;
+	}
+	#cN .RadMenuStatic .rmVertical .Upper.Extend .rmLink:after {
+		background-position: -25px 0;
+	}
+	#cN .RadMenuStatic .rmVertical .rmLevel1 .rmLink {
+		font-size: 0.9em;
+		padding: 10px 0 10px 30px;
+	}
+	#cN .RadMenuStatic .rmVertical .rmLink {
+		width: 100% !important;
+		padding: 10px 0px 10px 10px;
+	}
+	#cN .RadMenuStatic .rmVertical .rmLink {
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	#cN .RadMenuStatic .rmLink.MenuSelected,
+	ink.SelectedParent1 {
+		color: #9f8372;
+	}
+	#cN .RadMenuStatic .rmLink.rmExpanded,
+	#cN .RadMenuStatic .rmLink.rmFocused,
+	#cN .RadMenuStatic .rmLink:hover {}
+	#cN .RadMenuStatic .rmRootGroup.rmVertical .rmItem.rmFirst {
+		border-top: none;
+	}
+	#cN .Banner {
+		margin-left: 140px;
+		top: 0px;
+	}
+	#cN .Banner+.Banner {
+		margin-left: 100px;
+	}
+	#cN .Search {
+		margin-left: 70px;
+		margin-top: 30px;
+	}
+	#cN .Search.display {
+		margin-left: -30px;
+	}
+	#cSwrapper #VillaMariaHeroBanners {
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		height: 270px !important;
+	}
+	.HTMLContent img {
+		max-width: 100%;
+		height: auto!important;
+	}
+	#outerWrapper.product-detail #cS {
+		width: 100%!important;
+	}
+	#cS .CustomCode .BackLink {
+		width: 100%!important;
+	}
+	.ListCustomTitle,
+	h1 {
+		font-size: 42px;
+		line-height: 50px;
+	}
+	h2 {
+		font-size: 18px;
+		line-height: 40px;
+	}
+	p {
+		font-size: 16px;
+		line-height: 1.4em;
+	}
+	#outerWrapper.home .PageList .ListItem {
+		overflow: visible;
+		height: auto;
+		margin-bottom: 50px !important;
+		position: relative;
+	}
+	#outerWrapper.home .PageList .ListItem img.ListThumbnail {
+		width: auto !important;
+		max-width: none;
+		/* height: auto; */
+		height: 200px !important;
+	}
+	.PageList .ListTitle {
+		width: 100%;
+		position: absolute;
+		top: 1em;
+		left: 0;
+		font-size: 20px;
+		line-height: 1.2em;
+	}
+	.PageList .ListSummary {
+		max-width: 90%;
+	}
+	#cFWrapper {
+		background: none;
+	}
+	.home #cFWrapper {
+		background: none;
+	}
+	iframe {
+		max-width: 90% !important;
+		margin: 0 auto;
+	}
+	#cFleft {
+		width: 45%;
+	}
+	#cFmiddle {
+		float: right;
+		width: 45%;
+	}
+	#cFright {
+		width: 100%!important;
+		float: none;
+		clear: both;
+		margin: 0 0 0 0px;
+		padding: 0;
+	}
+	#cFright .EventsList .ListItem {
+		width: 100%;
+		margin: 0 !important;
+	}
+	#cFright .EventsList .ListItem+.ListItem {
+		float: right;
+	}
+	#FooterLinks {
+		width: 100%!important;
+		margin-top: 60px;
+	}
+	#FooterLinks .RadMenuStatic ul.rmRootGroup.rmHorizontal {
+		display: block;
+	}
+	#FooterLinks .RadMenuStatic .rmLink {
+		width: auto;
+	}
+	#FooterLinks .RadMenuStatic .rmHorizontal .rmItem {
+		display: inline-block;
+	}
+	#FooterLinks>img {
+		width: 300px;
+		height: 44px;
+		margin-top: 50px;
+	}
+	#cS .HTMLContent {
+		width: 100%!important;
+		margin: 0 auto;
+	}
+	.anotherworld #cS .HTMLContent {
+		width: 90%!important;
+	}
+	#outerWrapper.contact .HTMLContent .contact_col.right {
+		width: 500px;
+		float: left;
+		margin: 0 20px 0 0;
+	}
+	/* ================ FormBuilder.css =================================*/
+	#cFmiddle .FormBuilder input {
+		width: 190px;
+	}
+	#cFmiddle .FormBuilder input.EnquiryButton {}
+	#cFright .EventsList {
+		min-height: 100%!important;
+	}
+	/* ================ Pushbox plugin =================================*/
+	#VillaMariaHeroBanners .HeroContent h1 {
+		font-size: 24px!important;
+		line-height: 1.2em!important;
+		margin-bottom: 18px!important;
+		text-align: center!important;
+	}
+	#VillaMariaHeroBanners .HeroContent h2 {
+		width: 300px!important;
+		font-size: 14px!important;
+		line-height: 1.5em!important;
+	}
+	/* ================ Pushbox plugin =================================*/
+	.ProductList .CategorySummary,
+	.ProductCrossSell .CategorySummary,
+	.ProductCatalogueSearchResults .CategorySummary {
+		width: 300px!important;
+		float: none;
+		clear: both;
+		top: 0px;
+		left: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.ProductList .ListPrimarySeparator,
+	.ProductList .ListPrimarySeparator+.CategorySummary,
+	.ProductList .ListPrimarySeparator+.CategorySummary+.ListItem,
+	.ProductList .ListPrimarySeparator+.CategorySummary+.ListItem+.ListItem,
+
+	.ProductList .ListPrimarySeparator+.CategorySummary+.ListItem+.ListItem+.ListItem {
+		margin-top: 0px !important;
+	}
+	/* ================ Navigation.css =================================*/
+	#innerWrapper.inner #cPC .Navigation,
+	#innerWrapper.inner -white-wines #cPC .Navigation,
+	#innerWrapper.inner -red-wines #cPC .Navigation,
+	#innerWrapper.inner -other-wines #cPC .Navigation,
+	#innerWrapper.inner -wine-tiers #cPC .Navigation {
+		width: 100%!important;
+	}
+	/* ================ ProductCatalogue.css =================================*/
+	.ProductList .ListPrimarySeparator,
+	.ProductCrossSell .ListPrimarySeparator,
+	.ProductCatalogueSearchResults .ListPrimarySeparator {
+		margin: 8px auto 0em auto;
+		padding: 0;
+		width: 300px!important;
+		float: none;
+	}
+	.ProductList .ListItem,
+	.ProductCatalogueSearchResults .ListItem {
+		clear: both;
+		float: none;
+		width: 300px!important;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.ProductList .ListItem:hover .ImageHolder a:after,
+	.ProductCatalogueSearchResults .ListItem:hover .ImageHolder a:after {
+		width: 300px;
+	}
+	.ProductList .ListThumbnail,
+	.ProductCrossSell .ListThumbnail,
+	.ProductCatalogueSearchResults .ListThumbnail {
+		text-align: center;
+		width: 100%!important;
+	}
+	.ProductList .ImageHolder a,
+	.ProductCatalogueSearchResults .ImageHolder a {
+		width: 100%!important;
+	}
+	.ProductDetails .ProductDetailsLeft,
+	.ProductDetails .ProductDetailsImage,
+	.ProductDetails .ProductDetailsRight {
+		float: none;
+		clear: both;
+		width: 100%!important;
+	}
+	.ProductDetails .ProductDetailsImage .villa-maria-image-plugin img {
+		max-width: 300px!important;
+		height: auto;
+		margin-bottom: 20px;
+		margin-left: -20px!important;
+	}
+	.ProductDetails .tab_content,
+	.ProductDetails .tab_content:first-child+.tab_content,
+	.ProductDetails .tab_content:first-child+.tab_content+.tab_content+.tab_content,
+	.ProductDetails .tab_content:first-child+.tab_content+.tab_content+.tab_content+.tab_content+.tab_content,
+	.ProductDetails .tab_content:first-child+.tab_content+.tab_content+.tab_content+.tab_content+.tab_content+.tab_content+.tab_content,
+	.ProductDetails .tab_content:first-child+.tab_content+.tab_content+.tab_content+.tab_content+.tab_content+.tab_content+.tab_content+.tab_content+.tab_content {
+		float: left;
+		clear: both;
+		width: 90%!important;
+	}
+	.ProductDetails .ProductDetailsLeft .WineTier,
+	.ProductDetails .ProductDetailsLeft .Vineyard,
+	.ProductDetails .ProductDetailsLeft .Type {
+		font-size: 42px;
+	}
+	.ProductDetails .ProductDetailsLeft .ListSummary {
+		font-size: 18px;
+	}
+	.ProductDetails .ListVariant1,
+	.ProductDetails .ListVariant2 {
+		margin: 12px 0 12px 0px;
+	}
+	#outerWrapper.product-detail .DocumentLibraryDocumentList {
+		height: 100px;
+		right: 0;
+		top: 1300px;
+		width: 100%!important;
+		display: none;
+	}
+	/* ================ BUY section Stockists maps =================================*/
+	#outerWrapper.stockists .StockistsLeft,
+	#outerWrapper.stockists .StockistsRight {
+		width: 97%!important;
+		padding: 0 10px;
+	}
+	#outerWrapper.stockists .StockistsRight {
+		float: left;
+	}
+	#outerWrapper.stockists #cS .CustomCode {
+		margin-left: -150px;
+		top: 180px;
+		width: 300px;
+	}
+	#outerWrapper.stockists .StockistsMap img {
+		width: 100%!important;
+		height: auto;
+	}
+	.ProductList .ListPrimarySeparator:before,
+	.ProductCrossSell .ListPrimarySeparator:before,
+	.ProductCatalogueSearchResults .ListPrimarySeparator:before {
+		/* the line separator between sections... */
+		width: 100%;
+	}
+	/* ================ SHOPPING CART =================================*/
+	.ShoppingCartCheckoutProcess {
+		height: auto;
+		width: auto;
+	}
+	.ShoppingCartCheckoutProcess ul li {
+		padding: 0px;
+		margin: 0px;
+		float: left;
+		display: block;
+		line-height: 40px;
+		list-style-type: none;
+	}
+	.ShoppingCartCheckoutProcess ul li a {
+		line-height: 40px;
+		display: block;
+	}
+	.ShoppingCartCheckoutProcess ul li a.Selected {
+		border-left: none;
+		border-right: none;
+		height: auto;
+	}
+	.ShoppingCartItems td,
+	.ShoppingCartItems .AlternateItem td {
+		display: inline-block;
+		width: 100%;
+		border: none;
+	}
+	.ShoppingCartItems td .Header {
+		display: none;
+	}
+	.ShoppingCartItems .ItemPrice,
+	.ShoppingCartItems .ItemQuantity,
+	.ShoppingCartItems .ItemActions,
+	.ShoppingCartItems .ItemTotal,
+	.ShoppingCartItems .AlternateItem .ItemPrice,
+	.ShoppingCartItems .AlternateItem .ItemQuantity,
+	.ShoppingCartItems .AlternateItem .ItemActions,
+	.ShoppingCartItems .AlternateItem .ItemTotal {
+		width: 100%;
+		text-align: center;
+		padding: 10px;
+	}
+	.ShoppingCartItems .ItemActions a {
+		margin: 0 auto;
+	}
+	#outerWrapper.checkout #cPC_2col_Right {
+		width: 300px;
+	}
+	.ShoppingBag {
+		width: 260px;
+	}
+	.ShoppingBagItems {
+		width: 260px;
+	}
+	.Promotion .PromotionCodeInput {
+		width: 50px;
+	}
+	.Promotion {
+		width: 260px;
+	}
+	/* === [ BillingDetails ] === */
+	.BillingDetails,
+	.DeliveryDetails {
+		width: 100%!important;
+		clear: both;
+		padding: 0 10px;
+	}
+	.EnquiryLabelGroup.EmailSignup,
+	.EnquiryLabelGroup.YesNoTickBox {
+		clear: both;
+		width: 300px;
+		float: none;
+		margin: 0 0 30px 0;
+	}
+	.EnquiryLabelGroup.EmailSignup {
+		margin: 0;
+	}
+	.BillingDetails textarea,
+	.DeliveryDetails textarea {
+		width: 260px !important;
+	}
+	.BillingDetails .CustomTitle,
+	.DeliveryDetails .CustomTitle,
+	.BillingDetails .CustomTitle,
+	.DeliveryDetails .CustomTitle,
+	.GiftOptions .CustomTitle,
+	.Shipping .CustomTitle,
+	.PaymentOptions .CustomTitle,
+	.ShoppingCartConfirmation .CustomTitle,
+	.ShoppingCartConfirmation .OrderDetails .Header,
+	.ShoppingCartConfirmation .OrderSummary .Header {
+		font-size: 42px;
+		line-height: 50px;
+	}
+	.GiftOptions,
+	.Shipping,
+	.PaymentOptions,
+	.GiftOptions,
+	.Shipping,
+	.PaymentOptions {
+		padding: 0 10px;
+	}
+	.ShoppingCartConfirmation {
+		margin: 20px 0 10px;
+		padding: 0 5px;
+	}
+	.ShoppingCartConfirmation .OrderDetails .BillingDetailsCell,
+	.ShoppingCartConfirmation .OrderDetails .DeliveryDetailsCell {
+		padding: 0 10px;
+		width: 100%!important;
+	}
+	.ShoppingCartConfirmation .OrderDetails .BillingDetailsCell,
+	.ShoppingCartConfirmation .OrderDetails .DeliveryDetailsCell {
+		display: inline-block;
+	}
+	.ShoppingCartConfirmation .OrderDetails .DeliveryDetails {
+		margin: 10px 0 10px 0px;
+	}
+	.ShoppingCartConfirmation .OrderDetails .OrderNumberRow td {
+		width: 100%!important;
+		display: inline-block;
+		padding: 5px 10px;
+	}
+	.ShoppingCartConfirmation .OrderDetails .OrderNumberRow #ctl04_cPC_2col_Left_ctl01_ConfirmationControl_OrderNumberLabel {
+		width: auto;
+	}
+	.ShoppingCartConfirmation .OrderDetails .OrderNumberRow #ctl04_cPC_2col_Left_ctl01_ConfirmationControl_OrderDateLabel,
+	.ShoppingCartConfirmation .OrderDetails .OrderNumberRow #ctl04_cPC_2col_Left_ctl01_ConfirmationControl_OrderDateValue {
+		padding-left: 10px;
+	}
+	.ShoppingCartConfirmation .ShoppingCartItems td.ShippingTotalLabel,
+	.ShoppingCartConfirmation .ShoppingCartItems td.ShippingTotal {
+		border-top: #ccc8be 1px solid;
+		padding-top: 20px;
+		margin-top: 20px;
+	}
+	.ShoppingCartConfirmation .ShoppingCartItems td.ShippingTotalLabel,
+	.ShoppingCartConfirmation .ShoppingCartItems td.SubTotalLabel,
+	.ShoppingCartConfirmation .ShoppingCartItems td.TaxesLabel,
+	.ShoppingCartConfirmation .ShoppingCartItems td.TotalLabel {
+		width: 50%!important;
+		padding: 20px 0 0px;
+	}
+	.ShoppingCartConfirmation .ShoppingCartItems td.ShippingTotal,
+	.ShoppingCartConfirmation .ShoppingCartItems td.SubTotal,
+	.ShoppingCartConfirmation .ShoppingCartItems td.Taxes,
+	.ShoppingCartConfirmation .ShoppingCartItems td.Total {
+		width: 48%!important;
+		padding: 20px 0 0px;
+	}
+	.checkout .LoginForm,
+	.checkout .FacebookLoginForm {
+		float: none;
+		width: 100%;
+		border-right: none;
+		margin: 30px 0 30px 0;
+		margin-right: 0px;
+		padding: 0 10px;
+	}
+	.checkout .FacebookLoginForm {
+		float: none;
+		width: 100%;
+	}
+	.ProductList .ListPrimarySeparator,
+	.ProductCrossSell .ListPrimarySeparator,
+	.ProductCatalogueSearchResults .ListPrimarySeparator {
+		font-size: 24px;
+	}
+	.ProductList .CategorySummary,
+	.ProductCrossSell .CategorySummary,
+	.ProductCatalogueSearchResults .CategorySummary {
+		font-size: 14px;
+	}
+	#FooterLinks {
+		padding: 25px 0 0px 0px;
+	}
+	#outerWrapper.people-profile-1 #cPC_2col_Right {
+		float: right;
+		width: 100%;
+	}
+	.Vineyards .ThumbnailTable {
+		width: 100%;
+	}
+	.Vineyards .ThumbnailTable+.HTMLContent {
+		width: 100%;
+	}
+	.Vineyards .ThumbnailTable+.HTMLContent {
+		text-align: center;
+	}
+	.ProductDetails .ProductDescription {
+		max-width: 100%;
+		float: left;
+	}
+	#outerWrapper.home .PageList .ListItem {
+		height: 200px;
+		/* margin: 0 !important; */
+		overflow: hidden;
+		max-width: 320px;
+		margin: 0 auto !important;
+	}
+	.PageList .HoverOverlay {
+		height: 110px;
+		max-width: 320px;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+	}
+	#kea img {
+		width: 75% !important;
+		text-align: center;
+	}
+	.KEA h1 {
+		margin: 0 0 0 10px;
+	}
+	.ModuleColumns.CellarClubHeader .ListItemWrapper:nth-child(1) {
+		width: 100% !important;
+		padding-bottom: 0!important
+	}
+	.ModuleColumns.CellarClubHeader .ListItemWrapper {
+		width: 33.33% !important;
+		padding: 5px 20px !important;
+	}
+	.ModuleColumns.Packages .ListItemWrapper {
+		width: 50% !important;
+		margin: 0 0 10px 0;
+	}
+	.cellarclub #cPC_2col_Left {
+		padding: 0;
+		margin-bottom: 50px !important;
+	}
+	.KEA h1 {
+		margin: 0 0 0 0px;
+	}
+	.cellarclub #cPC_2col_Right .HTMLContent+.HTMLContent {
+		-webkit-column-count: 1;
+		-moz-column-count: 1;
+		column-count: 1;
+		-webkit-column-gap: 0;
+		-moz-column-gap: 0;
+		column-gap: 0;
+	}
+	.checkout .LoginForm,
+	.checkout .FacebookLoginForm,
+	.cellarclub .LoginForm,
+	.cellarclub .FacebookLoginForm {
+		float: none;
+		width: 100%;
+		border-right: none;
+		margin: 40px 0 60px 0;
+	}
+	.cellarclub .LoginForm {
+		margin: 0;
+	}
+	.cellarclub .LoginForm:after {
+		display: none;
+	}
+	.cellarclub .FacebookLoginForm {
+		position: relative;
+		margin: 0 0 60px 0;
+	}
+	/*.cellarclub .FacebookLoginForm:after {
+    content: 'OR';
+    position: absolute;
+    color: #a5926b;
+    font-size: 40px;
+    left: 40%;
+    right: 0;
+	bottom: -60px;
+    margin: auto;
+}*/
+	.SubscriptionSignup label.EnquiryLabel {
+		line-height: inherit;
+		height: 45px;
+	}
+	.cellarclub #cH {
+		padding: 0 0 61px 0;
+	}
+	.ModuleColumns.CellarClubHeader {
+		margin-top: 10px !important;
+	}
+	.member_login_responsive {
+		display: inherit !important;
+		margin-bottom: 18px;
+		float: none !important;
+		clear: both;
+	}
+	.ResetPasswordForm input[type="image"],
+	.ForgetLoginBorder input[type="image"] {
+		margin: 0px 0 0 0;
+	}
+	.anotherworld #outerWrapper.about-us #cPC_3col_Left,
+	#outerWrapper.about-us #cPC_3col_Right {
+		width: 100%;
+	}
+	.anotherworld #cPC_0col_0 h4 {
+		font-size: 32px !important;
+		line-height: initial !important;
+	}
+	.anotherworld #outerWrapper.about-us #cPC_2col_Left img {
+		width: 80% !important;
+	}
+	.anotherworld .EnquiryError {
+		font-size: 10px;
+		padding: 5px;
+	}
+	.anotherworld #cS .HTMLContent {
+		width: 90%;
+		padding: 10px 20px;
+	}
+	.owl-theme .owl-nav .owl-next {
+		right: -30px;
+	}
+	.Wedding .owl-theme .owl-nav .owl-next {
+		right: 15px;
+	}
+
+	.owl-theme .owl-nav .owl-prev {
+		left: -30px;
+	}
+	.Wedding .owl-theme .owl-nav .owl-prev {
+		left: 15px;
+	}
+	.Wedding .owl-theme .owl-nav [class*='owl-'] {
+		top: 55px;
+	}
+	#cFleft {
+		width: 100%;
+	}
+	#cFmiddle {
+		float: none;
+		width: 100%;
+		margin: 0;
+	}
+	.rTableCell {
+		width: 100%;
+		padding-bottom: 10px;
+	}
+	#outerWrapper.about-us #cPC_2col_Right .dropcap,
+	.anotherworld .dropcap {
+		line-height: 16px !important;
+	}
+	.Wedding #outerWrapper.about-us #cPC_1col_1
+	{
+		padding: 0;
+		margin: 0;
+		
+	}
+	.CalloutStrip .Text {
+    margin: 50px 10px 0px 10px;
+	line-height: 1.2em;
+}
+}
+
+@media screen and (max-width: 420px) {
+	.ModuleColumns.CellarClubHeader .ListItemWrapper {
+		width: 100% !important;
+		float: none !important;
+		padding: 20px 10px !important;
+	}
+	.ModuleColumns.Packages .ListItemWrapper {
+		width: 100% !important;
+		float: none !important;
+		margin: 0 0 10px 0;
+	}
+	.NonHostedDpsForm .FormField label {
+		display: inline-block;
+		width: 100%;
+	}
+	.member_login {
+		display: none !important;
+	}
+	.pp_inline h3.styled-h3 br {
+		display: none;
+	}
+	.pp_inline h3.styled-h3 br:after {
+		content: ' ';
+	}
+	.pp_inline h2 {
+		line-height: 40px !important;
+	}
+	div.pp_default #pp_full_res .pp_inline {
+		padding: 40px 10px !important;
+	}
+	.pp_inline h3.styled-h3 {
+		font-size: 14px !important;
+		line-height: 14px !important;
+	}
+	a.pp_close {
+		right: 15px !important;
+	}
+	.youTubeWrapper {
+		width: 80% !important;
+	}
+	.anotherworld #cPC_1col_1 .CustomCode iframe {
+		max-width: 100%;
+		height: 170px !important;
+	}
+	.anotherworld #outerWrapper.about-us #cPC_1col_2 .HTMLContent img {
+		margin-bottom: 10px !important;
+	}
+	.anotherworld #outerWrapper.about-us #cPC_2col_3 td,
+	.anotherworld #outerWrapper.about-us #cPC_1col_2 td {
+		display: inline-block;
+		width: 100%;
+	}
+	.anotherworld #cPCWrapper .HTMLContent {
+		float: left;
+	}
+	.anotherworld #cPC_3col_Left .HTMLContent img {
+		float: none !important;
+		text-align: center;
+		margin: 20px auto !important;
+		display: block;
+	}
+	.anotherworld #outerWrapper.about-us #cPC_1col_2 .HTMLContent img {
+		width: 30px;
+		margin: 0 14px !important;
+	}
+	.owl-theme .owl-controls {
+		top: 200px;
+	}
+	.anotherworld .winner {
+		width: 270px;
+		margin: 20px auto;
+	}
+	#cPC_5col_1,
+	#cPC_5col_2,
+	#cPC_5col_3,
+	#cPC_5col_4,
+	#cPC_5col_5 {
+		border: none;
+		width: 100%;
+		float: none;
+		margin: 0 00px 20px 0;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	#cSwrapper #VillaMariaHeroBanners {
+		height: 170px !important;
+	}
+	#cH {
+		margin: 0 auto -2px auto;
+	}
+	#innerWrapper {
+		margin-top: 10px;
+	}
+	#cPC .RadMenu .rmItem {
+		float: none;
+	}
+	#cPC .RadMenu ul.rmRootGroup.rmHorizontal,
+	#cPC .RadMenuStatic ul.rmRootGroup.rmHorizontal {
+		float: inherit!important;
+		display: inline-block;
+		text-align: left;
+	}
+	#cPC .RadMenu .rmHorizontal .rmText {
+		padding: 0px 0px 0px 0px;
+	}
+	.ProductList .ListItem,
+	.ProductCatalogueSearchResults .ListItem {
+		height: 520px;
+	}
+	.ProductDetails .tabContentWrapper {
+		margin-left: -20px;
+		margin-top: 0px;
+	}
+	#cFWrapper {
+		background: none;
+	}
+	.Displaylist .RadMenu.RadMenu_SlideHorizontal {
+		z-index: 0 !important;
+	}
+	#VideoBanner,
+	#VideoBannerContainer {
+		display: none;
+		/*background-size:contain;
+height:150px*/
+	}
+	.anotherworld #VideoBanner,
+	.anotherworld #VideoBannerContainer {
+		display: block;
+		background-size: contain;
+		height: 150px;
+	}
+	.SlideDownShoppingBag {
+		margin-left: 63px;
+	}
+	#cN .Banner {
+		margin-left: 120px;
+		top: 0px;
+	}
+	#cN .Search {
+		margin-left: 40px;
+		margin-top: 30px;
+	}
+	#cFmiddle .FormBuilder input {
+		width: 200px;
+	}
+	#cFmiddle .FormBuilder input.EnquiryButton {}
+	#cFright .EventsList .ListItem {
+		width: 100%;
+	}
+	.home #cFWrapper {
+		background: none;
+	}
+	#cFright .ListSummary {
+		padding: 1em 0 2em 0;
+	}
+	#cFright .EventsList .ListItem {
+		min-height: inherit;
+		margin-bottom: 2em
+	}
+	.ListCustomTitle,
+	h1 {
+		font-size: 34px !important;
+		line-height: 50px;
+	}
+	#ctl04_cPC_ctl00_ItemList_ctl04_ListItem_ListTitleLink cufon canvas {
+		margin-left: 5px;
+	}
+	#ctl04_cPC_ctl00_ItemList_ctl04_ListItem_ListTitleLink cufon:fist-child canvas {
+		margin-left: 5px;
+	}
+	#ctl04_cPC_ctl00_ItemList_ctl04_ListItem_ListTitleLink cufon:last-child canvas {
+		margin-left: 0px;
+	}
+	#ctl04_cPC_ctl00_ItemList_ctl05_ListItem_ListTitleLink cufon canvas {
+		margin-left: 15px;
+	}
+	#cH .cLogo img {
+		width: 140px;
+		height: auto;
+		margin: 0 auto;
+	}
+	#cH {
+		padding: 0 0 60px 0;
+	}
+	#cN {
+		top: 100px;
+		padding: 20px 0 0 0;
+	}
+	#cN .Search.display {
+		margin-left: -60px;
+	}
+	body.scrolled-over-210 #cN .RadMenuStatic .rmHorizontal .rmLink {}
+	#cS img {
+		float: none !important;
+		clear: both;
+		display: block;
+		margin: 0 auto;
+	}
+	.people-profile-1 .ThumbnailTable {
+		display: none;
+	}
+	.news-and-events-events #cS {
+		display: none;
+	}
+	.news-and-events-events-event-details #cS .CustomCode .BackLink {
+		display: none
+	}
+	#RegionImages .region-image-1,
+	#RegionImages .region-image-2,
+	#RegionImages .region-image-3 {
+		max-width: 100%;
+		height: auto !important;
+	}
+	#kea img {
+		width: 100% !important;
+		text-align: center;
+	}
+	.member_login {
+		display: none !important;
+	}
+	.anotherworld #outerWrapper.about-us #cPC_1col_2 .HTMLContent img {
+		width: 30px;
+		margin: 0 10px !important;
+	}
+	#outerWrapper.about-us #cPC_2col_Right .dropcap,
+	.anotherworld .dropcap {
+		line-height: 16px !important;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	#cS {
+		padding: 20px;
+		width: 88%;
+	}
+}

@@ -1,0 +1,190 @@
+/* 	[ COPYRIGHT CONTEGRO  - Intelligent Website Content Management ]   */
+/* 	[ http://www.contegro.com ]   */
+
+
+
+/* -----[ CONTENT ]------------------------------------------------------- */
+
+/*
+		These styles can be customised to suit design requirements.
+		They are applied to content through the word editor.
+		Change or add class names as required.
+		Duplicate styles to FTBDesign.
+*/
+
+/* === [ WORD EDITOR ] === */
+
+.Normal {
+}
+.selectedpackage{
+color:#FFFFFF;
+background:#A99068;
+padding:15px;
+width:260px;
+}
+.description {
+	font-size: 14px !important;
+	line-height: 20px !important;
+	color: #646462 !important;
+}
+.Paragraph-Dropcap {
+    display: block;
+    float: left;
+    font-size: 105px;
+    line-height: 1em;
+    margin: 0 20px 0 0;
+    text-transform: uppercase;}
+.description-red {
+	font-size: 14px !important;
+	line-height: 20px !important;
+	color: #b70735 !important;
+}
+.HTMLContent .BackLink,
+.BackLink {
+	font-size: 13px;
+	letter-spacing: 2px;
+	font-family: "nimbus-sans-extended", sans-serif;
+	text-transform: uppercase;
+	height:20px;
+	overflow:hidden;
+	margin: 15px 0 15px 0;
+	text-decoration: none;
+}
+.HTMLContent .BackLink a,
+.BackLink a {
+	color:#000;
+	text-decoration: none;
+	border-bottom-style: none;
+	height: 1.5em;
+	overflow: hidden;
+	display: inline-block;
+}
+.HTMLContent .BackLink img,
+.BackLink img {
+	width:20px;
+	height:auto;
+	margin-bottom:-26px;
+}
+.HTMLContent .BackLink a:hover img,
+.BackLink a:hover img {
+	position: relative;
+	top: -20px;
+}
+.FAQ-Question {
+	font-weight: bold;
+	color: #979596;
+	background: url(../../Templates/_images/faq_q.gif) no-repeat left 0.4em;
+	padding: 5px 30px;
+	margin: 20px 0px 0px 0px;
+	border-bottom: 1px solid #cccccc;
+}
+.FAQ-Answer {
+	background: url(../../Templates/_images/faq_a.gif) no-repeat left 0.1em;
+	margin-top: 5px;
+	padding-left: 30px;
+	padding-bottom: 5px;
+}
+.Highlight-Top {
+	padding: 30px 0 0 30px;
+	font-size: 1.2em;
+	letter-spacing: 1px;
+	margin: 20px 0 0.6em 0;
+	font-weight: bold;
+	color: #ac9142;
+	text-transform: uppercase;
+}
+.Highlight-Bottom {
+	margin-top: 5px;
+	padding: 0 20px 5px 30px;
+}
+.Highlight-Small {
+	font-size: 1.1em;
+	border: 1px solid #CCCCCC;
+	background: #efefef;
+	padding: 1em 2em;
+}
+.Highlight-Medium {
+	text-align: center;
+	background-color: #eeeeee;
+	padding: 1em 2em;
+}
+.Highlight-Large {
+	font-size: 1.2em;
+	color: #333333;
+	font-weight: bold;
+	margin-bottom: 0.9em;
+	padding: 1em 2em;
+	background-color: #DBDBDB;
+	border-bottom: 1px solid #CCCCCC;
+}
+.HighlightLink {
+	border-top: 1px solid #EFEFEF;
+	border-bottom: 1px solid #EFEFEF;
+	background: url(../../Templates/_images/icon_tick.gif) no-repeat 0.3em 0.6em;
+	padding: 0.6em 2em 0.6em 2em;
+	margin-bottom: 10px;
+	clear: both;
+}
+.Quote {
+	font-size: 22px;
+	line-height: 30px;
+	font-weight: 400;
+	font-style: normal;
+	color:#a5926b;
+	text-transform: uppercase;
+	text-align: center;
+}
+.QuoteLowercase {
+	font-size: 22px;
+	line-height: 40px;
+	font-weight: 400;
+	font-style: normal;
+	color:#a5926b;
+	text-align: center;
+}
+
+
+.firsttotry .Quote {
+	margin: 30px 0px 15px 0px;
+	font-size: 22px;
+	line-height: 30px;
+	font-weight: 400;
+	font-style: normal;
+	color:#a5926b;
+	text-transform: uppercase;
+	text-align: center;
+}
+.firsttotry .QuoteLowercase {
+	font-size: 22px;
+	line-height: 40px;
+	font-weight: 400;
+	font-style: italic;
+	color:#a5926b;
+	text-align: center;
+}
+
+
+.Quote + p {
+	color:#a5926b;
+	margin-top: 27px;
+	text-align: center;
+}
+
+.anotherworld #cPC_3col_Left li {
+	font-size:18px;
+	line-height: 25px;
+	list-style-type: disc;
+	margin-left: 30px;
+}
+
+.anotherworld a.anchor {
+    display: block;
+    position: relative;
+    top: 20px;
+    visibility: hidden;
+
+}
+
+#cPC_2col_Right .HTMLContent ul {
+    margin: 20px 0px 20px 35px;
+}

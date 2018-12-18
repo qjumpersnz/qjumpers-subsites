@@ -1,0 +1,98 @@
+/* 	[ COPYRIGHT CONTEGRO  - Intelligent Website Content Management ]   */
+/* 	[ http://www.contegro.com ]   */
+
+
+
+/* -----[ BANNER ]--------------------------------------------------------------------- */
+
+/*
+		Do not change class names. Alter attributes as required.
+		Prefix with Continer ID to apply style to individual containers.
+*/
+
+/* === [ GLOBAL STYLE ] === */
+
+/* === [ GLOBAL STYLE ] === */
+
+	.Banner {
+		position: relative;
+		margin: 0px;
+		padding: 0px;
+		clear: both;
+	}
+	
+	.home .Banner {
+		text-align:center;
+		margin-bottom:60px;
+	}
+	.Banner img{
+		max-width:100%;
+	}
+	
+	#cS .Banner{
+		text-align: center
+		}
+
+
+/* === [ Primary Container ] === */
+.landing-aus  #cPC_2col_Left .Banner {
+	clear: none;
+	float: left;
+	margin: 0px 50px 0 0px;
+	width: 300px;
+}
+.landing-aus #cPC_2col_Left .Banner + .HTMLContent + .Banner {
+	clear: none;
+	float: right;
+	margin: 0px 0 0 50px;
+	width: 300px;
+}
+
+	.landing-aus #cPC_2col_Left .Banner + .HTMLContent + .Banner a.BannerImage,
+	.landing-aus  #cPC_2col_Left .Banner a.BannerImage {
+		width: 300px;
+		text-align: center;
+	}
+
+
+#cN .Banner {
+	clear: none;
+	float: right;
+	width: 30px;
+	height: 20px;
+	overflow: hidden;
+	margin: -6px 0 0 10px;
+}
+
+	body.country-NZ #cN .Banner + .Banner { display: block; }
+
+
+	#cN .Banner img {
+		width: 30px;
+		height: 40px;
+	}
+		#cN .Banner img:hover {
+			margin-top: -20px;
+		}
+
+
+
+/* Automatically Updateded in patch version 4.5.2 */
+
+/* -----[ Patch 4.6.2 ]----- */
+/* -----[ Feature ID #1318 ]----- */
+/* -----[ Added to Banner.css  ]----- */
+/* -----[ Responsive CSS ]----------------------------------------------------- */
+.BackgroundBanner a {
+	display: block;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.buy-online #LeftContent .Banner {
+	margin-top: 15px;
+}
+
+.OAW2017 #cS .Banner img {
+    max-width: 1200px;
+}

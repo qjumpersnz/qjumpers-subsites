@@ -1504,12 +1504,13 @@ input#root_qualification_0_name, input#root_qualification_1_name, input#root_qua
 
 .qjumpers .PathForm__review___2YhQP.path-form-review h4.panel-title a {
 	display: flex;
+	margin-left: 10px;
+    margin-top: 5px;
 }
 
 .qjumpers .PathForm__review___2YhQP.path-form-review span.title {
 	flex-grow: 1;
-	margin-left: 10px;
-    margin-top: 5px;
+
 }
 
 .qjumpers .PathForm__review___2YhQP.path-form-review span.toggle-hide {

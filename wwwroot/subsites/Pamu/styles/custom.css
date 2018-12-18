@@ -781,3 +781,38 @@
         width: auto;
     }
 }
+
+.FileUpload__dropZone___2Yw9t.btn {
+    padding-bottom: 48px;
+}
+
+.qjumpers button.btn.btn {
+    padding-bottom: 38px;
+}
+
+@media only screen and (min-width: 993px){
+.container {
+    width: 100%;
+}}
+
+#toast-container {
+    z-index: 0;
+}
+
+.qjumpers button.btn.btn-info.btn-add.btn-text, .qjumpers button.btn.btn-danger.array-item-remove.btn-border.btn-text {
+    padding-bottom: 45px;
+}
+
+.qjumpers input.rw-input {
+    margin-bottom: 0px;
+    padding-right: 0px;
+}
+
+.rw-widget > .rw-select {
+    border: 0;
+    right: 10px;
+}
+
+.qjumpers .rw-datetimepicker.rw-widget {
+    padding-right: 18px;
+}

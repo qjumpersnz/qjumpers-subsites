@@ -1,0 +1,192 @@
+/* -----[ CUSTOM CODE ]--------------------------------------------------------------------- */
+
+/*
+		Do not change class names. Alter attributes as required.
+		Prefix with Continer ID to apply style to individual containers.
+*/
+
+/* === [ GLOBAL STYLE ] === */
+
+	.CustomCode {
+		position: relative;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+		clear: both;
+	}
+
+/* === [ Text links ] === */
+.CustomCode .textLink {
+		font-size: 13px;
+		letter-spacing: 2px;
+		font-family: "nimbus-sans-extended",sans-serif;
+		text-transform: uppercase;
+		height:20px; overflow:hidden;
+		margin: 15px 0 15px 0;
+	}
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px; 
+	height: 0;
+}
+
+.youTubeWrapper .videoWrapper {
+	padding-top: 0;
+
+}
+.youTubeWrapper .CustomCode {
+	width: 98%;
+
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+#cS .CustomCode .BackLink {
+	width: 1200px;
+	height: 20px;
+	position: absolute;
+	top: -53px;
+	left: 50%;
+	margin-left: -600px;
+	display: block; 
+	padding: 0px 0;
+	overflow: hidden;
+}
+.product-detail #cS .CustomCode .BackLink {
+	top: -14px;
+}
+
+	.CustomCode .textLink a, #cS .CustomCode .BackLink a {
+		color:#000;
+		text-decoration: none;
+	}
+	.CustomCode .textLink img, #cS .CustomCode .BackLink img {
+		width:20px;
+		height:auto;
+		margin-bottom:-26px;
+	}
+	
+/* First To Try Styling*/
+.FirstToTry-Banner {
+width: 100%;
+}
+body.country-NZ .stockistsbutton{
+	display:none;
+}
+
+.CustomCode li.timeline-TweetList-tweet {
+    width: 33.33%;
+    float: left;
+}
+
+
+.LiquorLicense {
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 20px 0 5px;
+}
+
+.LiquorLicense span {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #A5926B;
+}
+
+.LiquorLicense a {
+    display: inline-block;
+    margin: 0 auto;
+    font-size: 12px;
+    text-decoration: none;
+    width: 300px;
+    color: #646462;
+}
+
+/* Open Another World NZ*/
+
+.oaw-discover #cPC_3col_Left .CustomCode img,
+.oaw-discover #cPC_3col_Right .CustomCode img  {
+    float: left;
+    max-height: 300px;
+    padding-right: 50px;
+}
+
+.oaw-discover #cPC_3col_Left .CustomCode,
+.oaw-discover #cPC_3col_Right .CustomCode{
+	padding-top: 25px;
+}
+
+.OAW2017 #cPC_0col_0 .CustomCode p {
+    padding-right: 35px;
+}
+
+/* === [ Callout Strip ] === */
+
+.CalloutStrip.Show {
+	width:100%;
+	height: auto;
+	padding: 10px 0;
+	opacity:1
+}
+.CalloutStrip{
+    height: 0;
+    padding: 0;
+	opacity:0;
+	-webkit-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+	/* START cookie message sticky styles */
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+	/* END cookie message sticky styles */
+}
+.CalloutStrip .CalloutStripWrapper{
+	text-align:center;
+	max-width: 1200px;
+	margin: 0px auto;
+}
+
+.CalloutStrip .CalloutStripWrapper a{
+	color:#ffffff;
+}
+.CalloutStrip .Text {
+	font-family: "nimbus-sans-extended",sans-serif;
+    font-size: 14px; /* Avoids extra line breaks in Cookies footer, YY-23715-25-09-18 */
+    display: inline-block;
+    margin: 0 220px 0 110px;
+	line-height: 1.5em;
+}
+.CalloutStrip .CalloutStripButton.CalloutStripButton1{
+	display: none;
+	margin: 10px 0 0 0;
+}
+.CalloutStrip .CalloutStripButton1 p{
+	color:#ffffff;
+	text-decoration:none;
+	font-family: 'robotomedium', sans-serif;
+	border:1px solid #ffffff;
+	padding:5px 15px;
+	border-radius:2px;
+	font-size:16px;
+	margin:0 0px 0 0;
+	-webkit-transition: all 0.2s ease-out;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+	transition: all 0.2s ease-out;  /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+}
+.CalloutStrip .CalloutStripButton1 p:hover{
+	background:#ffffff;
+	color:#bda159
+}
+.CalloutStripClose{
+	position: absolute;
+	top: 8px;
+	right: 30px;
+}

@@ -1,0 +1,723 @@
+/* 	[ COPYRIGHT CONTEGRO  - Intelligent Website Content Management ]   */
+/* 	[ http://www.contegro.com ]   */
+
+
+
+/* -----[ NAVIGATION MODULES ]--------------------------------------------------------------------- */
+
+/*
+	Default Class Selectors and ID Selectors have been created for you.
+	Alter the Property and Value to reflect your design as required.
+	Choose the Navigation settings that suits your design within Contegro Administration, 
+	by changing the Module Settings on an individual page, or within the Template for a Global Setting.
+	Encompases Bread Crumb, Navigation Modules.
+	Prefix each Class Selector with a custom CSS class in the Module/Template Settings if required.
+*/
+
+.MobileShowNav {
+	display: none;
+}
+
+/* === [ BREADCRUMB ] ============================== */
+
+.Breadcrumb {
+	padding: 0 0 0 0px;
+	margin: 0 0 10px 0;
+	font-size: 11px;
+}
+	.Breadcrumb a { 
+		margin: 0px 15px 0px 0px;
+		border-bottom: 1px #999999 dotted;
+		text-decoration: none;
+	}
+	.Breadcrumb a:hover {
+		border-bottom: 1px #CCCCCC dotted;
+	}
+
+.Breadcrumb {
+	display:none;
+}
+#AutoPageTitle{
+font-size: 40px;
+text-decoration: none;
+cursor: default;
+border: none;
+}
+#AutoPageTitle:before{
+content:"Blog entries: ";
+}
+
+/* -----[ NAVIGATION ]--------------------------------------------------------------------- */
+
+/* === [ Skin Resetting - Leave alone === Starts ] === */
+	.RadMenuStatic .rmHorizontal .rmItem {clear: none; }
+	.RadMenuStatic .rmItem {padding: 0; }
+	.RadMenuStatic .rmHorizontal .rmItem {float: left; list-style: none outside none; font-size: 13px;	line-height: 1em;
+}
+	.RadMenuStatic .rmVertical .rmItem {list-style: none outside none; }
+	.RadMenu .rmRootGroup .rmItem .rmGroup {padding-bottom: 0px; }
+	ul.rmVertical {margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; }
+	ul.rmHorizontal { argin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; }	
+	.rmVertical .rmLink {float: none; 
+		color: #646462}/* Must be Float=None so that Height is recognised */
+	.rmText { cursor: pointer; cursor: hand; }
+/* === [ Skin Resetting === Ends ] === */
+
+
+/* === [ Wrapping Div's for styling ] === */
+/* === [ Prefix with a custom CSS class in the Module/Template Settings if required ] === */
+.Navigation {
+	clear: none;
+	width: 1075px;
+	float: left;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	max-width: 100%;
+}
+#cPC_4col_1 .Navigation {
+	margin: 0px 0px 40px 0px;
+}
+#cS .Navigation {
+	display:none;
+}
+.TopLeft {
+}
+.TopRight {
+}
+.BottomLeft {
+}
+.BottomRight {
+}
+/* === [ Custom Title ] === */
+.CustomTitle {
+	padding: 4px 0px;
+	clear: both;
+	display: block;
+}
+
+/* === [ Slide Navigation (RadMenu) ] === */ 
+
+/* === [ Wrapping Divs ] === */
+/* === [ Style for backgrounds, heights & widths ] === */
+	/* === [ Slide - Horizontal ] === */
+	.RadMenu.RadMenu_SlideHorizontal {
+		width: 100%;
+		text-align: center;
+	}
+	#cS .RadMenu.RadMenu_SlideHorizontal {
+		z-index:50 !important;
+	}
+	/* === [ Slide - Vertical ] === */
+	.RadMenu.RadMenu_SlideVertical {
+		width: 100%;
+	}
+
+/* === [ Link Top/Bottom Padding, Background, Border, Width ] ===  */
+.RadMenu .rmLink {
+	text-decoration: none;
+	width: 100%;
+}
+	/* === [ Slide - Horizontal ] === */ 
+	.RadMenu .rmHorizontal .rmLink {
+		padding: 0px 0px 0px 0px;
+		min-width: 10px !important;
+		font-family: "nimbus-sans-extended",sans-serif;
+		text-align: center;
+		font-size: 13px;
+		letter-spacing: 2px;
+		color:#646462;
+		text-transform: uppercase;
+	}
+		/* === [ Level 1 ] === */ 
+		.RadMenu .rmHorizontal .rmVertical.rmLevel1 .rmLink {
+			min-width: 150px !important;
+		}
+	/* === [ Slide - Vertical ] === */ 
+	.RadMenu .rmVertical .rmLink {
+		display: block;
+		float: left;
+		padding: 6px 0px 6px 0px;
+		color:#000;
+		min-width: 230px !important;
+		text-align: left;
+	}
+		/* === [ Level 1 ] ===  */
+		.RadMenu .rmVertical.rmLevel1 .rmLink {
+			min-width: 150px !important;
+		}
+
+/* === [ Link Left/Right Border ] ===  */
+	/* === [ Slide - Horizontal ] === */
+	.RadMenu .rmHorizontal .rmLink.rmRootLink {
+	}
+	
+/* === [ Float Left or Right in Container ] === */
+	/* === [ Slide - Horizontal ] === */
+	.RadMenu ul.rmRootGroup.rmHorizontal, .RadMenuStatic ul.rmRootGroup.rmHorizontal {
+			float: none!important;
+			display: inline-block;
+			text-align: center;	
+	}
+	.RadMenu .rmItem {
+	}
+/* === [ Group Left/Right Border ] ===  */
+	/* === [ Slide - Horizontal ] === */
+	.RadMenu .rmRootGroup.rmVertical,
+	.RadMenu .rmVertical.rmGroup {
+		
+	}
+	.RadMenu .rmSlide {
+		background: #f7f6f2;
+		border-bottom: 1px solid #ccc8be;
+		width: 1200px!important;
+		left: 0!important;
+		margin-top: 20px;
+		padding: 15px 0;
+	}
+
+/* === [ Link Left/Right Padding ] ===  */
+/* === [ Normal ] ===  */
+.RadMenu .rmHorizontal .rmText {
+	padding: 0px 20px 0px 20px;
+}
+#cS .RadMenu .rmHorizontal .rmText {
+	padding: 0px 10px 0px 10px;
+}
+.RadMenu .rmVertical .rmLevel1 .rmText,
+.RadMenu .rmVertical .rmLevel2 .rmText,
+.RadMenu .rmVertical .rmLevel3 .rmText {
+	padding: 0px 10px 0px 10px;
+}
+.RadMenu .rmVertical .rmText {
+	padding: 0px 10px 0px 10px;
+}
+
+/* === [ Menu Selected State ] ===  */
+/* === [ Normal ] ===  */
+.RadMenu .rmLink.MenuSelected {
+	color: #000;
+}
+	/* === [ Level 1 ] ===  */
+	.RadMenu .rmLevel1 .rmLink.MenuSelected {
+		color:#b3093a;
+	}
+		/* === [ Level 2 ] ===  */
+		.RadMenu .rmLevel2 .rmLink.MenuSelected {
+		}
+			/* === [ Level 3 ] ===  */
+			.RadMenu .rmLevel3 .rmLink.MenuSelected {
+			}
+
+/* === [ Selected Parent State ] ===  */
+/* === [ Normal ] ===  */
+.RadMenu .rmLink.SelectedParent1 {
+	color: #000;
+}
+	/* === [ Level 2 ] ===  */
+	.RadMenu .rmLink.SelectedParent2 {
+			color:#b3093a;
+	}
+		/* === [ Level 3 ] ===  */
+		.RadMenu .rmLink.SelectedParent3 {
+		}
+			/* === [ Level 4 ] ===  */
+			.RadMenu .rmLink.SelectedParent4 {
+			}
+
+/* === [ Hover State ] ===  */
+/* === [ Normal ] ===  */
+.RadMenu .rmLink.rmExpanded,
+.RadMenu .rmLink.rmFocused,
+.RadMenu .rmLink:hover {
+		color: #000;
+}
+	/* === [ Level 1 ] ===  */
+	.RadMenu .rmLevel1 .rmLink.rmExpanded,
+	.RadMenu .rmLevel1 .rmLink.rmFocused,
+	.RadMenu .rmLevel1 .rmLink:hover{
+		color:#b3093a;
+	}
+		/* === [ Level 2 ] ===  */
+		.RadMenu .rmLevel2 .rmLink.rmExpanded,
+		.RadMenu .rmLevel2 .rmLink.rmFocused,
+		.RadMenu .rmLevel2 .rmLink:hover {
+		}
+			/* === [ Level 3 ] ===  */
+			.RadMenu .rmLevel3 .rmLink.rmExpanded,
+			.RadMenu .rmLevel3 .rmLink.rmFocused,
+			.RadMenu .rmLevel3 .rmLink:hover {
+			}
+			
+/* === [ Expand Indicator. Add image background or border ] ===  */
+.RadMenu .rmVertical .rmText.rmExpandLeft,
+.RadMenu .rmVertical .rmText.rmExpandRight {
+	padding: 0 30px 0px 10px;
+	background: url(https://www.villamaria.co.nz/Templates/_images/NavigationArrow.gif) no-repeat right center;
+}
+	
+
+	
+/* === [ Static Navigation ] === */ 
+
+/* === [ Wrapping Divs ] === */
+/* === [ Style for backgrounds, heights & widths ] === */
+	/* === [ Static - Horizontal ] === */
+	.RadMenuStatic.RadMenu_SlideHorizontal {
+		width: 100%;
+		height: 28px;
+	}
+	/* === [ Static - Vertical ] === */
+	.RadMenuStatic.RadMenu_SlideVertical {
+		width: 100%;
+	}
+
+/* === [ Link Top/Bottom Padding, Background, Border, Width ] ===  */
+.RadMenuStatic .rmLink {
+	text-decoration: none;
+	width: 100%;
+}
+	/* === [ Static - Horizontal ] === */
+	.RadMenuStatic .rmHorizontal .rmLink {
+		padding: 0px 0px 0px 0px;
+		min-width: 10px !important;
+		font-family: "nimbus-sans-extended",sans-serif;
+		text-align: center;
+		letter-spacing: 2px;
+		color:#646462;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 12px;
+		line-height: 1em;
+	}
+		/* === [ Level 1 ] === */ 
+		.RadMenuStatic .rmHorizontal .rmLevel1 .rmLink {
+			/* width: 150px !important; */
+		}
+	/* === [ Static - Vertical ] === */
+	.RadMenuStatic .rmVertical .rmLink {
+		padding: 6px 0px 6px 0px;
+		display: block;
+		width: 230px;
+	}
+		/* === [ Level 1 ] === */ 
+		.RadMenuStatic .rmVertical .rmLevel1 .rmLink {
+			width: 230px !important;
+		}
+	/* === [ Static - Horizontal ] === */
+	.RadMenuStatic .rmHorizontal .rmLink.rmRootLink {
+	}
+
+/* === [ Link Left/Right Padding ] ===  */
+/* === [ Normal ] ===  */
+.RadMenuStatic .rmHorizontal .rmText {
+	padding: 0px 25px;
+}
+#FooterLinks .RadMenuStatic .rmHorizontal .rmItem {
+			text-align: center;
+			float: none;
+			display: inline;
+}
+
+
+.RadMenuStatic .rmHorizontal .rmVertical .rmLevel1 .rmText
+.RadMenuStatic .rmHorizontal .rmVertical .rmLevel2 .rmText
+.RadMenuStatic .rmHorizontal .rmVertical .rmLevel3 .rmText {
+	padding: 0px 10px 0px 10px;
+}
+.RadMenuStatic .rmVertical .rmText {
+	padding: 0px 10px 0px 10px;
+}
+#cPC_4col_1 .RadMenuStatic .rmVertical .rmText {
+	padding: 0px 0px 0px 0px;
+}
+	/* === [ Level 1 ] ===  */
+	.RadMenuStatic .rmVertical .rmLevel1 .rmText {
+		padding: 0px 10px 0px 20px;
+	}
+		/* === [ Level 2 ] ===  */
+		.RadMenuStatic .rmVertical .rmLevel2 .rmText {
+			padding: 0px 10px 0px 30px;
+		}
+			/* === [ Level 3 ] ===  */
+			.RadMenuStatic .rmVertical .rmLevel3 .rmText {
+				padding: 0px 10px 0px 40px;
+			}
+			
+/* === [ Menu Selected State ] ===  */
+/* === [ Normal ] ===  */
+.RadMenuStatic .rmLink.MenuSelected {
+	color: #000;
+}
+	/* === [ Level 1 ] ===  */
+	.RadMenuStatic .rmLevel1 .rmLink.MenuSelected {
+	}
+		/* === [ Level 2 ] ===  */
+		.RadMenuStatic .rmLevel2 .rmLink.MenuSelected {
+		}
+			/* === [ Level 3 ] ===  */
+			.RadMenuStatic .rmLevel3 .rmLink.MenuSelected {
+			}
+
+/* === [ Selected Parent State ] ===  */
+/* === [ Normal ] ===  */
+.RadMenuStatic .rmLink.SelectedParent1 {
+	color: #000;
+}
+	/* === [ Level 2 ] ===  */
+	.RadMenuStatic .rmLink.SelectedParent2 {
+	}
+		/* === [ Level 3 ] ===  */
+		.RadMenuStatic .rmLink.SelectedParent3 {
+		}
+			/* === [ Level 4 ] ===  */
+			.RadMenuStatic .rmLink.SelectedParent4 {
+			}
+
+/* === [ Hover State ] ===  */
+/* === [ Normal ] ===  */
+.RadMenuStatic .rmLink.rmExpanded,
+.RadMenuStatic .rmLink.rmFocused,
+.RadMenuStatic .rmLink:hover {
+	color: #000;
+}
+	/* === [ Level 1 ] ===  */
+	.RadMenuStatic .rmLevel1 .rmLink.rmExpanded,
+	.RadMenuStatic .rmLevel1 .rmLink.rmFocused,
+	.RadMenuStatic .rmLevel1 .rmLink:hover{
+	}
+		/* === [ Level 2 ] ===  */
+		.RadMenuStatic .rmLevel2 .rmLink.rmExpanded,
+		.RadMenuStatic .rmLevel2 .rmLink.rmFocused,
+		.RadMenuStatic .rmLevel2 .rmLink:hover {
+		}
+			/* === [ Level 3 ] ===  */
+			.RadMenuStatic .rmLevel3 .rmLink.rmExpanded,
+			.RadMenuStatic .rmLevel3 .rmLink.rmFocused,
+			.RadMenuStatic .rmLevel3 .rmLink:hover {
+			}
+			
+/* === [ Expand Indicator. Add image background ] ===  */
+.RadMenuStatic .rmVertical .rmText.rmExpandLeft,
+.RadMenuStatic .rmVertical .rmText.rmExpandRight {
+	padding: 0 30px 0px 10px;
+	background: url(https://www.villamaria.co.nz/Templates/_images/NavigationArrow.gif) no-repeat right center;
+}
+
+/* === [ UNIQUE NAVIGATION ] ============================== */
+
+.NavigationUnique { /* unique navigation container */
+            margin: 0;
+            padding: 0;
+}
+            .navunique { /* individual link container */
+                        text-transform: capitalize;
+                        margin: 0;
+                        padding: 0;
+            }
+                        .navunique a:link, 
+                        .navunique a:visited, 
+                        .navunique a:hover, 
+                        .navunique a:active { /* individual links */
+                                    font-size: 80%;
+                                    color: #000;
+                                    text-decoration: none;
+                                    margin: 0;
+                                    padding: 0 4px;
+                                    border-left: 1px solid #000;
+                        }
+                        span.navunique:first-child a:link, 
+                        span.navunique:first-child a:visited, 
+                        span.navunique:first-child a:hover, 
+                        span.navunique:first-child a:active { /* link inside the first individual link container */
+                                    border-left: none; 
+                        }
+                        .navunique a:hover { /* non selected hover state */
+                                    color: #ccc;
+                        }
+                                   .navunique a.MenuSelected:link, 
+                                    .navunique a.MenuSelected:visited, 
+                                    .navunique a.MenuSelected:hover, 
+                                    .navunique a.MenuSelected:active { /* selected state */
+                                                color: #ccc;
+                                    }
+
+	
+
+	.blognav{
+		min-height: 200px;
+		margin-top:12px;
+		width: 228px;
+		border: 6px solid #eee;
+		background-image: none;
+		background: #fbfbfb;
+		padding: 10px 20px 20px 20px;
+	}
+	.blognav .CustomTitle{
+		margin-top: 25px;
+		padding: 0;
+		color: #bb3234;
+		font-size: 2.2em;
+		font-weight: 100;
+		margin-bottom: 0.6em;
+		text-decoration: none;
+	}
+	.blognav li,
+	.blognav ul{
+		margin:0;
+		padding:0;
+		list-style-type: none;
+		margin-bottom:4px;
+	}
+	.blognav a,
+	.blognav span{
+		padding:0;
+		text-decoration:none;
+		font-size: 1.1em;
+	}
+	.blognav .RadMenu .rmVertical .rmLink,
+	.blognav .RadMenu .rmHorizontal .rmVertical .rmLink {
+		padding:0;
+		cursor:pointer;
+	}
+
+
+/* primary navigation */
+
+#cN .Navigation {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.contegro_ie7 #cN .Navigation {
+	left: 0px;
+}
+
+#cN .RadMenuStatic.RadMenu_SlideHorizontal {
+	text-align: center;
+	font-size: 13px;
+	letter-spacing: 2px;
+	height: auto;
+}
+	#cN .RadMenuStatic .rmHorizontal .rmItem {
+		display: inline-block;
+		float: none;
+		
+	}
+	.contegro_ie7 #cN .RadMenuStatic .rmHorizontal .rmItem {
+		display: inline;
+		float: left;
+	}
+	.contegro_ie7 #cN .RadMenuStatic .rmHorizontal .rmStatic .rmItem {
+		display: block;
+	}
+
+	#cN .RadMenuStatic .rmHorizontal .rmLink {
+		colour: #646462;
+	}
+		#cN .RadMenuStatic .rmHorizontal .rmText {
+			padding: 0 18px;
+		}
+
+	#cN .rmItem .rmStatic {
+		display: none;
+		
+		        box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;		
+	}
+	#cN .rmItem .rmStatic.display {
+		display: block;
+		z-index:5000000;
+		position: absolute;
+		width: 100%;
+		top: 29px;
+		left: 50%;
+		margin-left: -600px; /* this'll get updated by javascript... */
+		background: #F7F6F2;
+		border-top: 1px #DDDCD8 solid;
+		border-bottom: 1px #DDDCD8 solid;
+		padding: 2em 0;
+	}
+	.contegro_firefox #cN .rmItem .rmStatic.display {
+		top: 2.1em;
+	}
+	#cPC .RadMenu.RadMenu_SlideHorizontal{
+	z-index:500 !important;
+	}
+
+		/*
+		#cN .rmItem .rmStatic.display .rmStatic {
+			display: block;
+			margin: 1em 0 1em 1em;
+		}
+		*/
+
+
+	#cN .rmItem .rmStatic.display:before {
+		width: 52px;
+		height: 20px;
+		content: "";
+		background: url(../../templates/_images/dropdown_arrow_1x.png) 0 0 no-repeat;
+		display: block;
+		position: absolute;
+		top: -16px;
+		left: 50%;
+	}
+	html.backgroundsize #cN .rmItem .rmStatic.display:before {
+		background-image: url(../../templates/_images/dropdown_arrow_2x.png);
+		background-size: 52px 20px;
+	}
+
+/*		#cN .rmItem .rmStatic.subnav-about:before                 { margin-left: -379px; }
+		#cN .rmItem .rmStatic.subnav-wines:before                 { margin-left: -304px; }
+		#cN .rmItem .rmStatic.subnav-news-and-events:before       { margin-left: -191px; }
+		#cN .rmItem .rmStatic.subnav-cafe-and-cellar-doors:before { margin-left:  -14px; }
+		#cN .rmItem .rmStatic.subnav-contact:before               { margin-left:  226px; }
+		#cN .rmItem .rmStatic.subnav-buy:before              	  { margin-left:  170px; }
+		#cN .rmItem .rmStatic.subnav-buy:before              	  { margin-left:  270px; }*/
+
+
+		#cN .rmItem .rmStatic.subnav-about:before                 {margin-left: -500px;}
+		#cN .rmItem .rmStatic.subnav-wines:before                 {margin-left: -410px;}
+		#cN .rmItem .rmStatic.subnav-news-and-events:before       {margin-left: -280px;}
+		#cN .rmItem .rmStatic.subnav-cellar-club:before        	  {margin-left: -120px;}
+		#cN .rmItem .rmStatic.subnav-cafe-and-cellar-doors:before {margin-left: 60px;}
+		#cN .rmItem .rmStatic.subnav-contact:before               { margin-left:  140px; }
+		#cN .rmItem .rmStatic.subnav-win:before               {margin-left: 457px;}
+
+
+	#cN .rmItem .rmStatic .rmItem {
+			display: block;
+			text-align: left;
+			width: 320px;
+			margin-left: auto;
+			margin-right: auto;
+			position: relative;
+	}
+	
+/*	#cN .rmItem .rmStatic.subnav-about .rmItem                 { left: -202px; }
+	#cN .rmItem .rmStatic.subnav-wines .rmItem                 { left: -130px; }
+	#cN .rmItem .rmStatic.subnav-news-and-events .rmItem       { left: -22px; }
+	#cN .rmItem .rmStatic.subnav-cafe-and-cellar-doors .rmItem { left: 150px; }
+	#cN .rmItem .rmStatic.subnav-buy .rmItem { left: 350px; }*/
+	
+	#cN .rmItem .rmStatic.subnav-about .rmItem                 {left: -340px;}
+	#cN .rmItem .rmStatic.subnav-wines .rmItem                 { left: -250px; }
+	#cN .rmItem .rmStatic.subnav-news-and-events .rmItem       {left: -157px;}
+	#cN .rmItem .rmStatic.subnav-cellar-club .rmItem 			{ left: 10px; }
+	#cN .rmItem .rmStatic.subnav-cafe-and-cellar-doors .rmItem {left: 160px;}
+	#cN .rmItem .rmStatic.subnav-buy .rmItem 					{ left: 350px; }
+	#cN .rmItem .rmStatic.subnav-win .rmItem 					{left: 630px;}
+	
+		#cN .rmItem .rmStatic .rmItem .rmLink {
+			padding: 0;
+			width: auto;
+			padding: .25em 0;
+			text-align: left;
+		}
+		#cN .rmItem .rmStatic .rmItem .rmText {
+			padding: 0;
+		}
+/* Filter By Navigation */
+
+.FilterBy{
+position: absolute;
+left: 50%;
+margin-left: -600px;
+width: 1190px;
+display: block;
+}
+.FilterBy .styled-select {
+float: right;
+width: 260px;
+}
+.FilterBy span:before{
+content:'Filter By: ';
+position:absolute;
+top:17px;
+right:260px;
+font-size: 13px;
+letter-spacing: 2px;
+color: #646462;
+font-family: "nimbus-sans-extended",sans-serif;
+text-transform: uppercase;
+}
+/* footer navigation */
+
+#FooterLinks .rmLink {
+	padding: 4px 0;
+}
+
+#FooterLinks .rmItem.facebook .rmLink,
+#FooterLinks .rmItem.twitter  .rmLink,
+#FooterLinks .rmItem.instagram  .rmLink {
+	background-image: url(../../templates/_images/footer-social-icons_1x.png);
+	background-repeat: no-repeat;
+	padding-left: 40px;
+	cursor:pointer;
+}
+	#FooterLinks .rmItem.facebook .rmLink .rmText,
+	#FooterLinks .rmItem.twitter  .rmLink .rmText,
+	#FooterLinks .rmItem.instagram  .rmLink .rmText {
+		padding-left: 0;
+	}
+#FooterLinks .rmItem.facebook .rmLink       { background-position: 0    0;}
+#FooterLinks .rmItem.facebook .rmLink:hover { background-position: 0  -40px;}
+#FooterLinks .rmItem.twitter  .rmLink       { background-position: 0  -80px;}
+#FooterLinks .rmItem.twitter  .rmLink:hover { background-position: 0 -120px;}
+#FooterLinks .rmItem.instagram  .rmLink       { background-position: 0  -156px;}
+#FooterLinks .rmItem.instagram  .rmLink:hover { background-position: 0 -198px;}
+
+html.backgroundsize #FooterLinks .rmItem.facebook .rmLink,
+html.backgroundsize #FooterLinks .rmItem.twitter  .rmLink,
+html.backgroundsize #FooterLinks .rmItem.instagram  .rmLink {
+	background-image: url(../../templates/_images/footer-social-icons_2x.png);
+	background-size: 40px 230px;
+	min-height: 10px;
+}
+html.backgroundsize #FooterLinks .rmItem.facebook span,
+html.backgroundsize #FooterLinks .rmItem.twitter  span,
+html.backgroundsize #FooterLinks .rmItem.instagram  span {
+	display:none;
+}
+
+/* wines sub navigation */
+
+#innerWrapper.our-wines             #cPC .Navigation,
+#innerWrapper.our-wines-white-wines #cPC .Navigation,
+#innerWrapper.our-wines-red-wines   #cPC .Navigation,
+#innerWrapper.our-wines-other-wines #cPC .Navigation,
+#innerWrapper.our-wines-wine-tiers  #cPC .Navigation {
+	position: absolute;
+	top: -111px;
+	left: -10px;
+	width: 1200px;
+	border-top: #ccc8be 1px solid;
+	border-bottom: #ccc8be 1px solid;
+	background: #f7f6f2;
+	height: 20px;
+	padding: 20px 0 19px 0;
+	z-index: 50;
+}
+	body.scrolled-over-948 #innerWrapper.our-wines             #cPC .Navigation,
+	body.scrolled-over-948 #innerWrapper.our-wines-white-wines #cPC .Navigation,
+	body.scrolled-over-948 #innerWrapper.our-wines-red-wines   #cPC .Navigation,
+	body.scrolled-over-948 #innerWrapper.our-wines-other-wines #cPC .Navigation,
+	body.scrolled-over-948 #innerWrapper.our-wines-wine-tiers  #cPC .Navigation {
+		position: fixed;
+		top: 51px;
+		left: 50%;
+		margin-left: -600px;
+	}
+	
+	#innerWrapper.our-wines             #cPC .Navigation .RadMenu ul.rmRootGroup.rmHorizontal,
+	#innerWrapper.our-wines-white-wines #cPC .Navigation .RadMenu ul.rmRootGroup.rmHorizontal,
+	#innerWrapper.our-wines-red-wines   #cPC .Navigation .RadMenu ul.rmRootGroup.rmHorizontal,
+	#innerWrapper.our-wines-other-wines #cPC .Navigation .RadMenu ul.rmRootGroup.rmHorizontal,
+	#innerWrapper.our-wines-wine-tiers  #cPC .Navigation .RadMenu ul.rmRootGroup.rmHorizontal {	
+		display: block;
+	}
+
+
+

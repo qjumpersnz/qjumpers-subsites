@@ -495,6 +495,7 @@
     border: 0;
     font-size: 20px;
     color: #000;
+    padding-bottom: 15px;
 }
 .qjumpers .path-form-review .panel-heading a {
     border-radius: 3px;
@@ -510,7 +511,7 @@
     border: 0;
     padding-left: 0;
 }
-.qjumpers .alert-warning .btn-info {
+.qjumpers .alert-warning .btn-info , .qjumpers button.btn.btn-info.btn-add.btn-text, .qjumpers button.btn.btn-info{
     padding: 9px 17px;
     background: #000;
     min-width: 100px;

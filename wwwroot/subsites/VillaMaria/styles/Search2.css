@@ -1,0 +1,591 @@
+/* 	[ COPYRIGHT CONTEGRO  - Intelligent Website Content Management ]   */
+/* 	[ http://www.contegro.com ]   */
+
+
+
+/* -----[ Search form and results ]--------------------------------------------------------------------- */
+
+/*
+		Do not change class names. Alter attributes as required.
+		Prefix with Container ID to apply style to individual containers.
+*/
+
+
+/* === [ Search form ] === */
+
+.Search { /* Container for the search form */
+	clear: both;
+	width: 100%;
+}
+#cN .Search {
+	position: relative;
+	float:right;
+	width: auto;
+	clear: none;
+	z-index: 500;
+	margin-top: -40px;
+	margin-bottom: 4px;
+	margin-right: -34px;
+}
+	#cN .Search:after {
+		width: 19px;
+		height: 16px;
+		display: block;
+		background: url(../../templates/_images/search_bg_1x.png) 0 0 no-repeat;
+		position: absolute;
+		top: 4px;
+		right: 0;
+		content: "";
+	}
+	html.backgroundsize #cN .Search:after {
+		background-image: url(../../templates/_images/search_bg_2x.png);
+		background-size: 19px 16px;
+	}
+
+	#cN .Search.display:after {
+		display: none;
+	}
+#cN .Search .FieldLabel {
+	display: none;
+}
+
+
+	.Search .ListCustomTitle {	/* Intro title for the search form */
+	}
+	.Search .IntroText {		/* Intro text for the search form */
+		font-size: 1.2em;
+		padding-bottom: 10px;
+		margin: 10px 0;
+		border-bottom: 1px #ccc solid;
+	}
+
+
+	.Search .KeywordField {
+		margin: 0px 0;
+	}
+	
+		.Search .KeywordField .FieldLabel, .Search .FormField .FieldLabel { /* "Keyword" label */
+			font-size: 1.2em;
+			margin: 0 0 4px 0;
+		}
+		
+		#panelContainer .Search .KeywordField .FormField { /* Text box container */
+			border:#c9c9c1 1px solid!important;
+			background:#fff;
+			padding: 15px 15px 16px 15px;
+			width: 250px;
+			margin-bottom: 10px;
+		}
+		#panelContainer .Search .KeywordField .FormField .InlineLabel { /* Text box container */
+			font-size: 13px;
+			letter-spacing: 2px;
+			color:#938e83;
+			font-family: "nimbus-sans-extended",sans-serif;
+			text-transform: uppercase;
+		}
+		#cN .Search .KeywordField .FormField { /* Text box container */
+		}
+			.Search .FormField input,
+			.Search .KeywordField input { /* Text box */
+				display:inline;
+				border: none;
+				width: 22px;
+				padding: 3px 0;
+				background: transparent;
+
+
+				        box-sizing: border-box;
+				   -moz-box-sizing: border-box;
+				-webkit-box-sizing: border-box;		
+
+				-webkit-transition: all 0.25s;
+				   -moz-transition: all 0.25s;
+				        transition: all 0.25s;
+
+			}
+			#panelContainer .Search .FormField input, #panelContainer .Search .KeywordField input {
+					width: 250px;
+			}
+			.Search.display .FormField input,
+			.Search.display .KeywordField input { /* Text box */
+				padding: 3px 25px 3px 3px;
+				width: 300px;
+				background-color: white;
+
+				-webkit-transition: width 0.25s, padding 0.25s;
+				   -moz-transition: width 0.25s, padding 0.25s;
+				        transition: width 0.25s, padding 0.25s;
+			}
+			
+
+
+	.Search .SearchField, .Search .SearchMethodField {
+		margin: 0px 0;
+		clear: both;
+		display: block;
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 1px;
+		color:#646462;
+	}
+		.Search .SearchField .FieldLabel { /* "Show results that have the following categories" label */
+			font-size: 1.2em;
+			margin: 10px 0 5px 0;
+		}	
+		.Search .SearchField .FormField { /* Category selector container */
+			clear: both;
+			display: block;
+			width: 500px;
+			
+		}	
+		.Search .SearchField .FormField input, #panelContainer .Search .SearchMethodField .FormField input,
+		#panelContainer .Search .SearchField .FormField input { /* Category selector container */
+			width: auto;
+		}
+	
+		.Search .CategoryListWrapper {
+			height: 160px!important;
+			margin: 0px 0 10px 0;
+		}			
+
+	.Search .FormButtons { /* Search button container */
+		float:left;
+		margin: 0px 0 0 10px;
+		display:inline;
+	}
+		.trade-and-media .Search .FormButtons { /* Search button container */
+		float:none;
+	}
+	.trade-and-media #ctl04_cPC_2col_Left_ctl02_HtmlContent,
+	.trade-and-media #ctl04_cPC_2col_Left_2_ctl02_HtmlContent{
+		margin:20px 0 0 0;
+	}
+		
+		.Search .FormButtons {
+			
+		}
+		#cN .Search .FormButtons {
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			top: 4px;
+			right: 3px;
+			display: none;
+			z-index: 100;
+			
+			-webkit-transition: opacity 0.5s 0.25s;
+			   -moz-transition: opacity 0.5s 0.25s;
+			        transition: opacity 0.5s 0.25s;
+
+		}
+		#cN .Search.display .FormButtons {
+			display: block;
+		}
+		#cN .Search .FormButtons input {
+			width: 16px;
+			height: 16px;
+		}
+
+		
+		
+.SearchResults { /* Container for the search results */
+	clear: both;
+	display: block;
+	position: relative;
+	padding: 0px 0;
+	margin: 0px 10px 0 0;
+}	
+/* === [ Search results ] === */		
+
+.SearchResults { /* Container for the search results */
+	clear: both;
+	display: block;
+}	
+.SearchResults .SearchResultsBanner { /* Title for the search results */
+	padding:0px 0 0 0;
+}
+.SearchResults .SearchResultTabs {
+}
+.SearchResults .multiPage {
+	padding: 0 0px 20px 0px;
+	width: 940px;
+	float: right;
+}
+
+	.AjaxSearchResultTabPanel:after {
+		display: block;
+		content: url(../../templates/_images/loading_search.gif);
+		width: 100%;
+		text-align: center;
+		opacity: 0;
+		visibility: visible;
+		height: auto;
+		margin-top: 50px;
+	
+		-webkit-transition: opacity 0.5s;
+		   -moz-transition: opacity 0.5s;
+				transition: opacity 0.5s;
+	}
+	
+	
+	.AjaxSearchResultTabPanel.loading:after {
+		opacity: 1;
+	}
+
+
+.SearchResults .SortByLabel {
+	margin: 0 4px 0 0;
+}
+.SearchResults .RadTabStrip, 
+.SearchResults .RadTabStripVertical {
+	width: 200px;
+	float: left;
+	margin: 100px 0 0 0;
+}
+.RadTabStripTop_Windows7 .rtsLevel1 .rtsLink, .RadTabStripTop_Windows7 .rtsLevel1 .rtsOut, .RadTabStripBottom_Windows7 .rtsLevel1 .rtsLink, .RadTabStripBottom_Windows7 .rtsLevel1 .rtsOut, .RadTabStripTop_Windows7 .rtsLevel1, .RadTabStripBottom_Windows7 .rtsLevel1 {
+		background:none!important; 
+}
+
+.SearchResults .RadTabStrip_Windows7 .rtsLevel1 {
+	margin: 0 0 20px 0;
+	padding: 4px 5px 0px 0px;
+	width: auto;
+}
+.SearchResults .RadTabStrip .rtsLevel {
+    clear: both;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.SearchResults .RadTabStrip .rtsUL, .SearchResults .RadTabStripVertical .rtsUL {
+    float: left;
+    overflow: hidden;
+}
+.SearchResults .RadTabStrip .rtsLI, .RadTabStrip .rtsLink {
+    display: block;
+    float: none!important;
+	text-align: left!important;
+	color:#646462;
+	font-style: italic;
+	padding-left: 0px!important;
+	font-family: "garamond-premier-pro",serif!important;
+}
+.RadTabStrip .rtsIn, .RadTabStripVertical .rtsIn,
+.RadTabStrip .rtsLevel1 .rtsTxt, .RadTabStripVertical .rtsLevel1 .rtsTxt {
+    padding: 0 0px!important;
+}
+.SearchResults .RadTabStripTop_Windows7 .rtsLevel1 .rtsLink, 
+.SearchResults .RadTabStripTop_Windows7 .rtsLevel1 .rtsOut, 
+.SearchResults .RadTabStripBottom_Windows7 .rtsLevel1 .rtsLink, 
+.SearchResults .RadTabStripBottom_Windows7 .rtsLevel1 .rtsOut, 
+.SearchResults .RadTabStripTop_Windows7 .rtsLevel1, 
+.SearchResults .RadTabStripBottom_Windows7 .rtsLevel1 {
+}
+.SearchResults .RadTabStrip_Windows7 .rtsLevel1 .rtsLI, 
+.SearchResults .RadTabStrip_Windows7 .rtsLevel1 .rtsLink {
+    color: #646462;
+}
+.SearchResults .RadTabStripTop_Windows7 .rtsLevel1 .rtsSelected, 
+.SearchResults .RadTabStripTop_Windows7 .rtsLevel1 .rtsSelected:hover {
+	color: #b3093a;
+}
+.SearchResults .RadTabStrip .rtsLevel1 .rtsTxt, 
+.SearchResults .RadTabStripVertical .rtsLevel1 .rtsTxt {
+}
+.RadTabStripTop_Windows7 .rtsLevel1 .rtsLink:hover {
+}
+.RadTabStripTop_Windows7 .rtsLevel1 .rtsLink:hover .rtsOut {
+    
+}
+.SearchResults .SortByWrapper {
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 1px;
+	color:#646462;
+	margin-top: 27px;
+}
+.SearchResults #ctl04_cPC_ctl01_ctl00_CurrentPage,
+.SearchResults #ctl04_cPC_ctl01_ctl01_CurrentPage,
+.SearchResults #ctl04_cPC_ctl01_ctl02_CurrentPage,
+.SearchResults #ctl04_cPC_ctl01_ctl03_CurrentPage,
+.SearchResults #ctl04_cPC_ctl01_ctl04_CurrentPage,
+.SearchResults #ctl04_cPC_ctl01_ctl05_CurrentPage {
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 1px;
+	color:#646462;
+	width: 170px;
+	position: absolute;
+	top:100px;
+	left: 0;
+}
+
+.SearchResults .Pagination { /* Container for the page numbers */
+		margin:20px 0 0px 0;
+		display: block;
+	}	
+	.SearchResults .Pages { /* Container for the page numbers */
+		display: inline-block;
+	}	
+	.SearchResults .ItemsPerPage { /* Container for the page numbers */
+		display: inline-block;
+		float:right;
+	}	
+	.SearchResults .OrderingNumbers { /* Container for the page numbers */
+		margin: 10px 0px 6px 0px;
+		position: relative;
+		height: auto;
+		clear: both;
+		font-size: 13px;
+		letter-spacing: 2px;
+		color:#646462;
+	}
+		.SearchResults .OrderingNumbers span.SelectedPage { /* The number of the selected page */
+			color: #b3093a;
+		margin-right: 0.2em;
+		padding: 0 0 0 0.2em;
+		text-decoration: none;
+		line-height: 0.1em;	
+		}
+		
+		.SearchResults .OrderingNumbers a { /* The number links to select pages */
+			margin-right: 0.2em;
+			padding: 0 0 0 0.2em;
+			text-decoration: none;
+			line-height: 0.1em;
+			color:#646462
+		}
+		.SearchResults .OrderingNumbers a:hover { /* The number of the selected page */
+			color: #b3093a;
+		}
+	/* Next and Back */
+	.SearchResults a.OrderingNext, 
+	.SearchResults .OrderingNext.disabled {
+		font-size: 13px;
+		letter-spacing: 2px;
+		color:#646462;
+		margin: 0px 0px 0px 6px;
+		text-decoration: none;
+	}
+	.SearchResults a.OrderingBack, 
+	.SearchResults .OrderingBack.disabled{
+		font-size: 13px;
+		letter-spacing: 2px;
+		color:#646462;
+		margin: 0px 6px 0px 0px;
+		text-decoration: none;
+	}
+	.SearchResults a.OrderingNext:hover, .SearchResults a.OrderingBack:hover { /* The number of the selected page */
+			color: #b3093a;
+		}
+	.SearchResults .PageSize { /* Container for the "Items per page" functionality */
+		float: right;
+	}
+		.SearchResults .PageSize .PageSizeLabel { /* Text next to the number of items per page select box */
+			
+		}
+		.SearchResults .PageSize select.PageSizeSelector { /* Select box to change the number of items per page */
+			font-size: 1em;
+			margin-left: 5px;
+		}
+	.SearchResults .EndPagination { /* Empty div at the end of the pagination */
+		clear: both;
+	}
+	
+	.SearchResults .ListItem { /* Single result item container */
+		display: block;
+		margin: 0px 0px 0px 0px;
+		padding: 50px 0 50px 0;
+		display: block;
+		width: auto;
+		border-bottom:#ccc8be 1px solid;
+	}
+		.SearchResults .ListItem p.ListTitle { 	/* Title of the search result */
+			font-size: 18px;
+			line-height: 20px;
+			letter-spacing:3px;
+			color: #a5926b;
+			text-transform: uppercase;
+			border-bottom: none;
+			margin-bottom: 30px;
+		}
+		.SearchResults .ListItem p.ListTitle b {
+				font-weight: normal!important;
+		}
+		.SearchResults .ListItem p.ListTitle a {
+			color: #a5926b;
+		}
+		.SearchResults .ListItem p.ListTitle img { 	/* Title image of the search result */
+			padding: 0 10px 0 0px;
+			display: none;
+		}
+		.SearchResults .ListItem .ListThumbnail img{/* Thumbnail image of the search result */
+		max-width:100px;
+		max-height:150px;
+		}
+		.SearchResults .ListItem .ListThumbnail{/* Thumbnail image of the search result */
+		border:none;
+		margin:0px 0px 10px 50px;
+		}
+
+		.SearchResults .ListItem p.ListKeywords,
+		.SearchResults .ListItem p.ListCreator,
+		.SearchResults .ListItem p.ListItemDate,
+		.SearchResults .ListItem p.ListCreatedDate {		/* Keywords of the search result */
+			color: #000;
+			font-size: 18px;
+			font-weight:400;
+			font-style: normal;
+			letter-spacing: 1px;
+			line-height: 30px;
+			text-transform: none;
+		}
+
+		.SearchResults .ListItem p.ListItemDate {
+				width: auto;
+				display: inline;
+				margin-bottom: 20px;
+		}
+		.SearchResults .ListItem p.ListUpdator {		/* Last updated name of the search result */
+		}
+		.SearchResults .ListItem p.ListSummary {		/* Short summary of the search result */
+			color: #000;
+			font-size: 18px;
+			font-weight:400;
+			font-style: normal;
+			letter-spacing: 1px;
+			line-height: 30px;
+		}
+			.SearchResults .ListItem p.ListSummary a { 	/* More>> link */
+				color: #000;
+			}
+		.SearchResults .ListItem .ListEndItem {			/* Div at the end of a single search result */
+		}
+		.SearchResults .RadRating ul {
+		display:none;
+		}
+		.SearchResults .ListPrice, .SearchResults .ListSalePrice {
+			color: #b3093a;
+		}
+/* -----[ Online Shop search results ]------------------------------------------------------------------------------- */		
+		.SearchResults .ListVariant1 span {
+		display:none;
+	}
+	.SearchResults .DetailHolder .ListSummary {
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 1px;
+		color: #646462;
+	}
+	.SearchResults .ListVariant1 span,
+	.SearchResults .ListVariant2 span,
+	.SearchResults .ListQuantity span {
+		font-size: 14px;
+		line-height: 20px;
+		letter-spacing: 1px;
+		color:#646462;
+		font-style: italic;
+		padding: 0px 4px 0px 0px;
+	}
+	.SearchResults .ListVariant1 .styled-select {
+				display: inline-block;
+				height: auto;
+				width: 180px;
+				margin: 10px 0;
+				font-size: 14px;
+				letter-spacing: 1px;
+				color:#646462;
+				font-style: italic;
+				line-height: 20px;
+				text-transform: none;
+				height: auto;
+				font-family: "garamond-premier-pro",serif!important;
+}
+.SearchResults .DetailHolder .ListThumbnail {
+	float: left;
+	margin: 0 50px 10px 0;
+}
+.SearchResults .PriceHolder, .SearchResults .ActionHolder {
+	margin: 0 0px 10px 136px;
+}
+/* -----[ Always Hide AddtoCart Button unless from NZ ]------------------------------------------------------------------------------- */
+.SearchResults .PriceHolder,
+.SearchResults .ActionHolder{
+display:none;
+}
+.country-NZ .SearchResults .PriceHolder,
+.country-NZ .SearchResults .ActionHolder{
+display:block;
+}
+
+
+/* -----[ SEARCH LETTER ITEM ]----------------------------------------------- */
+
+/* Search Letter Item (DIV) */
+            .AlphaFilterWrapper {
+                        position: relative;
+                        clear: both;
+                        margin: 0 0 0 0;
+                        padding: 0;
+            }
+/* === [ Link State ] === */
+            .AlphaFilterWrapper a:visited.SearchLetter, 
+            .AlphaFilterWrapper a:link.SearchLetter {
+                        margin: 0px 0px 0px 1px;
+                        display: inline-block;
+                        padding: 2px 5px 3px 5px;
+                        color: #FFFFFF;
+                        text-decoration: none;
+                        background: #999;
+            }
+            .AlphaFilterWrapper a:hover.SearchLetter {
+                        color: #FFFFFF;
+                        text-decoration: none;
+                        background: #666;
+            }
+/* === [ Selected State ] === */
+            .AlphaFilterWrapper a:link.Selected, 
+            .AlphaFilterWrapper a:visited.Selected, 
+            .AlphaFilterWrapper a:hover.Selected, 
+            .AlphaFilterWrapper a:active.Selected {
+                        color: #fff;
+                        text-decoration: none;
+                        background: #999;
+            }
+/* === [ Unavailable State ] === */
+            .AlphaFilterWrapper a:link.Unavailable, 
+            .AlphaFilterWrapper a:visited.Unavailable, 
+            .AlphaFilterWrapper a:hover.Unavailable, 
+            .AlphaFilterWrapper a:active.Unavailable {
+                        color: #666;
+                        text-decoration: none;
+                        background: #ccc;
+            }                                   
+
+		
+/* Automatically Updateded in patch version 4.3.8.0 */
+
+/* Automatically Updated */
+/* -----[ Patch 4.4.0 ]----- */
+/* -----[ Feature ID #1098 ]----- */
+/* -----[ Added to Search2.css  ]----- */
+/* -----[ Search Results - Did You Mean ]----------------------------------------------------- */
+ 
+.SearchResults .DidYouMeanField {
+	margin: 0 0 20px 0;
+ } 
+	.SearchResults .DidYouMeanField .FieldLabel {
+		float: left;
+		clear: none;
+		width: auto;
+		margin: 0 5px 0px 0;
+	 } 
+	.SearchResults .DidYouMeanField .DidYouMean,
+	.SearchResults .DidYouMeanField .DidYouMean a {
+		color: #003366;
+	 }
+	
+	.SearchResults .DidYouMeanField .DidYouMean a:hover {
+		color: #999;
+	 }
+	 
