@@ -1,0 +1,1073 @@
+@using System.Threading.Tasks
+@using QJumpers.Public.QJumpersClient.Helpers;
+@using QJumpers.Common.Api.Extensions;
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+      @{
+      <!-- Google Tag Manager -->
+      <noscript><iframe src="//www.googletagmanager.com/ns.html?id=@ViewData["QJGTMCode"]" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+      <script>
+         (function (w, d, s, l, i) {
+         	w[l] = w[l] || [];
+         	w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+         	var f = d.getElementsByTagName(s)[0],
+         		j = d.createElement(s),
+         		dl = l != 'dataLayer' ? '&l=' + l : '';
+         	j.async = true;
+         	j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+         	f.parentNode.insertBefore(j, f);
+         })(window, document, 'script', 'qjDataLayer', '@ViewData["QJGTMCode"]');
+              
+      </script>
+      <!-- End Google Tag Manager -->
+      }
+      @{
+      var clientGACode = "";
+      if (!(bool)ViewData["IsQjumpersSubsite"] && !string.IsNullOrEmpty((string)ViewData["SubsiteGACode"]))
+      {
+      clientGACode = string.Format("ga('create', '{0}', 'auto', 'clientTracker');ga('clientTracker.send', 'pageview');", @ViewData["SubsiteGACode"]);
+      }
+      <script>
+         (function (i, s, o, g, r, a, m) {
+         	i['GoogleAnalyticsObject'] = r;
+         	i[r] = i[r] || function () {
+         		(i[r].q = i[r].q || []).push(arguments)
+         	}, i[r].l = 1 * new Date();
+         	a = s.createElement(o),
+         		m = s.getElementsByTagName(o)[0];
+         	a.async = 1;
+         	a.src = g;
+         	m.parentNode.insertBefore(a, m)
+         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+         
+         ga('create', '@ViewData["SubsiteGACode"]', 'auto');
+         ga('send', 'pageview');
+         @if (!(bool)ViewData["IsQjumpersSubsite"] && !string.IsNullOrEmpty((string)ViewData["SubsiteGACode"]))
+         {
+         	@:ga('create', '@ViewData["SubsiteGACode"])', 'auto', 'clientTracker');
+         			@:ga('clientTracker.send', 'pageview');
+         }
+               
+      </script>
+      }
+
+      <!-- Stylesheets -->
+      <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,700,100,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="/subsites/Horowhenua/styles/oc_print.css" type="text/css" media="screen" id="pagestyle" />
+      <link rel="stylesheet" href="/form.css">
+      <link rel="stylesheet" href="/subsites/Horowhenua/styles/custom.css" type="text/css" media="screen" id="pagestyle" />
+
+        <script type="text/javascript">
+            var __metaQueryBreakpoints = {
+                'sc-size-4': '(max-width: 480px)',
+                'sc-size-3': '(min-width: 480px) and (max-width: 768px)',
+                'sc-size-2': '(min-width: 768px) and (max-width: 992px)',
+                'sc-size-1': '(min-width: 992px)'
+            }
+        </script>
+      @{
+      var host = string.Empty;
+      if (Context.Request.Host.Port == null)
+      {
+      host = $"{Context.Request.Scheme}{Uri.SchemeDelimiter}{Context.Request.Host.Host}";
+      }
+      else
+      {
+      host = $"{Context.Request.Scheme}{Uri.SchemeDelimiter}{Context.Request.Host.Host}:{Context.Request.Host.Port}";
+      }
+      var geoHost = "Geonames_Base_Url".FromRequiredEnvironmentVariable();
+      var keycloakHost = "Keycloak_Host".FromRequiredEnvironmentVariable();
+      var sessionTimeout = "SESSIONTIMEOUT".FromRequiredEnvironmentVariable();
+      <script>
+         var environmentConfig = {
+             host: "@Context.Request.Host.Host",
+             port: @Context.Request.Host.Port,
+             sessionTimeout: @sessionTimeout,
+             subsite: "@Context.Items[SubsiteConstants.SubsiteKey]",
+             ADMIN: {
+                 apiHost: "@host/api",
+                 apiPath: ""
+             },
+             GEO: {
+                 apiHost: "@geoHost/api",
+                 apiPath: ""
+             },
+             KEYCLOAK: {
+                 apiHost: "@keycloakHost/auth",
+                 apiPath: ""
+             }
+         }
+      </script>
+      }
+    </head>
+    <body>
+        <!-- Header here -->
+        <div class="header-outer-container">
+                    <div class="header-container clearfix">
+                        <div class="grid">
+                            <div class="header-first-row clearfix">
+                                <div class="col-xs-12 col-lg-3" id="skip-to-content-container">
+                                    <a href='Home#main-content' class="visuallyhidden focusable" id='skip-to-content-link'>
+                                        Skip to main content
+                                    </a>&nbsp;
+                                </div>
+                                <div class="col-xs-8 col-lg-6">
+                                    <div class="header-site-logo">
+                                        <a href="Home" lang="en-AU">
+                                            <span class="visuallyhidden">
+                                                Horowhenua District Council - Home
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-lg-3">
+                                    <div class="header-website-settings">
+                                        <a id="btn-mob-nav" href='Home#'><i></i>Menu</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 header-search-control-container" id='header-search'>
+                                <div class="search-inner-container">
+                                    <div class="sc-search-panel">
+                                        <label for="ctl07_txtSearch" id="ctl07_lblSearch" class="sc-search-label">Search</label><input
+                                            name="ctl07$txtSearch" type="text" id="ctl07_txtSearch" class="sc-search-text"
+                                            placeholder="Find almost anything on our website" /><input type="submit"
+                                            name="ctl07$btnSearch" value="Search" id="ctl07_btnSearch" class="sc-search-button" />
+                                    </div>
+                                    <div id="predictiveResults">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation-outer-container">
+                    <div id="nav" role="navigation" class="navigation-container" data-menu-type="horizontal">
+                        <div class="grid">
+                            <div class="col-xs-12">
+                                <ul class="sf-menu" id="sc-main-menu">
+                                    <li class="nav-section-quarters-1 nav-active-path nav-active-page first-item nav-item-seq-1">
+                                        <a href="Home" class="nav-level-1">
+                                            <i class="item-icon"></i><span class="item-text">Home</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-section-quarters-1   nav-item-seq-2">
+                                        <a href="https://www.horowhenua.govt.nz/Services" class="nav-level-1 nav-has-children">Services</a>
+                                        <button class="mobnav-subarrow"><i></i><span class="visuallyhidden text">Sub-menu</span></button>
+                                        <ul>
+
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Services/A-Z-of-Services"
+                                                    class="">A-Z of Services</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Change-of-Address"
+                                                    class="">Change of Address</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Roads-and-Traffic-Management"
+                                                    class="nav-has-children">Roads and Traffic Management</a><button
+                                                    class="mobnav-subarrow-child"><i></i><span class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Roads-and-Traffic-Management/Working-on-the-Road">Working
+                                                            on the Road</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Roads-and-Traffic-Management/Applying-for-a-Corridor-Access-Request-CAR">Applying
+                                                            for a Corridor Access Request (CAR)</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Roads-and-Traffic-Management/Engineering-Standards-for-Working-in-Roads">Engineering
+                                                            Standards for Working in Roads</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Roads-and-Traffic-Management/Roads-and-Traffic-Management-for-Events">Traffic
+                                                            Management</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Cemeteries"
+                                                    class="nav-has-children">Cemeteries</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Cemeteries/Burial-Procedures">Burial
+                                                            Procedures</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Cemeteries/Cemetery-Search">Cemetery
+                                                            Search</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Cemeteries/District-Cemeteries">District
+                                                            Cemeteries</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Cemeteries/Cemetery-Fees-Charges">Cemetery
+                                                            - Fees & Charges</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Building-Planning"
+                                                    class="nav-has-children">Building & Planning</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Building-Planning/Building-Consents">Building
+                                                            Consents</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Building-Planning/Resource-Consents">Resource
+                                                            Consents</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Building-Planning/Relocated-Buildings">Relocated
+                                                            Buildings</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Building-Planning/Land-Information-Memorandum-LIM">Land
+                                                            Information Memorandum (LIM)</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Building-Planning/Building-Fences">Building
+                                                            Fences (includes pools)</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Building-Planning/Trees-Vegetation">Trees
+                                                            & Vegetation</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Building-Planning/Earthquake-prone-Buildings">Earthquake-prone
+                                                            Buildings</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Water-Services"
+                                                    class="nav-has-children">Water Services</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Water-Services/Water">Water</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Water-Services/Wastewater">Wastewater</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Emergency-Management"
+                                                    class="nav-has-children">Emergency Management</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Emergency-Management/Civil-Defence">Civil
+                                                            Defence</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Emergency-Management/Fire-Restrictions">Fire
+                                                            Restrictions</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Emergency-Management/Outdoor-Fires">Outdoor
+                                                            Fires</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Emergency-Management/Emergency-Management-Fees-and-Charges">Emergency
+                                                            Management - Fees & Charges</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Emergency-Management/Emergency-Rainwater-Tanks">Emergency
+                                                            Rainwater Tanks</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Rubbish-Recycling"
+                                                    class="nav-has-children">Rubbish & Recycling</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Rubbish-Recycling/What-Goes-Where">What
+                                                            Goes Where</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Rubbish-Recycling/Kerbside-Rubbish-Recycling-Services">Kerbside
+                                                            Rubbish & Recycling Services</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Rubbish-Recycling/Waste-Transfer-Recycling-Stations">Waste
+                                                            Transfer & Recycling Stations</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Rubbish-Recycling/Frequently-Asked-Questions-and-Answers">Frequently
+                                                            Asked Questions and Answers</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Rubbish-Recycling/Hazardous-Substances">Hazardous
+                                                            Substances</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Rubbish-Recycling/Mobile-Phone-Recycling">Mobile
+                                                            Phone Recycling</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Rubbish-Recycling/Rubbish-Recycling-Fees-and-Charges">Rubbish
+                                                            & Recycling - Fees & Charges</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Rubbish-Recycling/Waste-Minimisation">Waste
+                                                            Minimisation</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Animal-Control"
+                                                    class="nav-has-children">Animal Control</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Animal-Control/Dog-Owners-Information">Dog
+                                                            Owners Information</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Animal-Control/Animal-Control-Fees-and-Charges">Animal
+                                                            Control - Fees & Charges</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Animal-Control/Animal-Complaints">Animal
+                                                            Complaints</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Rating-Information"
+                                                    class="nav-has-children">Rating Information</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Rating-Information/How-to-Pay-Your-Rates">How
+                                                            to Pay Your Rates</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Rating-Information/Rates-Rebates">Rates
+                                                            Rebates</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Rating-Information/Rates-Invoice-by-e-mail">Rates
+                                                            Invoice by e-mail</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Rating-Information/Rating-Database">Rating
+                                                            Database</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Rating-Information/How-Rates-Are-Calculated">How
+                                                            Rates Are Calculated (including penalties)</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Rating-Information/How-Will-Revaluations-Affect-Your-Rates">How
+                                                            Will Revaluations Affect Your Rates?</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Online-Maps"
+                                                    class="">Online Maps</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Noise-Control"
+                                                    class="">Noise Control</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Services/Parking"
+                                                    class="">Parking</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-section-quarters-2   nav-item-seq-3">
+                                        <a href="https://www.horowhenua.govt.nz/Council" class="nav-level-1 nav-has-children">Council</a>
+                                        <button class="mobnav-subarrow"><i></i><span class="visuallyhidden text">Sub-menu</span></button>
+                                        <ul>
+
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Careers-at-HDC"
+                                                    class="nav-has-children">Careers at HDC</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Careers-at-HDC/Jobs-Listing">Jobs
+                                                            Listing</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Career-at-Council"
+                                                    class="">Jobs Listing</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Have-Your-Say"
+                                                    class="">Have Your Say</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Iwi-Relationships"
+                                                    class="nav-has-children">Iwi Relationships</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Iwi-Relationships/Partnerships">Partnerships</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Iwi-Relationships/Iwi-Contact-Information">Iwi
+                                                            Contact Information</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies"
+                                                    class="nav-has-children">Local Bylaws & Policies</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Animal-Nuisance-and-the-Keeping-of-Pigs-Poultry-and-Bees-Bylaw-2014">Animal
+                                                            Nuisance and the Keeping of Pigs, Poultry and Bees Bylaw
+                                                            2014</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Dog-Control-Bylaw-2015">Dog
+                                                            Control Bylaw 2015</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Alcohol-Liquor-Bylaw-2015">Alcohol
+                                                            (Liquor) Bylaw 2015</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Prevention-of-Spread-of-Fires-Involving-Vegetation-Bylaw-2007">Prevention
+                                                            of Spread of Fires Involving Vegetation Bylaw 2007</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Public-Places-Bylaw-2016">Public
+                                                            Places Bylaw 2016</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Solid-Waste-Bylaw-2014">Solid
+                                                            Waste Bylaw 2014</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Trade-Waste-Bylaw-2015">Trade
+                                                            Waste Bylaw 2015</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Wastewater-Bylaw-2015">Wastewater
+                                                            Bylaw 2015</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Water-Supply-Bylaw-2014">Water
+                                                            Supply Bylaw 2014</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Corporate-Debt-Management-Policy">Corporate
+                                                            Debt Management Policy</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Dog-Control-Policy">Dog
+                                                            Control Policy</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Food-Premises-Grading-Policy">Food
+                                                            Premises Grading Policy</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Gambling-Class-4-Venue-Policy-2017">Gambling
+                                                            Class 4 Venue Policy 2017</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Policy-on-Dangerous-and-Insanitary-Buildings-Policy-2017">Policy
+                                                            on Dangerous and Insanitary Buildings Policy 2017</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Liability-Management-Policy">Liability
+                                                            Management Policy</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Psychoactive-Substances-Policy-LAPP-2014">Psychoactive
+                                                            Substances Policy (LAPP) 2014</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Rates-Remission-Policy">Rates
+                                                            Remission Policy</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Remission-of-Rates-on-Maori-Freehold-Land-Policy">Remission
+                                                            of Rates on Maori Freehold Land Policy</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Revenue-and-Financing-Policy">Revenue
+                                                            and Financing Policy</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Sale-of-Liquor-Policy-2006">Sale
+                                                            of Liquor Policy 2006</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/TAB-Venue-Policy-2017">TAB
+                                                            Venue Policy 2017</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Significance-and-Engagement-Policy">Significance
+                                                            and Engagement Policy</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Smokefree-Environment-Policy">Smokefree
+                                                            Environment Policy</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Electronic-Communications-E-mail-Quarantine-Policy">Electronic
+                                                            Communications (E-mail Quarantine) Policy</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Land-Transport-Bylaw-2017">Land
+                                                            Transport Bylaw 2017</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Local-Easter-Sunday-Shop-Trading-Policy-2017">Local
+                                                            Easter Sunday Shop Trading Policy 2017</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Financial-Contribution-Policy">Financial
+                                                            Contribution Policy</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Local-Bylaws-Policies/Community-Leases-Policy">Community
+                                                            Leases Policy</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Plans-Strategies"
+                                                    class="nav-has-children">Plans & Strategies</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Plans-Strategies/Levin-Town-Centre-Strategy">Transforming
+                                                            Taitoko/Levin - Levin Town Centre Strategy </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Plans-Strategies/Horowhenua-Growth-Strategy-2040">Horowhenua
+                                                            Growth Strategy 2040</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Plans-Strategies/Long-Term-Plan-2018-2038">Long
+                                                            Term Plan 2018-2038 (Te Mahere Tūroa)</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Plans-Strategies/Annual-Plan-2017-2018">Annual
+                                                            Plan 2017-2018</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Plans-Strategies/District-Plan">District
+                                                            Plan</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Plans-Strategies/Heritage-Strategy">Heritage
+                                                            Strategy</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Plans-Strategies/Horowhenua-Economic-Development-Strategy">Horowhenua
+                                                            Economic Development Strategy</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Plans-Strategies/Open-Space-Strategy">Open
+                                                            Space Strategy </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Plans-Strategies/Horowhenua-Waste-Management-Minimisation-Plan">Horowhenua
+                                                            Waste Management & Minimisation Plan</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Plans-Strategies/Reserve-Management-Plans">Reserve
+                                                            Management Plans</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Plans-Strategies/Horowhenua-Shared-Pathways-Strategy">Horowhenua
+                                                            Shared Pathways Strategy</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Plans-Strategies/Horowhenua-Development-Plan">Horowhenua
+                                                            Development Plan</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Plans-Strategies/Foxton-Beach-Reserves-Investment-Plan">Foxton
+                                                            Beach Reserves Investment Plan</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Plans-Strategies/Property-Strategy">Property
+                                                            Strategy</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Annual-Reports"
+                                                    class="">Annual Reports</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Council-Projects"
+                                                    class="nav-has-children">Council Projects</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Council-Projects/Professional-Services-Register">Professional
+                                                            Services Register</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Council-Projects/Works-Projects">Works
+                                                            & Projects</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Fees-and-Charges"
+                                                    class="nav-has-children">Fees and Charges</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Fees-and-Charges/Building-Fees-Charges">Building
+                                                            - Fees & Charges</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Fees-and-Charges/Animal-Control-Fees-Charges">Animal
+                                                            Control - Fees & Charges</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Fees-and-Charges/Cemetery-Fees-Charges">Cemetery
+                                                            - Fees & Charges</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Fees-and-Charges/Infrastructure-Services-Fees-Charges">Infrastructure
+                                                            Services - Fees & Charges</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Fees-and-Charges/Emergency-Management-Fees-Charges">Emergency
+                                                            Management - Fees & Charges</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Fees-and-Charges/Liquor-Licensing-Fees-Charges">Liquor
+                                                            Licensing - Fees & Charges</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Fees-and-Charges/Parking-Fees-Charges">Parking
+                                                            - Fees & Charges</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Fees-and-Charges/Parks-Reserves-Fees-Charges">Parks
+                                                            & Reserves - Fees & Charges</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Fees-and-Charges/Public-Halls-Fees-Charges">Public
+                                                            Halls - Fees & Charges</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Fees-and-Charges/Roading-Fees-Charges">Roading
+                                                            - Fees & Charges</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Fees-and-Charges/Rubbish-Recycling-Fees-Charges">Rubbish
+                                                            & Recycling - Fees & Charges</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Fees-and-Charges/Wastewater-Fees-Charges">Wastewater
+                                                            - Fees & Charges</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Fees-and-Charges/Water-Fees-Charges">Water
+                                                            - Fees & Charges</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Fees-and-Charges/Miscellaneous-Fees-Charges">Miscellaneous
+                                                            - Fees & Charges</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Fees-and-Charges/Environmental-Health-Fees-Charges">Environmental
+                                                            Health - Fees & Charges</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Fees-and-Charges/Planning-Fees-Charges">Planning
+                                                            - Fees & Charges</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Your-Council"
+                                                    class="nav-has-children">Your Council</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Your-Council/Council-Meetings">Minutes
+                                                            & Agendas</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Your-Council/Council-Meetings-Live">Live
+                                                            Council Meetings</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Your-Council/Mayor-Councillors">Mayor
+                                                            & Councillors</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Your-Council/Meeting-Schedules-Requests">Meeting
+                                                            Schedules & Requests</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Your-Council/Council-Committees">Council
+                                                            Committees</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Your-Council/Elections">Elections</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Your-Council/Councils-Role-and-Purpose">Council's
+                                                            Role and Purpose</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Your-Council/Foxton-Community-Board">Foxton
+                                                            Community Board </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Your-Council/Leadership-Team">Leadership
+                                                            Team</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Your-Council/CouncilMARK™">CouncilMARK™</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Horowhenua-Lake-Domain-Board"
+                                                    class="">Horowhenua Lake Domain Board</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Council/Community-Outcomes"
+                                                    class="">Community Outcomes</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-section-quarters-2   nav-item-seq-4">
+                                        <a href="https://www.horowhenua.govt.nz/Business" class="nav-level-1 nav-has-children">Business</a>
+                                        <button class="mobnav-subarrow"><i></i><span class="visuallyhidden text">Sub-menu</span></button>
+                                        <ul>
+
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Horowhenua-New-Zealand-Trust"
+                                                    class="">Horowhenua New Zealand Trust</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Investing-in-Horowhenua"
+                                                    class="">Investing in Horowhenua</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Our-Key-Partners"
+                                                    class="">Our Key Partners</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Events-and-Networking"
+                                                    class="nav-has-children">Events and Networking</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Events-and-Networking/Horowhenua-Taste-Trail">Horowhenua
+                                                            Taste Trail</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Events-and-Networking/Foxton-Tourist-Development-Association">Foxton
+                                                            Tourist & Development Association </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Network/Electra-Business-After-5">Electra
+                                                            Business After 5 </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Events-and-Networking/Business-Networking-Group">Business
+                                                            Networking Group</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Events-and-Networking/Event-Calendar">Event
+                                                            Calendar </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Events-and-Networking/Electra-Business-Awards">Electra
+                                                            Business Awards</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Strategy-and-Insights"
+                                                    class="nav-has-children">Strategy and Insights</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Information/Strategy">Strategy
+                                                        </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Strategy-and-Insights/Research">Research</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Data-and-Insights/Data-Tools">Data
+                                                            Tools</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Business-Capability-and-Capacity"
+                                                    class="nav-has-children">Business Capability and Capacity</a><button
+                                                    class="mobnav-subarrow-child"><i></i><span class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Business-Capability-and-Capacity/Mentoring">Mentoring</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Business-Capability-and-Capacity/Exporting">Exporting</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Business-Capability-and-Capacity/Funding-Opportunities">Funding
+                                                            Opportunities</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Business-Capability-and-Capacity/Tips-and-Tools">Tips
+                                                            and Tools</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Licensing"
+                                                    class="nav-has-children">Licensing </a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Licensing/Food">Food
+                                                        </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Licensing/Alcohol">Alcohol</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Licensing/Other">Other</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Navigating-Council-Processes"
+                                                    class="">Navigating Council Processes</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Our-District"
+                                                    class="nav-has-children">Our District</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Our-District/Horowhenuas-Townships">Horowhenua's
+                                                            Townships</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Our-District/Things-to-Do">Things
+                                                            to Do</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Business/Horowhenua/Watch">Watch</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-section-quarters-3   nav-item-seq-5">
+                                        <a href="https://www.horowhenua.govt.nz/Community" class="nav-level-1 nav-has-children">Community</a>
+                                        <button class="mobnav-subarrow"><i></i><span class="visuallyhidden text">Sub-menu</span></button>
+                                        <ul>
+
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Local-Directory"
+                                                    class="">Local Directory</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Grants-Funding"
+                                                    class="nav-has-children">Grants & Funding</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Grants-Funding/Council-Facilitated-Grants">Council
+                                                            Facilitated Grants </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Grants-Funding/Calls-for-Applications">Calls
+                                                            for Applications</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Grants-Funding/Grants-Timeframes">Grants
+                                                            Timeframes</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Capacity-Building"
+                                                    class="nav-has-children">Capacity Building</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Community-Engagement/Capacity-Building/Volunteers">Volunteers</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Capacity-Building/Training-and-Workshops">Training
+                                                            and Workshops </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Capacity-Building/Te-Takeretanga-o-Kura-hau-pō-Learning-Courses">Te
+                                                            Takeretanga o Kura-hau-pō Learning Courses </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Older-People"
+                                                    class="nav-has-children">Older People</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Older-People/Elderberries">
+                                                            Elderberries </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Older-People/Shuttle-Services-Transport">Shuttle
+                                                            Services & Transport</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Positive-Ageing/60-Activities-for-over-60s">60
+                                                            Activities for over 60's</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Older-People/Age-on-the-Go-Expo">Age
+                                                            on the Go Expo</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Older-People/Older-Persons-Network">Older
+                                                            Persons' Network</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Youth"
+                                                    class="nav-has-children">Youth </a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Youth/Horowhenua-Youth-Action-Plan">Horowhenua
+                                                            Youth Action Plan</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Youth/Youth-Directories">Youth
+                                                            Directories </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Youth/Horowhenua-Youth-Network">Horowhenua
+                                                            Youth Network</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Youth/Youth-Voice">Youth
+                                                            Voice </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Youth/Youth-Excellence-Scholarships">Youth
+                                                            Excellence Scholarships</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Youth/Horowhenua-Tertiary-Education-Scholarships">Horowhenua
+                                                            Tertiary Education Scholarships</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Health-Disability"
+                                                    class="nav-has-children">Health & Disability </a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Health-Disability/Horowhenua-Access-and-Inclusion-Plan">Horowhenua
+                                                            Access and Inclusion Plan</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Health-Disability/Horowhenua-Defibrillator-Locations">Horowhenua
+                                                            Defibrillator Locations</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Health-Disability/Directory-Resources">Disability
+                                                            Directory Resources </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Education"
+                                                    class="nav-has-children">Education </a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Education/Education-Horowhenua-Team">Education
+                                                            Horowhenua Team</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Education/Horowhenua-Education-Action-Plan">Horowhenua
+                                                            Education Action Plan</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Arts-Culture-Heritage"
+                                                    class="">Arts, Culture & Heritage </a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Pride-Vibrancy"
+                                                    class="nav-has-children">Pride & Vibrancy</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Pride-and-Vibrancy/Pride-and-Vibrancy-Action-Plan">Pride
+                                                            and Vibrancy Action Plan </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Pride-Vibrancy/Vibrant-Communities-Grant">Vibrant
+                                                            Communities Grant</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Pride-and-Vibrancy/Tag-Free-District">Tag
+                                                            Free District </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Pride-and-Vibrancy/Keep-Levin-Beautiful">Keep
+                                                            Levin Beautiful</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Community-Engagement"
+                                                    class="nav-has-children">Community Engagement</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Community-Engagement/Community-Reference-Group">Community
+                                                            Reference Group</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Community-Engagement/Community-Connection">Community
+                                                            Connection </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Community-Engagement/Community-Service">Community
+                                                            Service</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Community-Wellbeing"
+                                                    class="nav-has-children">Community Wellbeing </a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Community-Wellbeing/Uplift-Horowhenua">Uplift
+                                                            Horowhenua - Community Wellbeing Newsletter</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Community-Wellbeing/Community-Wellbeing-Committee">Community
+                                                            Wellbeing Committee </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Community/Community-Wellbeing/Strategies-and-Action-Plans">Strategies
+                                                            and Action Plans </a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-section-quarters-3   nav-item-seq-6">
+                                        <a href="https://www.horowhenua.govt.nz/Places-Events" class="nav-level-1 nav-has-children">Places
+                                            & Events</a>
+                                        <button class="mobnav-subarrow"><i></i><span class="visuallyhidden text">Sub-menu</span></button>
+                                        <ul>
+
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Event-Calendar"
+                                                    class="">Event Calendar </a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Organising-An-Event"
+                                                    class="nav-has-children">Organising An Event </a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Organising-An-Event/Sale-of-Food-at-Events-or-Markets">Sale
+                                                            of Food at Events or Markets </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Organising-An-Event/Alcohol-at-an-Event">Alcohol
+                                                            at an Event</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Organising-An-Event/Plan-and-promote-your-Event">Plan
+                                                            and promote your Event</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Organising-An-Event/Events-Notification">Events
+                                                            Notification </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Organising-An-Event/Traffic-Management">Traffic
+                                                            Management</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Organising-An-Event/Flagtrax-Streetlight-Flags">Flagtrax
+                                                            Streetlight Flags </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Aquatic-Centre-Pools"
+                                                    class="">Aquatic Centre & Pools</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Community-Centres-Libraries"
+                                                    class="nav-has-children">Community Centres & Libraries </a><button
+                                                    class="mobnav-subarrow-child"><i></i><span class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Community-Centres-Libraries/Te-Takeretanga-o-Kura-hau-pō-Community-Centre-Library">Te
+                                                            Takeretanga o Kura-hau-pō Community Centre & Library</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Community-Centres-Libraries/Foxton-Service-Centre-Library">Foxton
+                                                            Service Centre & Library</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Community-Centres-Libraries/Shannon-Library">Shannon
+                                                            Library</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Community-Centres-Libraries/Te-Awahou-Nieuwe-Stroom">Te
+                                                            Awahou Nieuwe Stroom </a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Parks-Reserves-Recreation"
+                                                    class="">Parks, Reserves & Recreation</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Beaches-Coastal-Communities"
+                                                    class="nav-has-children">Beaches & Coastal Communities </a><button
+                                                    class="mobnav-subarrow-child"><i></i><span class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Beaches-Coastal-Communities/Waitārere-Beach">Waitārere
+                                                            Beach</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Beaches-Coastal-Communities/Foxton-Beach">Foxton
+                                                            Beach</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Beaches-Coastal-Communities/Hokio-Beach">Hokio
+                                                            Beach</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Beaches-Coastal-Communities/Waikawa-Beach">Waikawa
+                                                            Beach</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Cycle-Tracks-Walking-Trails"
+                                                    class="nav-has-children">Cycle Tracks & Walking Trails</a><button
+                                                    class="mobnav-subarrow-child"><i></i><span class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Cycle-Tracks-Walking-Trails/Tararua-Northern-Crossing">Tararua
+                                                            Northern Crossing </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Cycle-Tracks-Walking-Trails/Papaitonga-Scenic-Reserve-walks">Papaitonga
+                                                            Scenic Reserve walks</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Cycle-Tracks-Walking-Trails/Burttons-Track">Burttons
+                                                            Track</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Cycle-Tracks-Walking-Trails/Mangahao-Makahika-Track-Location-Shannon-walk">Mangahao
+                                                            Makahika Track Location: Shannon walk</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Cycle-Tracks-Walking-Trails/Hydrabad-Wreck-Location">Hydrabad
+                                                            Wreck Location</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Cycle-Tracks-Walking-Trails/Trig-Walkway">Trig
+                                                            Walkway</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Cycle-Tracks-Walking-Trails/Foxton-and-the-Beach-Places-to-walk-and-cycle">Foxton
+                                                            and the Beach - Places to walk and cycle</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Cycle-Tracks-Walking-Trails/Queen-St-Walkway">Queen
+                                                            St Walkway</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Sports-Grounds-Facilities"
+                                                    class="nav-has-children">Sports Grounds & Facilities</a><button
+                                                    class="mobnav-subarrow-child"><i></i><span class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Sports-Grounds-Facilities/Levin-Domain-Levin">Levin
+                                                            Domain</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Sports-Grounds-Facilities/Weraroa-Domain">Weraroa
+                                                            Domain, Levin</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Sports-Grounds-Facilities/Easton-Park-Foxton">Easton
+                                                            Park, Foxton</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Sports-Grounds-Facilities/Donnelly-Park-Levin">Donnelly
+                                                            Park,</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Sports-Grounds-Facilities/Victoria-Park-Levin">Victoria
+                                                            Park, Foxton</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Sports-Grounds-Facilities/Western-Park-Levin">Western
+                                                            Park, Levin </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Sports-Grounds-Facilities/Manakau-Domain-Manakau">Manakau
+                                                            Domain, Manakau</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Sports-Grounds-Facilities/Shannon-Domain-Shannon">Shannon
+                                                            Domain </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Sports-Grounds-Facilities/Moynihan-Park-Shannon">Moynihan
+                                                            Park, Shannon</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Sports-Grounds-Facilities/Playford-Park-Levin">Playford
+                                                            Park</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Sports-Grounds-Facilities/Tokomaru-Domain-Tokomaru">Tokomaru
+                                                            Domain, Tokomaru</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Sports-Grounds-Facilities/Ohau-Domain">Ohau
+                                                            Domain, Ohau</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Halls-Venues-Meeting-Rooms"
+                                                    class="nav-has-children">Halls, Venues, Meeting Rooms </a><button
+                                                    class="mobnav-subarrow-child"><i></i><span class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Halls-Venues-Meeting-Rooms/Halls-and-Venues">Horowhenua
+                                                            District Meeting Rooms, Halls & Venues </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Halls-Venues-Meeting-Rooms/Te-Takeretanga-o-Kura-hau-po-Meeting-Rooms">Te
+                                                            Takeretanga o Kura-hau-pō Meeting Rooms</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Halls-Venues-Meeting-Rooms/Te-Awahou-Nieuwe-Stroom-Meeting-Rooms">Te
+                                                            Awahou Nieuwe Stroom Meeting Rooms </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Places-Events/Halls-Venues-Meeting-Rooms/Bookings-Terms-and-Conditions">Bookings
+                                                            Terms and Conditions </a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-section-quarters-4   nav-item-seq-7">
+                                        <a href="https://www.horowhenua.govt.nz/News-Notices" class="nav-level-1 nav-has-children">News
+                                            & Notices</a>
+                                        <button class="mobnav-subarrow"><i></i><span class="visuallyhidden text">Sub-menu</span></button>
+                                        <ul>
+
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/News-Notices/News"
+                                                    class="">News</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/News-Notices/Public-Notices"
+                                                    class="">Public Notices</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="nav-section-quarters-4   nav-item-seq-8">
+                                        <a href="https://www.horowhenua.govt.nz/Contact-Us" class="nav-level-1 nav-has-children">Contact
+                                            Us</a>
+                                        <button class="mobnav-subarrow"><i></i><span class="visuallyhidden text">Sub-menu</span></button>
+                                        <ul>
+
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/Paying-Us"
+                                                    class="nav-has-children">Paying Us</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/Paying-Us/Internet-Banking-Payments">Internet
+                                                            Banking Payments</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/Paying-Us/Rates-Payments-Online">Rates
+                                                            Payments Online</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/Change-of-Address"
+                                                    class="">Change of Address</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/Official-Information-Requests"
+                                                    class="">Official Information Requests</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/Visiting-Us"
+                                                    class="">Visiting Us</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/Mobile-Alert"
+                                                    class="">Mobile Alert</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/Connect-Horowhenua"
+                                                    class="">Connect Horowhenua</a></li>
+                                            <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs"
+                                                    class="nav-has-children">FAQs</a><button class="mobnav-subarrow-child"><i></i><span
+                                                        class="visuallyhidden text">Sub-menu</span></button>
+                                                <ul>
+
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Roading">FAQs
+                                                            - Roading</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Parks">FAQs
+                                                            - Parks</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Parking">FAQs
+                                                            - Parking</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-LIMS-Document-Requests">FAQs
+                                                            - LIMS & Document Requests</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Illegal-Dumping">FAQs
+                                                            - Illegal Dumping</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Planning">FAQs
+                                                            - Planning</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Grants">FAQs
+                                                            - Grants</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Governance">FAQs
+                                                            - Governance</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-General">FAQs
+                                                            - General</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Flooding-Stormwater">FAQs
+                                                            - Flooding & Stormwater</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Fire">FAQs
+                                                            - Fire</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Property">FAQs
+                                                            - Property</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Facilities">FAQs
+                                                            - Facilities</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Events">FAQs
+                                                            - Events</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Environmental">FAQs
+                                                            - Environmental</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Council-Projects">FAQs
+                                                            - Council Projects</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Cemeteries">FAQs
+                                                            - Cemeteries</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Rates">FAQs
+                                                            - Rates</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Building">FAQs
+                                                            - Building</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Solid-Waste-Rubbish-Recycling">FAQs
+                                                            - Solid Waste (Rubbish & Recycling)</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Trees">FAQs
+                                                            - Trees </a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Animals">FAQs
+                                                            - Animals</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Wastewater-Sewage">FAQs
+                                                            - Wastewater (Sewage)</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Water">FAQs
+                                                            - Water</a></li>
+                                                    <li class=" "><a href="https://www.horowhenua.govt.nz/Contact-Us/FAQs/FAQs-Competition-Guidelines">FAQs
+                                                            - Competition Guidelines</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <!-- Header finish -->
+        
+        <!-- QJ Body Rendered-->
+        <main role="main" class="default-theme qjumpers">
+               @RenderBody()
+        </main>
+
+        <!-- Footer here -->
+            <div class="footer-outer-container footer-first-row">
+                <div class="footer-container clearfix">
+                    <div class="grid grid-pad">
+                        <div class="col-xs-12 col-s-6 col-m-4  contact-us-footer-widget">
+                            <h3 class="footer-title">Contact Us</h3>
+                            <div style="margin-left: 2em">
+                                <p><span class="phone">06 366 0999</span></p>
+                                <p><span class="fax">06 366 0983</span></p>
+                                <p><span class="email"><a href="mailto:enquiries@horowhenua.govt.nz" title="email Horowhenua District Council.">enquiries@horowhenua.govt.nz</a></span></p>
+                            </div>
+
+
+
+
+                        </div>
+                        <div class="col-xs-12 col-s-12 col-m-4 ">
+                            <h3 class="footer-title">Share &amp; Connect</h3>
+
+                            <ul class="footer-links with-icons social-media-links">
+                                <li class="footer-link-facebook">
+                                    <a href="https://www.facebook.com/pages/Horowhenua-District-Council/269047933236930?fref=ts"
+                                        target="_blank">
+                                        <i></i>Like us on facebook
+                                    </a>
+                                </li>
+                                <li class="footer-link-twitter">
+                                    <a href="https://twitter.com/HoroDC" target="_blank">
+                                        <i></i>Follow us on twitter
+                                    </a>
+                                </li>
+                                <li class="footer-link-youtube">
+                                    <a href="https://www.youtube.com/channel/UC_WCKYirkzkNaLWzf3BnmVQ" target="_blank">
+                                        <i></i>Watch our YouTube Channel
+                                    </a>
+                                </li>
+                                <li class="footer-link-linkedin">
+                                    <a href="https://www.linkedin.com/company/horowhenua-district-council" target="_blank">
+                                        <i></i>Connect on Linkedin
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="col-xs-12 col-s-6 col-m-4 ">
+                            <h3 class="footer-title">Visit Our Other Sites</h3>
+
+                            <ul class="footer-links without-icons ">
+                                <li>
+                                    <a href="http://aquatics.horowhenua.govt.nz/" target="_blank">Aquatics Horowhenua</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.tetakere.org.nz/" target="_blank">Te Takere</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-outer-container footer-second-row">
+                <div class="footer-container clearfix">
+                    <div class="grid grid-pad footer-secondary-links">
+                        <div class="col-xs-12 col-m-7">
+
+                            <div><a href="https://www.horowhenua.govt.nz/General-Pages/Disclaimer-and-Copyright" target="_self">Disclaimer
+                                    & Copyright</a>&nbsp;| <a href="https://www.horowhenua.govt.nz/General-Pages/Privacy-Statement"
+                                    target="_self">Privacy Statement</a>&nbsp;| <a href="https://www.horowhenua.govt.nz/General-Pages/Sitemap"
+                                    target="_self">Sitemap</a>&nbsp;| <a href="https://www.govt.nz/" target="_blank">nz.govt.nz</a></div>
+
+                        </div>
+                        <div class="col-xs-12 col-m-5 powered-by">
+                            <div class="right">
+                                &copy; 2019 Horowhenua District Council&nbsp;|&nbsp;<span class="powered-by">Powered by
+                                    <a href="http://www.opencities.com" target="_blank">OpenCities</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- Footer finish -->
+    </body>
+
+</html>

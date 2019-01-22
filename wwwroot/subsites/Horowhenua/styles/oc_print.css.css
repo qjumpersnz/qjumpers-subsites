@@ -1,0 +1,197 @@
+* {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+    
+.print-element
+{
+	display:block;	
+}
+.header-outer-container,.navigation-outer-container,.footer-outer-container,.sub-navigation-outter-container
+{
+	display:none;	
+}
+.main-container
+{
+	width:100%;
+}
+
+.print-header-outer-container {
+    height: 100%;
+}
+#breadcrumbs-container .nav-separator {
+    text-indent: 0;
+}
+.search-filter,.seamless-pagination
+{
+	display:none;	
+}
+#tabs-header.js-element
+{
+	display:none !important;
+}
+#tabs-body .no-js-element
+{
+	display:block !important;
+}
+.tabs-panel.selected,.tabs-panel.disabled
+{
+	display:block;	
+}
+.related-information-section a:before {
+    content:none;
+}
+.toolbar-outer-container {
+    display: none;
+}
+.profile-tabbed-listing.do-it-online .item-icon,
+.drop-button.zip-all,
+section.comment-forum > .comment-action,
+section.comment-forum .comment-list-actions,
+section.comment-forum footer,
+.list-container .list-item-container-2 .published-on:before,
+.list-container .list-item-container .published-on:before,
+.list-container .list-item-container .applications-closing:before,
+.list-item-address:before,
+.multi-date-toggle,
+.add-to-calendar-header,
+.image-gallery-container a[href]:after,
+.categories-list a[href]:after,
+a.pop_glossary[href]:after,
+.accordion-trigger span.visuallyhidden,
+#sub-navigation-outter-container,
+.sc-feedback-form,
+.back-to-top-container,
+#readspeaker_button_default,
+.table-of-content-container,
+.page-section-pagination,
+a.item-navigation,
+.image-fade,
+.share-page-container {
+	display: none;
+}
+
+.main-inner-container .col-lg-4 + .col-lg-8 {
+	width: 100%;
+}
+
+.print-header-outer-container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.profile-tabbed-listing.do-it-online .profile-list {
+	padding: 0;
+	margin: 0;
+}
+
+.past-events-container,
+.js .page-section-container {
+	display: block;
+}
+
+#consultationDiscussion,
+#consultationLatestUpdates,
+.accordion-item-body {
+	display: block !important;
+}
+
+.accordion-item-body {
+	padding-left: 0;
+}
+
+.accordion-list-container .accordion-item-header h2 {
+	padding-left: 0;
+	padding-bottom: 0;
+}
+
+.animal-list-container .item-adopt span.field-label {
+	padding: 0;
+}
+
+.page-section-header.page-section-header-auto {
+	height: auto;
+	margin: 0 0 20px 0;
+	position: static;
+	width: auto;
+}
+
+.js .social-media-profiles.icons-only li {
+	clear: left;
+}
+
+.qr-code {
+    display: block;
+    float: right;
+    margin-top: 10px;
+}
+
+.qr-code img {
+    width: 100px;
+    height: 100px;
+}
+
+.step-numbering-Yes .step-section-container { border-left-color: #000!important; }
+.step-numbering-Yes .step-section-container::before { color: #000!important; border-color: #000!important; }
+.main-inner-container .grid > .col-m-8 { width: 66%; }
+.main-inner-container .grid > .col-m-4 { width: 33%; }/* Client print styles */

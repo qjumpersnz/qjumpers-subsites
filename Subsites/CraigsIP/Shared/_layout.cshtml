@@ -1,0 +1,419 @@
+@using System.Threading.Tasks
+@using QJumpers.Public.QJumpersClient.Helpers;
+@using QJumpers.Common.Api.Extensions;
+<!DOCTYPE html>
+<!--[if IE 9]><html lang="en" class="ie9 no-js"><![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="shortcut icon" type="image/ico" href="/subsites/craigsip/images/favicon.ico" />
+
+    <title>Careers | Join the Team | Craigs Investment Partners </title>
+
+    <meta name="keywords" content="careers" />
+    <meta name="description" content="We're proud of the people who work in our team. But we are always on the look out for more talented people to help us meet the growing needs of our clients. Here you can see our current vacancies."
+    />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:title" content="careers" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="careers" />
+    <meta property="og:url" content="https://craigsip.com/careers" />
+    
+    <link href="https://cloud.typography.com/6124312/7507592/css/fonts.css" rel="stylesheet" type="text/css" />
+    <link href="/subsites/craigsip/styles/Main.min.css" rel="stylesheet" />
+    <link href="/subsites/craigsip/styles/custom1.css" rel="stylesheet" />
+    <link href="/form.css" rel="stylesheet" />
+    <link href="/subsites/craigsip/styles/custom.css" rel="stylesheet" />
+</head>
+
+<body class="default-theme ">
+    @{
+        
+    <!-- Google Tag Manager -->
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=@ViewData["QJGTMCode"]" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+        <script>
+			(function (w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != 'dataLayer' ? '&l=' + l : '';
+				j.async = true;
+				j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, 'script', 'qjDataLayer', '@ViewData["QJGTMCode"]');
+        </script>
+        <!-- End Google Tag Manager -->
+    }
+    @{
+        var clientGACode = "";
+
+        if (!(bool)ViewData["IsQjumpersSubsite"] && !string.IsNullOrEmpty((string)ViewData["SubsiteGACode"]))
+        {
+            clientGACode = string.Format("ga('create', '{0}', 'auto', 'clientTracker');ga('clientTracker.send', 'pageview');", @ViewData["SubsiteGACode"]);
+        }
+        <script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', '@ViewData["SubsiteGACode"]', 'auto');
+		ga('send', 'pageview');
+		@if (!(bool)ViewData["IsQjumpersSubsite"] && !string.IsNullOrEmpty((string)ViewData["SubsiteGACode"]))
+		{
+			@:ga('create', '@ViewData["SubsiteGACode"])', 'auto', 'clientTracker');
+					@:ga('clientTracker.send', 'pageview');
+		}
+        </script>
+    }
+
+    <div id="fb-root"></div>
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.11&appId=1681441575442683';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+     @{
+        var host = string.Empty;
+        if (Context.Request.Host.Port == null)
+        {
+            host = $"{Context.Request.Scheme}{Uri.SchemeDelimiter}{Context.Request.Host.Host}";
+        }
+        else
+        {
+            host = $"{Context.Request.Scheme}{Uri.SchemeDelimiter}{Context.Request.Host.Host}:{Context.Request.Host.Port}";
+        }
+        var geoHost = "Geonames_Base_Url".FromRequiredEnvironmentVariable();
+        var keycloakHost = "Keycloak_Host".FromRequiredEnvironmentVariable();
+        var sessionTimeout = "SESSIONTIMEOUT".FromRequiredEnvironmentVariable();
+        
+        <script>
+        var environmentConfig = {
+            host: "@Context.Request.Host.Host",
+            port: @Context.Request.Host.Port,
+            sessionTimeout: @sessionTimeout,
+            subsite: "@Context.Items[SubsiteConstants.SubsiteKey]",
+            ADMIN: {
+                apiHost: "@host/api",
+                apiPath: ""
+            },
+            GEO: {
+                apiHost: "@geoHost/api",
+                apiPath: ""
+            },
+            KEYCLOAK: {
+                apiHost: "@keycloakHost/auth",
+                apiPath: ""
+            }
+        }
+        </script>
+    }
+
+
+    <div id="main-container">
+        <header class="header-static">
+
+
+            <nav class="navbar navbar-default" id="mainNavbar">
+                <div class="header-top">
+                    <div class="container-fluid">
+                        <div class="top-nav-section">
+                            <button type="button" onclick="mobileMenu()" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-target="#siteNavbar" aria-expanded="true">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <!-- Logos -->
+                            <a class="hidden-xs" href="https://craigsip.com">
+                                <img src="/subsites/craigsip/images/craigs-logo.png"
+                                    class="logo-margin" alt="Craigs Investment Partners" DisableWebEdit="False" />
+                            </a>
+
+                            <!-- Mobile -->
+                            <div class="navbar-left">
+                                <a class="navbar-brand " href="https://craigsip.com">
+                                    <span class="logo">
+                                        <img src="/subsites/craigsip/images/craigs-mobile-logo.png"
+                                            class="visible-xs" alt="Craigs Investment Partners" DisableWebEdit="False"
+                                        />
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="navbar-center hidden visible-xs">
+                            <div class="navbar-collapse collapse" id="siteNavbar" aria-expanded="true">
+                                <nav>
+                                    <ul class="nav navbar-nav">
+                                        <li id="mobile-search">
+                                            <form action="https://craigsip.com/search" class="search-container" role="search">
+                                                <div id="search-typeahead">
+                                                    <input class="typeahead form-control" name="query" type="text" placeholder="Search" autocomplete="off">
+                                                </div>
+                                                <i class="search-icon glyphicon glyphicon-search"></i>
+                                                <input type="submit" style="width: 0px; height: 0px; opacity: 0; position:absolute;" />
+                                            </form>
+                                        </li>
+                                        <li class="dropdown">
+
+                                            <a href="https://craigsip.com/personal-wealth" class="dropdown-toggle  text-uppercase" data-toggle="dropdown" role="button"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                Personal Wealth
+                                                <i class="fa fa-chevron-down menu-caret"></i>
+                                            </a>
+                                            <ul class="dropdown-menu m-l-1">
+
+                                                <li class="menu-subitem ">
+                                                    <a href="https://craigsip.com/personal-wealth/overview" target="">Overview</a>
+                                                </li>
+                                                <li class="menu-subitem ">
+                                                    <a href="https://craigsip.com/personal-wealth/managed-portfolio-service" target="">Managed Portfolio Service</a>
+                                                </li>
+                                                <li class="menu-subitem ">
+                                                    <a href="https://craigsip.com/personal-wealth/sharebroking" target="">Sharebroking</a>
+                                                </li>
+                                                <li class="menu-subitem ">
+                                                    <a href="https://craigsip.com/personal-wealth/mystart" target="">mySTART</a>
+                                                </li>
+                                                <li class="menu-subitem ">
+                                                    <a href="https://craigsip.com/personal-wealth/craigs-kiwisaver" target="">Craigs KiwiSaver</a>
+                                                </li>
+                                                <li class="menu-subitem ">
+                                                    <a href="https://craigsip.com/personal-wealth/craigs-superannuation" target="">Craigs Superannuation</a>
+                                                </li>
+                                                <li class="menu-subitem ">
+                                                    <a href="https://craigsip.com/personal-wealth/australian-super-transfers" target="">Australian Superannuation Transfers</a>
+                                                </li>
+                                                <li class="menu-subitem ">
+                                                    <a href="https://craigsip.com/personal-wealth/uk-pension-transfers" target="">UK Pension Transfers</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+
+                                            <a href="https://craigsip.com/corporate" class="dropdown-toggle  text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                Corporate
+                                                <i class="fa fa-chevron-down menu-caret"></i>
+                                            </a>
+                                            <ul class="dropdown-menu m-l-1">
+
+                                                <li class="menu-subitem ">
+                                                    <a href="https://craigsip.com/corporate/overview" target="">Overview</a>
+                                                </li>
+                                                <li class="menu-subitem ">
+                                                    <a href="https://craigsip.com/corporate/deutsche-craigs" target="">Deutsche Craigs</a>
+                                                </li>
+                                                <li class="menu-subitem ">
+                                                    <a href="https://craigsip.com/corporate/institutional-equities" target="">Institutional Equities</a>
+                                                </li>
+                                                <li class="menu-subitem ">
+                                                    <a href="https://craigsip.com/corporate/deals" target="">Deals</a>
+                                                </li>
+                                                <li class="menu-subitem ">
+                                                    <a href="https://craigsip.com/corporate/new-issues-offers" target="">New Issues &amp; Offers</a>
+                                                </li>
+                                                <li class="menu-subitem ">
+                                                    <a href="https://craigsip.com/corporate/awards" target="">Awards</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+
+                                            <a href="https://craigsip.com/insights" class="dropdown-toggle  text-uppercase" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                Insights
+                                                <i class="fa fa-chevron-down menu-caret"></i>
+                                            </a>
+                                            <ul class="dropdown-menu m-l-1">
+
+                                                <li class="menu-subitem ">
+                                                    <a href="https://craigsip.com/insights/overview" target="">Overview</a>
+                                                </li>
+                                                <li class="menu-subitem ">
+                                                    <a href="https://craigsip.com/insights/investor-education" target="">Investor Education</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li class=" hidden-xs">
+                                            <a href="https://craigsip.com/people/advisers" target="" title="Contact" class="top-link text-normal ">
+                                                Contact </a>
+                                        </li>
+                                        <li class=" hidden-xs">
+                                            <a href="https://portal.craigsip.com/client/app" target="" title="Login" class="top-link text-normal ">
+                                                Login </a>
+                                        </li>
+                                        <li class=" visible-xs">
+                                            <a href="https://craigsip.com/people/advisers" target="" title="Contact" class="top-link text-normal ">
+                                                Contact </a>
+                                        </li>
+
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 2nd half of header -->
+                <div class="container-fluid hidden-xs header-container-margin">
+                    <div class="row nav-level-one">
+                        <!-- Primary nav level one-->
+                        <div class="col-sm-6">
+
+                            <nav>
+                                <ul class="nav navbar-nav">
+                                    <li class="">
+                                        <a href="https://craigsip.com/personal-wealth" target="">
+                                            Personal Wealth
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="https://craigsip.com/corporate" target="">
+                                            Corporate
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="https://craigsip.com/insights" target="">
+                                            Insights
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                        </div>
+                        <div class="col-sm-5">
+                        @{
+                            @if ((bool)ViewData["React"]) {
+                                <div id='navRoot'></div>
+                            }
+                            else {
+                                <ul id="nav-search" class="pull-right nav navbar-nav">
+                                    <li id="desktop-search" class="desktop-search navbar-activity-search">
+                                        <form action="https://craigsip.com/search" class="search-container" role="search">
+                                            <div class="search-typeahead">
+                                                <input class="typeahead form-control" name="query" type="text" placeholder="Search" autocomplete="off">
+                                            </div>
+                                            <i class="search-icon glyphicon glyphicon-search"></i>
+                                            <input type="submit" style="width: 0px; height: 0px; opacity: 0; position:absolute;" />
+                                        </form>
+                                    </li>
+                                    <li class=" hidden-xs">
+                                        <a href="https://craigsip.com/people/advisers" target="" title="Contact" class="top-link text-normal ">
+                                            Contact </a>
+                                    </li>
+                                    
+                                    <li class=" visible-xs">
+                                        <a href="https://craigsip.com/people/advisers" target="" title="Contact" class="top-link text-normal ">
+                                            Contact </a>
+                                    </li> 
+                                </ul>
+                            }
+                        }
+                        </div>
+                        <div class="col-sm-1">
+                            <div class="pull-right navbar-activity">
+                            @{
+                                <ul class="nav navbar-nav">
+                                    <!-- Logged in -->
+                                    @if (User.Identity.IsAuthenticated) {
+                                    <li class=" hidden-xs">
+                                        <a href="/jobs/user/logout" target="" title="Logout" class="top-link text-normal ">
+                                            Logout </a>
+                                    </li>      
+                                    }
+                                    else {                                       
+                                    <li class=" hidden-xs">
+                                        <a href="/jobs/user/login" target="" title="Login" class="top-link text-normal ">
+                                            Login </a>
+                                    </li>
+                                    }
+                                </ul>
+                            }
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- Primary nav level two -->
+                    <div class="nav-level-two">
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Body Start -->
+        <main role="main" class="default-theme qjumpers">
+          @RenderBody()
+        </main>
+        <!-- Body End -->
+
+        <footer>
+            <div class="footer-bottom text-center ">
+                <div class="container ">
+                    <h6>Please ensure you read and agree to our
+                        <a href="https://craigsip.com/-/media/craigsip/files/other/careers-terms-and-conditions.pdf?la=en&amp;hash=4E135B9AE640CF1DFB77528A19C30D50349192CB ">Careers Terms &amp; Conditions</a> before applying for a vacancy or registering your interest in
+                        future opportunities.</h6>
+                    <h6>
+                        <h6>Craigs Investment Partners Limited is a NZX Participant firm. Adviser Disclosure Statements are available
+                            on request and free of charge.</h6>
+                        <h6>&copy; Copyright 2018 Craigs Investment Partners Limited</h6>
+                    </h6>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Craigs JS start -->
+    <script src="~/subsites/craigsip/scripts/base.min.js"></script>
+    <script src="~/subsites/craigsip/scripts/ScrollMagic.min.js"></script>
+    <script src="~/subsites/craigsip/scripts/vendor.min.js"></script>
+    <!-- Craigs JS end -->
+
+    
+    
+    @{
+        if (ViewData["React"] == null || !(bool)ViewData["React"] || !(bool)ViewData["LocalDev"])
+        {
+            <!-- Standard QJumpers JS start -->
+            <script src="~/jobs/lib/core-js/core.js"></script>
+            <script src="~/jobs/lib/sweetalert2/sweetalert2.min.js"></script>
+            <script src="~/jobs/lib/typeahead/typeahead.bundle.min.js"></script>
+            <script src="~/jobs/js/site.js" asp-append-version="true"></script>
+            <!-- Standard QJumpers JS end -->
+        }
+        else {
+
+        }
+    }
+
+    <script src="~/subsites/craigsip/scripts/custom.js" asp-append-version="true"></script>    
+
+</body>
+</html>        

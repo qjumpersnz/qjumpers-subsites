@@ -1,0 +1,297 @@
+@using System.Threading.Tasks
+@using QJumpers.Public.QJumpersClient.Helpers;
+@using QJumpers.Common.Api.Extensions;
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+      @{
+      <!-- Google Tag Manager -->
+      <noscript><iframe src="//www.googletagmanager.com/ns.html?id=@ViewData["QJGTMCode"]" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+      <script>
+         (function (w, d, s, l, i) {
+         	w[l] = w[l] || [];
+         	w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+         	var f = d.getElementsByTagName(s)[0],
+         		j = d.createElement(s),
+         		dl = l != 'dataLayer' ? '&l=' + l : '';
+         	j.async = true;
+         	j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+         	f.parentNode.insertBefore(j, f);
+         })(window, document, 'script', 'qjDataLayer', '@ViewData["QJGTMCode"]');
+              
+      </script>
+      <!-- End Google Tag Manager -->
+      }
+      @{
+      var clientGACode = "";
+      if (!(bool)ViewData["IsQjumpersSubsite"] && !string.IsNullOrEmpty((string)ViewData["SubsiteGACode"]))
+      {
+      clientGACode = string.Format("ga('create', '{0}', 'auto', 'clientTracker');ga('clientTracker.send', 'pageview');", @ViewData["SubsiteGACode"]);
+      }
+      <script>
+         (function (i, s, o, g, r, a, m) {
+         	i['GoogleAnalyticsObject'] = r;
+         	i[r] = i[r] || function () {
+         		(i[r].q = i[r].q || []).push(arguments)
+         	}, i[r].l = 1 * new Date();
+         	a = s.createElement(o),
+         		m = s.getElementsByTagName(o)[0];
+         	a.async = 1;
+         	a.src = g;
+         	m.parentNode.insertBefore(a, m)
+         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+         
+         ga('create', '@ViewData["SubsiteGACode"]', 'auto');
+         ga('send', 'pageview');
+         @if (!(bool)ViewData["IsQjumpersSubsite"] && !string.IsNullOrEmpty((string)ViewData["SubsiteGACode"]))
+         {
+         	@:ga('create', '@ViewData["SubsiteGACode"])', 'auto', 'clientTracker');
+         			@:ga('clientTracker.send', 'pageview');
+         }
+               
+      </script>
+      }
+
+      <!-- Stylesheets -->
+      <link rel="stylesheet" href="/subsites/InghamdrivenNz/styles/inghamdrivenNz.css" type="text/css" media="screen" id="pagestyle" />
+      <link rel="stylesheet" href="/subsites/InghamdrivenNz/styles/genericCss.min-21.css" type="text/css" media="screen" id="pagestyle" />
+      <link rel="stylesheet" href="/form.css">
+
+      @{
+      var host = string.Empty;
+      if (Context.Request.Host.Port == null)
+      {
+      host = $"{Context.Request.Scheme}{Uri.SchemeDelimiter}{Context.Request.Host.Host}";
+      }
+      else
+      {
+      host = $"{Context.Request.Scheme}{Uri.SchemeDelimiter}{Context.Request.Host.Host}:{Context.Request.Host.Port}";
+      }
+      var geoHost = "Geonames_Base_Url".FromRequiredEnvironmentVariable();
+      var keycloakHost = "Keycloak_Host".FromRequiredEnvironmentVariable();
+      var sessionTimeout = "SESSIONTIMEOUT".FromRequiredEnvironmentVariable();
+      <script>
+         var environmentConfig = {
+             host: "@Context.Request.Host.Host",
+             port: @Context.Request.Host.Port,
+             sessionTimeout: @sessionTimeout,
+             subsite: "@Context.Items[SubsiteConstants.SubsiteKey]",
+             ADMIN: {
+                 apiHost: "@host/api",
+                 apiPath: ""
+             },
+             GEO: {
+                 apiHost: "@geoHost/api",
+                 apiPath: ""
+             },
+             KEYCLOAK: {
+                 apiHost: "@keycloakHost/auth",
+                 apiPath: ""
+             }
+         }
+      </script>
+      }
+    </head>
+    <body>
+        <!-- Header here -->
+        <nav>
+    <div class="container">
+        <div id="company-logo-container" class="pull-left"><a href="https://www.inghamdriven.nz/"><img src="/wwwroot/subsites/InghamdrivenNz/images/ingham-logo-web.svg" alt="Ingham Driven logo" /></a></div>
+        <div id="nav-links" class="pull-right">
+            <ul class="list-flat list-white">
+
+                <li class="new-car" id="nav-new-cars-link">
+                    <a onclick="if($(document).width() > 1025) window.location.assign('/new-cars');">New Cars</a>
+                    <div id="nav-new-cars">
+                        <div class="container">
+
+                        <div id="nav-hide-new-cars" class="hide pad-1">
+                            <span class="arrow-left"></span>
+                            <span class="mg-left-2">Back to menu</span>
+                        </div>
+                        <div class="nav-new-cars-container">
+                            <a href="http://www.hyundai.co.nz/new-cars/all-cars/" target='_blank'>
+                                <span class="new-cars-name">Hyundai</span>
+                            </a>
+                        </div>
+                        <div class="nav-new-cars-container">
+                            <a href="http://www.wingsandwheelsisuzu.co.nz/" target='_blank'>
+                                <span class="new-cars-name">Isuzu</span>
+                            </a>
+                        </div>
+                        <div class="nav-new-cars-container">
+                            <a href="https://www.kia.co.nz/find-a-dealer/dealer/taupo-kia/" target='_blank'>
+                                <span class="new-cars-name">Kia</span>
+                            </a>
+                        </div>
+                        <div class="nav-new-cars-container">
+                            <a href="https://www.mercedes-benz.co.nz/content/new_zealand/mpc/mpc_new_zealand_website/en/home_mpc/passengercars.html" target='_blank'>
+                                <span class="new-cars-name">Mercedes-Benz</span>
+                            </a>
+                        </div>
+                        <div class="nav-new-cars-container">
+                            <a href="https://www.mmnz.co.nz/" target='_blank'>
+                                <span class="new-cars-name">Mitsubishi</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </li>
+
+            <li class="used-cars"><a href="https://www.inghamdriven.nz/search">Used cars</a></li>
+            <li class="promotions"><a href="https://www.inghamdriven.nz/specials">Specials</a></li>
+            <li class="finance"><a href="https://www.inghamdriven.nz/finance">Finance</a></li>
+            <li class="service-and-parts"><a href="https://www.inghamdriven.nz/service-and-parts">Service & Parts</a></li>
+            <li class="dealership" id="nav-dealership-link">
+                <a onclick="if($(document).width() > 1025) window.location.assign('/dealerships');">Dealerships</a>
+                <div id="nav-dealership">
+                    <div class="container">
+
+                        <div id="nav-hide-dealerships" class="hide pad-1">
+                            <span class="arrow-left"></span>
+                            <span class="mg-left-2">Back to menu</span>
+                        </div>
+                        <div class="nav-dealership-container">
+                            <a href="https://www.inghamdriven.nz/mercedes-benz-auckland">
+                            <span class="dealership-location">Auckland</span>
+                                <span class="dealership-name">Mercedes-Benz Auckland</span>
+                            </a>
+                        </div>
+                        <div class="nav-dealership-container">
+                            <a href="https://www.inghamdriven.nz/ingham-sears">
+                            <span class="dealership-location">Bay of Plenty</span>
+                                <span class="dealership-name">Ingham-Sears</span>
+                            </a>
+                        </div>
+                        <div class="nav-dealership-container">
+                            <a href="https://www.inghamdriven.nz/mercedes-benz-hawkes-bay">
+                            <span class="dealership-location">Hawke's Bay</span>
+                                <span class="dealership-name">Mercedes-Benz Hawkes Bay</span>
+                            </a>
+                        </div>
+                        <div class="nav-dealership-container">
+                            <a href="https://www.inghamdriven.nz/hyundai-isuzu-taupo">
+                            <span class="dealership-location">Waikato</span>
+                                <span class="dealership-name">Hyundai & Isuzu Taupo</span>
+                            </a>
+                        </div>
+                        <div class="nav-dealership-container">
+                            <a href="https://www.inghamdriven.nz/ingham-hyundai">
+                            <span class="dealership-location">Waikato</span>
+                                <span class="dealership-name">Ingham Hyundai</span>
+                            </a>
+                        </div>
+                        <div class="nav-dealership-container">
+                            <a href="https://www.inghamdriven.nz/ingham-mitsubishi">
+                            <span class="dealership-location">Waikato</span>
+                                <span class="dealership-name">Ingham Mitsubishi</span>
+                            </a>
+                        </div>
+                        <div class="nav-dealership-container">
+                            <a href="https://www.inghamdriven.nz/ingham-prestige">
+                            <span class="dealership-location">Waikato</span>
+                                <span class="dealership-name">Ingham Prestige</span>
+                            </a>
+                        </div>
+                        <div class="nav-dealership-container">
+                            <a href="https://www.inghamdriven.nz/ingham-taupo">
+                            <span class="dealership-location">Waikato</span>
+                                <span class="dealership-name">Ingham Taupo</span>
+                            </a>
+                        </div>
+                        <div class="nav-dealership-container">
+                            <a href="https://www.inghamdriven.nz/ingham-te-awamutu">
+                            <span class="dealership-location">Waikato</span>
+                                <span class="dealership-name">Ingham Te Awamutu</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </li>
+            <li class="myfleet" ><a href="https://www.inghamdriven.nz/myfleet">MyFleet</a></li>
+            <li><a href="http://inghamdriven.qjumpers.co.nz/jobs/" target="_blank">Careers</a></li>
+            <li class="contact" ><a href="contact">Contact</a></li>
+            </ul>
+    </div>
+    <div id="nav-mb-icon">
+        <span></span>
+    </div>
+    <div id="nav-mb-menu" class="hide mb-show">Menu</div>
+</div>
+</nav>
+
+<div class="hero-half-page background-image" data-background-image="https://www.inghamdriven.nz/image.php?name=/files/inghamdriven/images/161/Company-Contact-Header-2.jpg">
+
+    <!-- SUB NAVIGATION START -->
+    <div class="sub-nav-bottom">
+        <div class="sub-navigation-container sub-navigation-menu">
+            <div class="container row">
+                <h1 class="hover mb-pad-1-left" data-sub-nav="home">Careers</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUB NAVIGATION END -->
+</div>
+
+        <!-- Header finish -->
+        
+        <!-- QJ Body Rendered-->
+        <main role="main" class="default-theme qjumpers">
+               @RenderBody()
+        </main>
+
+        <!-- Footer here -->
+            <footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <b><a href="https://www.inghamdriven.nz/search" class="toggle-hidden-header mb-arrow-right">Used cars</a></b>
+            </div>
+            <div class="col-2">
+                <b><a href="https://www.inghamdriven.nz/specials" class="toggle-hidden-header mb-arrow-right">Specials</a></b>
+            </div>
+            <div class="col-2">
+                <b><a href="https://www.inghamdriven.nz/service-and-parts" class="toggle-hidden-header mb-arrow-right">Service & Parts</a></b>
+            </div>
+
+            <div class="col-2">
+                <div class="mb-hidden-toggle">
+                <b class="toggle-hidden-header mb-arrow-right">Dealerships</b>
+                <ul class="mb-hide"><li><a href='https://www.inghamdriven.nz/hyundai-isuzu-taupo'>Hyundai & Isuzu Taupo</a></li><li><a href='https://www.inghamdriven.nz/ingham-hyundai'>Ingham Hyundai</a></li><li><a href='https://www.inghamdriven.nz/ingham-mitsubishi'>Ingham Mitsubishi</a></li><li><a href='https://www.inghamdriven.nz/ingham-prestige'>Ingham Prestige</a></li><li><a href='https://www.inghamdriven.nz/ingham-taupo'>Ingham Taupo</a></li><li><a href='https://www.inghamdriven.nz/ingham-te-awamutu'>Ingham Te Awamutu</a></li><li><a href='https://www.inghamdriven.nz/ingham-sears'>Ingham-Sears</a></li><li><a href='https://www.inghamdriven.nz/mercedes-benz-auckland'>Mercedes-Benz Auckland</a></li><li><a href='https://www.inghamdriven.nz/mercedes-benz-hawkes-bay'>Mercedes-Benz Hawkes Bay</a></li>
+                </ul>
+                </div>
+            </div>
+            <div class="col-2">
+                <b><a href="contact" class="toggle-hidden-header mb-arrow-right">Contact</a></b>
+            </div>
+            <div id="footer-social-icons" class="col-2 mb-align-right mb-pad-1">
+                <b class="mb-hide clear">Follow Ingham</b>
+                <a href="https://www.facebook.com/inghamdriven"><img src="/wwwroot/subsites/InghamdrivenNz/images/fb.svg" /></a>
+                <a href="https://twitter.com/inghamdriven"><img src="/wwwroot/subsites/InghamdrivenNz/images/twitter.svg" /></a>
+                <!--<a href="#"><img src="/files/inghamdriven/files/60/youtube.svg" /></a>
+                <a href="#"><img src="/files/inghamdriven/files/59/instagram.svg" /></a>-->
+            </div>
+        </div>
+    </div>
+    <div id="footer-bottom" class="row">
+        <div class="container">
+            <div class="mb-hidden-toggle">
+                <b class="toggle-hidden-header hide mb-arrow-right">Site Information</b>
+                <div class="pull-left mb-hide"> <a href="https://www.inghamdriven.nz/privacy-policy">Privacy Policy</a> | <a href="https://www.inghamdriven.nz/terms-and-conditions">Terms and Conditions</a></div>
+                <div class="pull-right mb-pull-left mb-hide"> Copyright 2017 Ingham Group Services Ltd </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        <!-- Footer finish -->
+
+    <script src="/wwwroot/subsites/InghamdrivenNz/scripts/ingham.formSubmit.min-3.js"></script>
+<script src="/wwwroot/subsites/InghamdrivenNz/scripts/ingham.financeCalculator.min.js" async="true"></script>
+    </body>
+
+</html>

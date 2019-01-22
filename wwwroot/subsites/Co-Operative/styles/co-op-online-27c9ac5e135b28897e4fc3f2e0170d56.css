@@ -7572,7 +7572,7 @@ html:not(.has-touch) .has-tooltip:hover .tooltip {
     }
 }
 
-.btn, [type=submit] {
+.btn, [type=submit],  {
     display: inline-block;
     vertical-align: initial;
     white-space: nowrap;
@@ -10802,7 +10802,7 @@ h5+.Select-dropdown-greyLink {
 
 .MobileMenu-affordance .affordance {
     color: rgba(255, 255, 255, .5);
-    transition: transform 150ms linear
+    transition: transform 150ms linear;
 }
 
 .MobileMenu-affordance:hover .affordance {

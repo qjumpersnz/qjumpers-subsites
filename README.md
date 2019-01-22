@@ -21,3 +21,8 @@ npm run dev
 Open a new browser
 
 [http://127.0.0.1:8081/?subsite=InghamDriven&page=list](http://127.0.0.1:8081/?subsite=InghamDriven&page=list)
+
+
+Make sure to link to the form.css stylesheet located in the wwwroot/ directory. This fixes general styling errors that occur on most subsites.
+
+Make a copy of the custom.css template and use this for custom styling.

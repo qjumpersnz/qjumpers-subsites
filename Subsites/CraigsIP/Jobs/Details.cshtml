@@ -1,0 +1,114 @@
+@using System.Threading.Tasks
+@using QJumpers.Public.QJumpersClient.Helpers
+@{
+	Layout = "_layout";
+
+    var applyLinkDisabled = false;
+    var hasBeenApplied = ViewData["Application"] != null;
+    var applicationPage = "/applications/add/" + Model.Id;
+
+    if (Model.JobAdvertExpiryDate.ToUniversalTime() < DateTimeOffset.UtcNow || hasBeenApplied)
+    {
+        applicationPage = "#";
+        applyLinkDisabled = true;
+    }
+    else
+    {
+        var subsiteDomain = ViewData["Subsite"].ToString();
+        var applicantSource = string.Empty;
+
+        if (!string.IsNullOrEmpty(subsiteDomain))
+        {
+            applicantSource = subsiteDomain;
+        }
+    }
+}
+
+@model QJumpers.JobBoard.Contracts.Jobs.Job
+
+<div class="job-detail">
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+              function mobileMenu() {
+                  var e = document.getElementById("siteNavbar"");
+                  e.classList.toggle("collapse in");                  
+              }
+
+   <script src="/subsites/CraigsIP/scripts/app-bundle.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>CAREERS</h1>
+            </div>
+        </div>
+    </div>
+    <div class="job-detail--header">
+        <div class="container">
+	        <div class="row border-bottom">
+		        <div class="col-xs-12 col-sm-8">
+			        
+                    <h2>@Model.Title</h2>
+
+                    <div>
+                        <em class="">
+                            @Model.Address.ToFriendlyDisplay()
+                        </em>
+                    </div>
+
+                    <div>
+                        <em id="applicataionClosingDateSummary">
+                            Applications close: @Model.JobAdvertExpiryDate
+                        </em>
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-sm-4 text-right" style= "display: block;">
+
+                     <a disabled="@applyLinkDisabled" href="@applicationPage"  class="btn cta cta--top" id="applyBtn">@(!hasBeenApplied ? "APPLY NOW" : "SUBMITTED")</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="job-detail--body">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <p>@Html.Raw(Model.FullDescription)</p>
+
+                    <div class="docs-wrap">
+                        <ul class="list-unstyled list-inline">
+                            <li>
+                                @if (@Model.JobDescription != null && !string.IsNullOrEmpty(@Model.JobDescription.Url))
+                                {
+                                    <span>Job Description</span>
+                                    <a href="@Model.JobDescription.Url" target="_blank" class="cv-file">
+                                        @Model.JobDescription.Name
+                                    </a>
+                                }
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <a disabled="@applyLinkDisabled" href="@applicationPage" class="btn cta" id="applyBtn2">@(!hasBeenApplied ? "APPLY NOW" : "SUBMITTED")</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var localeDateString = new Date("@Html.Raw(Model.JobAdvertExpiryDate.ToString("yyyy-MM-dd HH:mm:ss zzz"))").toLocaleDateString();
+    console.log(localeDateString);
+    if (localeDateString !== "Invalid Date") {
+        document.getElementById("applicataionClosingDate").innerHTML += localeDateString;
+    }
+    //document.getElementById("applicataionClosingDateSummary").innerHTML += localeDateString;
+</script>

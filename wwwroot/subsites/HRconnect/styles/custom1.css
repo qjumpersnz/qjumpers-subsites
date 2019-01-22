@@ -1,0 +1,70 @@
+
+
+.qjumpers * {
+    color: #475051;
+}
+
+
+
+/* Form */
+
+.qjumpers [class^="PathForm__pathForm___"] > div > .row:not(.no-bottom-line):after {
+    background-color: #c4c4c4;
+}
+
+/* Btn */
+.job-detail {
+    margin-bottom: 50px;
+}
+.qjumpers button.btn.btn-info, .qjumpers button.btn.btn-info.btn-add.btn-text, .qjumpers button.btn.btn-danger.array-item-remove.btn-border.btn-text, .qjumpers .job-detail .job-detail--sidebar .cta-wrap .btn.cta, .qjumpers btn, .qjumpers .form-actions .btn, .qjumpers .FileUpload__dropZone___2Yw9t.btn {
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    min-width: 6.875rem;
+    padding: 1rem 1.25rem;
+    line-height: 1;
+    -webkit-transition: background 0.25s linear, color 0.25s linear, box-shadow 0.25s linear;
+    transition: background 0.25s linear, color 0.25s linear, box-shadow 0.25s linear;
+    font-family: htrh,Arial;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    border-radius: 0.5rem;
+    background: #475051;
+    box-shadow: inset 0 0 0 0px #475051;
+    font-family: 'htrh',Arial;
+}
+
+.qjumpers button.btn.btn-info:hover {
+    background: #475051;
+}
+.qjumpers button.btn.btn-info span,  .qjumpers button.btn.btn-info.btn-add.btn-text span,  .qjumpers .form-actions .btn span, .FileUpload__dropZone___2Yw9t.btn span, .qjumpers li.step-doing span.text span, .qjumpers .navbar-nav li.step-todo span:hover, .qjumpers button.btn.btn-danger.array-item-remove.btn-border.btn-text span {
+    color: #fff;
+}
+
+.qjumpers .FileUpload__dropZone___2Yw9t.btn {
+    width: 125px;
+}
+.qjumpers .cta-wrap.clearfix .clearfix {
+    width: 200px;
+}
+
+.qjumpers span.rw-i.rw-i-calendar {
+    color: white;
+}
+
+.qjumpers .btn:hover, .qjumpers .job-detail .job-detail--sidebar .cta-wrap .btn.cta:hover, .qjumpers .form-actions .btn:hover{
+    color:#fff;background:#293233;box-shadow:inset 0 0 0 0px #293233;
+}
+
+
+/* List */
+.qjumpers .dashboard-list-item .location-icon {
+    font-size: 16px;
+}
+
+hr {
+    display: none;
+}

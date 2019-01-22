@@ -816,3 +816,16 @@
 .qjumpers .rw-datetimepicker.rw-widget {
     padding-right: 18px;
 }
+
+ @font-face {
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-weight: 400;
+            src: url('/wwwroot/subsites/Pamu/fonts/MaterialIcons-Regular.eot');
+            /* For IE6-8 */
+            src: local('Material Icons'),
+            local('MaterialIcons-Regular'),
+            url('/wwwroot/subsites/Pamu/fonts/MaterialIcons-Regular.woff2') format('woff2'),
+            url('/wwwroot/subsites/Pamu/fonts/MaterialIcons-Regular.woff') format('woff'),
+            url('/wwwroot/subsites/Pamu/fonts/MaterialIcons-Regular.ttf') format('truetype');
+        }

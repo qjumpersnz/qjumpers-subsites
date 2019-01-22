@@ -1,0 +1,117 @@
+/* Custom Styles for company */
+
+/* Job List page */
+
+    /* Job Title */
+    .qjumpers .col-xs-12.col-sm-7 .qjumpers h4 {
+        color: ;
+        font-size: ;
+        margin-bottom: ;
+    }
+
+    /*  Job location */
+    .qjumpers .col-xs-12.col-sm-3 strong {
+        color: ;
+        font-size: ;
+    }
+
+    /*  Job short description */
+    .qjumpers .row.dashboard-list-item--content .col-xs-12.col-sm-8.text-wrap.dark-txt {
+        color: ;
+        font-size: ;
+        margin-bottom: ;
+    }
+
+
+/* Job details/ad page */
+
+    /* Job Title */
+    .qjumpers .row.border-bottom .col-xs-12.col-sm-9 h1 {
+        color: ;
+        font-size: ;
+        margin-bottom: ;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Job full description */
+    .qjumpers .col-xs-12.col-sm-8.col-md-9 .job-summary-wrap.clearfix.hidden-sm.hidden-md.hidden-lg p {
+        color: ;
+        font-size: ;
+    }
+
+    /* Job apply button */
+    .qjumpers .cta-wrap.clearfix .clearfix a#applyBtn {
+        color: #FFF;
+        font-size: ;
+        align-items: center;
+        min-height: 45px;
+        justify-content: center;
+        padding: 0px;
+        width: 100%;
+        text-transform: uppercase;
+        transition: none;
+        max-width: 100%;
+        box-sizing: border-box;
+        border-radius: 10px;
+        border: none;
+        background-color: ;
+        margin-bottom: ;
+    }
+
+
+/* Form pages */
+
+    /* Navbar */
+
+        /* Active page and on button hover */
+        .qjumpers .navbar-nav li.step-doing, .qjumpers .navbar-nav li:hover {
+            background: #030303;
+            color: #fff;
+        }
+
+        /* Default nav button */
+        .qjumpers .navbar-nav li.step-todo {
+            background: #fff;
+            color: #030303;
+        }
+
+    
+    /* Headings */
+        .qjumpers .PathForm__stepper___2jBU- span, .PathForm__review___2YhQP .panel-heading a {
+            color: ;
+        }
+
+
+    /* Form buttons*/
+        .qjumpers button.btn.btn-danger.array-item-remove.btn-border.btn-text, .qjumpers button.btn.btn-info.btn-add.btn-text, .qjumpers .form-actions .btn, .qjumpers button.btn.btn-info, .FileUpload__dropZone___2Yw9t.btn {
+            border-radius: 4px;
+            color: #fff;
+            background-color: #118c3a;
+            background-image: linear-gradient(to right, #87c95e 0, #118c3a 100%);
+            line-height: 42px;
+            min-width: 110px;
+            padding: 5px 10px;
+            margin-right: 16px
+        }
+        /*hover*/
+        .qjumpers button.btn.btn-danger.array-item-remove.btn-border.btn-text:hover, .qjumpers .button-group .btn:hover, .qjumpers button.btn.btn-info.btn-add.btn-text:hover, .qjumpers .form-actions .btn:hover, .qjumpers button.btn.btn-info:hover, .FileUpload__dropZone___2Yw9t.btn:hover {
+            background-image: linear-gradient(to left, #87c95e 0, #118c3a 100%);
+        }
+        
+        /*on click*/
+        .qjumpers button.btn.btn-info.btn-add.btn-text:active, .qjumpers button.btn.btn-danger.array-item-remove.btn-border.btn-text:active, .btn-group .btn.active, .qjumpers button.btn.btn-info:active {
+            color: #fff !important; 
+            background-image: linear-gradient(to left, #87c95e 0, #118c3a 100%) !important;
+            background-color: #118c3a; }
+        
+    /*Icon changes */
+            /* Dropdown icon color*/
+        .qjumpers .rw-widget > .rw-btn {
+            background: #000;
+        }
+
+        /* Calendar Icon Alignment */
+        span.rw-select {
+            margin-right: -1px;
+        }
+        
