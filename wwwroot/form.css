@@ -1787,7 +1787,7 @@ ul.rw-list.rw-list-grouped>li.rw-list-option, .rw-selectlist.rw-list-grouped>li.
     .qjumpers .form-actions .btn.action:not(:last-child) {
         display: block;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: auto !important;
         border-radius: 3px;
     }
     .qjumpers .form-actions .pull-right, 
@@ -2334,6 +2334,10 @@ span.rw-select {
 	}
 }
 
+.PathForm__review___2YhQP .alert[class*="alert-default"] {
+	border: none !important;
+}
+
 @media screen and (min-width: 767px){
 	.qjumpers .col-xs-10 {
 		max-width: 79.33333%;
@@ -2541,4 +2545,13 @@ border: none; }
 
 	.qjumpers .PathForm__pathForm___1qxcX .row:after {
 		display: none;
+	}
+
+	.undefined.alert.alert-default button.btn.btn-info {
+		margin-left: 15px;
+		margin-top: 12px;
+	}
+
+	.undefined.alert.alert-warning button.btn.btn-info {
+		margin-left: 15px;
 	}
