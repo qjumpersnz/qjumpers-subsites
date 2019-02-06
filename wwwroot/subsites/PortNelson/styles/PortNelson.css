@@ -1,0 +1,459 @@
+/* Global */
+.qjumpers {
+    color: #000;
+    font: 400 12px Roboto, sans-serif;
+    margin: 0 3px;
+
+}
+.qjumpers .job-detail .job-detail--header h1 {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 24px;
+}
+
+.qjumpers > .job-detail .job-detail--header h1 {
+    font-size: 25px;
+}
+
+.qjumpers h2 {
+    font-size: 14px;
+    color: #000;
+}
+
+.qjumpers h2 + div > [class^="PathForm__pathForm___"] {
+    margin-left: 0;
+}
+
+.qjumpers h2 + div > [class^="PathForm__pathForm___"] > div > .row:first-child {
+    padding-top: 0;
+}
+
+.qjumpers [class^="PathForm__pathForm___"] > div > .row > h3 {
+    font-size: 12px;
+    margin-bottom: .8em;
+}
+
+.qjumpers p {
+    font: inherit;
+    color: inherit;
+    margin-bottom: 1em;
+}
+
+.qjumpers ul li {
+    list-style: inside disc;
+    margin-bottom: 1em;
+}
+
+.qjumpers .panel .alert-warning {
+    margin: 17px 14px 8px;
+    padding: 10px;
+    border: 1px solid #c4c4c4;
+    border-radius: 2px;
+}
+
+.qjumpers .panel .alert-warning .white-icon {
+    font-size: 10px;
+}
+
+.qjumpers .pull-right {
+    position: static;
+    margin-right: 0;
+}
+
+.qjumpers .form-actions:before, 
+.qjumpers .form-actions:after {
+    display: none;
+}
+
+.qjumpers .form-actions {
+    justify-content: space-between;
+}
+
+.qjumpers #kc-content-wrapper ul li {
+    list-style: none;
+}
+
+.qjumpers #kc-content-wrapper.row {
+    padding: 35px 40px;
+}
+
+.qjumpers #kc-content-wrapper h2 {
+    font-size: 24px;
+    text-transform: none;
+}
+
+.qjumpers [class^="PathForm__pathForm___"] > div > .row.no-bottom-line + .row {
+    padding-top: 18px;
+}
+
+/* Buttons */
+.qjumpers .job-detail .job-detail--sidebar .cta-wrap .btn.cta {
+    background: #c4c4c4;
+    border-radius: 5px;
+    color: #000;
+    font-size: 12px;
+    text-transform: uppercase;
+    min-width: 185px;
+    border-color: #c4c4c4;
+}
+
+.qjumpers .form-actions .btn {
+    font-size: 11px;
+    text-transform: uppercase;
+    min-width: 104px;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.qjumpers .btn-primary, .qjumpers .btn-success {
+    border-color: #c4c4c4;
+    background: #c4c4c4;
+    color: #000;
+}
+
+.qjumpers .form-actions {
+    padding: 18px 0 23px;
+    margin-bottom: 0;
+}
+
+.qjumpers .alert-warning .btn-info, .qjumpers button.btn.btn-info {
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.qjumpers .alert-warning .btn.btn-info {
+    min-width: 0;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* Navbar */
+.qjumpers nav {
+    margin-top: 0;
+    margin-bottom: 17px;
+}
+
+.qjumpers .navbar-nav {
+    display: flex;
+    width: 100%;
+}
+
+.qjumpers .navbar-nav li {
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.qjumpers .navbar-nav li a {
+    font-size: 9px;
+    min-height: 36px;
+}
+
+/* Forms */
+
+.qjumpers [class^="FileUpload__dropZone___"] {
+    font-size: 10px;
+    border-radius: 3px;
+    min-width: 80px;
+    padding: 10px;
+}
+
+.qjumpers [class^="PathForm__pathForm___"] > div > .row {
+    padding: 18px 0;
+    position: relative;
+}
+
+.qjumpers .job-detail [class^="PathForm__pathForm___"] > div > .row:after {
+    content: '';
+    background: #C4C4C4;
+    position: absolute;
+    top: 100%;
+    left: 14px;
+    width: calc(100% - 28px);
+    height: 1px;
+    display: block;
+}
+
+.qjumpers label {
+    width: auto;
+}
+
+.qjumpers .control-label,
+.qjumpers .panel-collapse .well .control-label {
+    font-size: 10px;
+    margin-bottom: 4px;
+}
+
+.qjumpers .form-control,
+.qjumpers .select .rw-widget.rw-multiselect, 
+.qjumpers .job-detail input[type="text"], 
+.qjumpers .job-detail input[type="password"], 
+.qjumpers .job-detail input[type="date"], 
+.qjumpers .job-detail input[type="datetime"], 
+.qjumpers .job-detail input[type="email"], 
+.qjumpers .job-detail input[type="number"],
+.qjumpers .job-detail input[type="search"],
+.qjumpers .job-detail input[type="tel"],
+.qjumpers .job-detail input[type="time"],
+.qjumpers .job-detail input[type="url"],
+.qjumpers .job-detail textarea,
+.qjumpers .rw-input,
+.qjumpers .rw-dropdownlist.rw-widget {
+    color: #000;
+    border-radius: 2px;
+    background: #E5E5E5;
+    height: 25px !important;
+    padding: 0 10px;
+    font-size: 13px;
+    box-shadow: none;
+}
+
+.qjumpers textarea.form-control {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.qjumpers .rw-dropdownlist.rw-widget {
+    padding: 0;
+}
+
+.qjumpers .form-group.field.field-string .rw-datetimepicker {
+    border-radius: 2px !important;
+    border: 0;
+}
+
+.qjumpers .rw-widget > .rw-input, 
+.qjumpers .rw-widget > input.rw-input, 
+.qjumpers .select .rw-widget.rw-multiselect {
+    padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 2px;
+    margin-bottom: 0;
+    box-shadow: none;
+}
+
+.qjumpers .form-group {
+    margin-bottom: 10px;
+}
+
+.qjumpers [class^=FileUpload__dropZone] span {
+    color: #000;
+}
+
+.qjumpers [class^=FileUpload__dropZone]:hover span  {
+    color: #fff;
+}
+
+.qjumpers [class^="FileUpload__files___"] {
+    margin-bottom: 18px;
+}
+
+.qjumpers .row .col-xs-6 .form-group.field.field-string .control-label span {
+    margin-top: 0;
+}
+
+.qjumpers .rw-widget>.rw-select {
+    width: auto;
+    margin: 0;
+}
+
+.qjumpers span.rw-dropdownlist-picker.rw-select.rw-btn,
+.qjumpers .rw-widget>.rw-select > .rw-btn {
+    display: flex;
+    background: #C4C4C4;
+    border-radius: 0 2px 2px 0;
+    height: 25px;
+    width: 16px;
+    justify-content: center;
+}
+
+.qjumpers .rw-widget>.rw-select > .rw-btn span {
+    font-size: 11px;
+}
+
+.qjumpers .rw-dropdownlist.rw-widget:not(.rw-state-readonly):hover > .rw-btn {
+    background: #000;
+}
+
+.qjumpers [class^="col-"], .qjumpers .col-xs-12 {
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.qjumpers .btn-prev {
+    color: inherit;
+    cursor: pointer;
+}
+
+.qjumpers .btn-prev:hover {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.qjumpers .radio, .qjumpers .checkbox {
+    float: none;
+    height: auto;
+}
+
+/* Education */
+
+.qjumpers [class^=PathForm__pathForm] .field-array.field-array-keyed .array-item-toolbox {
+    bottom: 0;
+    right: 14px;
+    padding: 0 0 10px;
+}
+
+.qjumpers .array-item-remove,
+.qjumpers .array-item-add button.btn.btn-info.btn-add.btn-text {
+    min-width: 90px;
+    font-size: 9px;
+    border-radius: 2px;
+    background: transparent;
+    padding: 9px;
+    color: #000;
+}
+
+.qjumpers button.btn.btn-info.btn-add.btn-text {
+    margin-bottom: 0;
+}
+
+.qjumpers button.btn.btn-info.btn-add.btn-text:hover {
+    background: #000;
+    color: #fff;
+}
+
+.qjumpers .array-item:last-child {
+    margin-bottom: 15px;
+}
+
+.qjumpers .array-item-add {
+    margin-bottom: 10px;
+}
+
+/* Org questions */
+.qjumpers .well {
+    border: 1px solid #e7e7e7;
+    border-radius: 3px;
+    padding: 15px 11px;
+}
+
+.qjumpers .well .form-group > label:first-child {
+    margin-bottom: 30px;
+}
+
+.qjumpers .well .surveyjsContainer, 
+.qjumpers .well .surveyjsContainer h5, 
+.qjumpers .well label,
+.qjumpers .surveyjs-save-info {
+    font-size: 10px;
+}
+
+.qjumpers .well .surveyjsContainer h5 {
+    margin-bottom: 5px;
+}
+
+.qjumpers .well .form-inline {
+    margin-bottom: 15px;
+}
+
+.qjumpers input[type="radio"]:checked ~ .circle {
+    box-shadow: inset 0 0 0 1px #fff;
+}
+
+.qjumpers .btn-primary.sv_complete_btn {
+    font-size: 9px;
+    min-width: 65px;
+    border-radius: 3px;
+    padding: 15px 10px;
+}
+
+/* Accordion */
+
+.qjumpers .path-form-review .panel-heading {
+    font-size: 12px;
+    padding: 8px 13px;
+}
+
+.qjumpers [class^=PathForm__review].path-form-review span.title {
+    margin: 0;
+}
+
+.qjumpers .path-form-review .panel-heading a {
+    color: inherit;
+    font-size: 12px;
+}
+
+.qjumpers .toggle-show, .qjumpers .toggle-hide {
+    display: flex;
+    font-size: 10px;
+}
+
+.qjumpers .toggle-hide .qjicon-chevron-up, 
+.qjumpers .toggle-show .qjicon-chevron-down {
+    font-size: .7em;
+    height: 1em;
+    margin-left: 5px;
+}
+
+.qjumpers [class^=PathForm__review].path-form-review .panel {
+    background: #e7e7e7;
+}
+
+.qjumpers .panel-collapse [class^='col-'] {
+    width: 100%;
+}
+
+.qjumpers .panel-collapse [class^='col-'] > div:only-child, 
+.qjumpers .panel-collapse [class^='col-'] > .form-group,
+.qjumpers .panel-collapse .col-xs-4,
+.qjumpers .panel-collapse [class^='col-'].field,
+.qjumpers .panel-collapse .field.field-string {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/* .qjumpers .panel-collapse [class^='col-'] > div:only-child > .control-label, 
+.qjumpers .panel-collapse [class^='col-'] > .form-group > .control-label, 
+.qjumpers .panel-collapse .col-xs-4 > .control-label, 
+.qjumpers .panel-collapse [class^='col-'].field > .control-label {
+    width: 140px;
+    float: left;
+    margin-bottom: 0;
+} */
+.qjumpers .panel-collapse .control-label {
+    width: 140px;
+    float: left;
+    margin-bottom: 0;
+    margin-right: 13px;
+}
+
+.qjumpers .panel-collapse .control-label + * {
+    max-width: calc(100% - 153px);
+    width: calc(100% - 153px);
+}
+
+.qjumpers .panel-collapse .control-label ~ div:not([class]) {
+    max-width: 100%;
+    width: 100%;
+}
+
+.qjumpers .panel-collapse .form-control {
+    box-shadow: none;
+}
+
+.qjumpers .panel-collapse ul li {
+    list-style-type: none;
+}
+
+.qjumpers .error-detail .text-danger {
+    font-size: 12px;
+}
+
+.qjumpers .panel-collapse .question .answers {
+    padding-left: 14px;
+    padding-right: 14px;
+}

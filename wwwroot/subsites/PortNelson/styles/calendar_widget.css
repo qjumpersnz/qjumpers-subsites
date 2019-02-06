@@ -1,0 +1,90 @@
+table.calendar-widget-table td.calendar-day,
+table.calendar-widget-table td.show-week {cursor: pointer;}
+table.calendar-widget-table td.calendar-day:hover,
+table.calendar-widget-table td.show-week:hover {background-color:#ccc;}
+table.calendar-widget-table td.calendar-day.selected {background-color:#D5ECFF;}
+
+table.calendar-widget-table td.out-of-month {color:#999;background-color::#999;}
+table.calendar-widget-table td.today {border-bottom: 2px solid #00AEEF;}
+table.calendar-widget-table td.hasEvent {background-color:#FC3;}
+
+table.calendar-widget-table thead th {text-align:center;}
+
+.calendar-widget{
+margin-top:40px;
+width:243px;
+margin-right:5px;
+border:1px solid #CCC;
+}
+
+.calendar-widget-table{
+width:100%;
+}
+
+.calendar-widget-table thead{
+background: rgb(242,242,242); /* Old browsers */
+background: -moz-linear-gradient(top, rgba(242,242,242,1) 0%, rgba(221,221,221,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(242,242,242,1)), color-stop(100%,rgba(221,221,221,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(221,221,221,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(221,221,221,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(221,221,221,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(242,242,242,1) 0%,rgba(221,221,221,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
+height:30px;
+line-height:30px;
+border:1px solid #999;
+}
+
+.calendar-widget-table thead a{
+text-decoration:none;
+}
+
+a.prev{
+float:left;
+background:url(../images/prev.png) no-repeat 10px 10px ;
+padding:10px;
+text-indent: -999em;
+}
+
+a.show-month{
+font-size:14px;
+color:#000;
+}
+
+a.next{
+float:right;
+background:url(../images/next.png) no-repeat 10px 10px ;
+padding:10px;
+text-indent: -999em;
+}
+
+
+.calendar-widget-table tbody{
+font-size:12px;
+}
+
+.calendar-widget-table tbody td{
+padding:6px 0;
+}
+
+.calendar-header-day{
+font-weight:bold;
+}
+
+.calendar-day{
+background-color:#EFF7FF;
+color:#BBBBBB;
+}
+
+.calendar-day:hover{
+background-color:#E7E7E7;
+color:#333;
+}
+
+#additionalDates .date{
+
+}
+
+#additionalDates .time{
+
+}
