@@ -534,7 +534,8 @@
 /* Profile page */
 .qjumpers [class^="Address__selectLocation"] > div {
     display: flex;
-    margin: 0 -15px;
+    margin: 0;
+    width: 100%;
 }
 .qjumpers [class^="Address__selectLocation"] [class*="col-"] {
     padding: 0 15px;
@@ -749,6 +750,7 @@
 }
 .qjumpers .panel-body [class^="Address__selectLocation"] > div {
     flex-wrap: wrap;
+    margin: 0 -15px;
 }
 .qjumpers [class^="PathForm__review"] .panel-body input,
 .qjumpers [class^="PathForm__review"] .panel-body .rw-widget {
