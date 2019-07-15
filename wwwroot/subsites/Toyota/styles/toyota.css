@@ -1,4 +1,45 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap&subset=latin-ext');
+
+/* Custom navigation */
+#Header .header-top .header-right p {
+    display: flex;
+}
+#Header .header-top .header-right a {
+    flex: 0 0 auto;
+    min-width: 165px;
+}
+#Header .header-top .header-right a.logout {
+    min-width: 100px;
+    width: 100px;
+    margin-left: 15px;
+}
+@media (max-width: 1440px) and (min-width: 991px) {
+    #Header .header-top .header-right {
+        width: 20%;
+    }
+}
+@media (max-width: 992px) {
+    #Header .header-top .header-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0;
+    }
+    #Header .header-top .header-right a,
+    #Header .header-top .header-right a.logout {
+        width: auto;
+    }
+    #Header .header-top .header-right a span {
+        width: 100%;
+        position: static;
+    }
+}
+@media (max-width: 767px) {
+    #Header .header-top .header-right {
+        position: static;
+        padding: 0 15px;
+    }
+}
 /* Global */
 .qjumpers .dashboard-list--header,
 .qjumpers .dashboard-list-item--content .img-wrap,
@@ -17,6 +58,9 @@
     font-weight: 400;
     width: 100%;
     font-family: "Roboto", "proxima-nova", sans-serif;
+}
+.qjumpers#bodyHere {
+    margin-top: 35px;
 }
 .qjumpers, .qjumpers *, .qjumpers *:before, .qjumpers *:after {
     box-sizing: border-box;
