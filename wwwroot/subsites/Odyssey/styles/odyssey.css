@@ -13,6 +13,15 @@
     display: none;
 }
 
+.sub-page .sub-menu ul.level-2 a:before {
+    top: 0;
+    line-height: 1;
+}
+.sub-page .sub-menu ul li li {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 #bodyHere.qjumpers {
     margin: 0 -15px 0 15px;
     max-width: 660px;
