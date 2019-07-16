@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    
+<html class="no-js lt-ie9" lang="en">
+<![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"359ddf9b85","applicationID":"9203","transactionName":"MlZSYEBZWEMFURINCgsccWdiF1JVAlMTCBFLUkNESg==","queueTime":0,"applicationTime":90,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XQICUlVAAQEAVw=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(18),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(19),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(21)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(21)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(21)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(21)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(b?b.then(a):w?w(a):(E=-E,R.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(21)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(){var t=window.NREUM,n=t.info.accountID||null,e=t.info.agentID||null,r=t.info.trustKey||null,i="btoa"in window&&"function"==typeof window.btoa;if(!n||!e||!i)return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:e,id:o.generateCatId(),tr:o.generateCatId(),ti:Date.now()}};return r&&n!==r&&(a.d.tk=r),btoa(JSON.stringify(a))}var o=t(16);n.exports={generateTraceHeader:r}},{}],11:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return w(r)}function i(t,n){var e=f(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),f=t(12),u=t(10).generateTraceHeader,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(15),w=t(14),v=window.XMLHttpRequest;s.features.xhr=!0,t(9),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(e=!!NREUM.init.distributed_tracing.enabled),e&&this.sameOrigin){var r=u();r&&n.setRequestHeader("newrelic",r)}}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=w(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)})}},{}],12:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],13:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(18),s=t(19),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],14:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],15:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],16:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],17:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],18:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],19:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],20:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],21:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(19),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(18),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(18),u=t("ee"),d=t(17),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:x,userAgent:d};t(13),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(20)},{}]},{},["loader",2,11,4,3]);</script>
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Advice & Insurance Company" />
+    <meta name="keywords" content="Insurance, Advice, FMG, Advice & Insurance" />
+    <title>MARITIME NEW ZEALAND</title>
+    <!-- Client Dependency Injection -->
+    <link href="http://maritimenz.qjumpers.co.nz/DependencyHandler.axd?s=L2Nzcy9zdWJzaXRlcy9zdWJzaXRlLmNzczsvY3NzL3N1YnNpdGVzL2Zvcm1zLmNzczsvY3NzL2ZvdW5kYXRpb24vZm91bmRhdGlvbi5jc3M7L2Nzcy9mb3VuZGF0aW9uL2FwcC5jc3M7&amp;t=Css&amp;cdv=2526" type="text/css" rel="stylesheet"/>
+    <script src="http://maritimenz.qjumpers.co.nz/DependencyHandler.axd?s=L3NjcmlwdHMvZm91bmRhdGlvbi9mb3VuZGF0aW9uLm1pbi5qczsvc2NyaXB0cy9qcXVlcnktMS4xMS4zLm1pbi5qczsvc2NyaXB0cy9qcXVlcnkudmFsaWRhdGUuanM7L3NjcmlwdHMvanF1ZXJ5LnNjcm9sbFRvLW1pbi5qczsvc2NyaXB0cy9qc29uMi5qczsvc2NyaXB0cy8vc3Vic2l0ZXMvZ2xvYmFsLmpzOy9zY3JpcHRzLy9zdWJzaXRlcy9mb3Jtcy5qczsvc2NyaXB0cy8vZm91bmRhdGlvbi9tb2Rlcm5penIuZm91bmRhdGlvbi5qczs&amp;t=Javascript&amp;cdv=2526" type="text/javascript"></script>
+    <!-- Included CSS Files, use foundation.css if you do not want minified code -->
+    <!-- Insert default markup here -->
+    <!-- Custom Modernizr for Foundation -->
+    <!-- <script src="/scripts/foundation/modernizr.foundation.js" type="text/javascript"></script>-->
+    <link type="text/css" rel="stylesheet" href="http://maritimenz.qjumpers.co.nz/css/subsites/maritime/reset.css" />
+    <link type="text/css" rel="stylesheet" href="http://maritimenz.qjumpers.co.nz/css/subsites/maritime/bootstrap.min.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="http://maritimenz.qjumpers.co.nz/css/subsites/maritime/main.min.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="http://maritimenz.qjumpers.co.nz/css/subsites/maritime/maritime.css" media="all" />
+    <link type="text/css" rel="stylesheet" href="/wwwroot/subsites/MaritimeNz/styles/maritimenz.css" media="all" />
+    <style type="text/css">
+      /* Set the back drop, font colors and menu pointer to either HOME page or DEFAULT */
+      body{
+      background-color:#f0eee7;
+      color:#252525; 
+      }
+      .navbar-inverse .navbar-nav > .active > a:after {
+      border-bottom: 14px solid #f0eee7;
+      }
+    </style>
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-476466-1']);
+      _gaq.push(['_setDomainName', '.qjumpers.co.nz']);
+      _gaq.push(['_trackPageview']);
+      
+      (function () {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+      
+    </script>
+  </head>
+  <body>
+    <!-- Header and Nav -->
+    <header role="banner">
+      <span class="MNZ-print-logo visible-print">
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 272.6 69.8" enable-background="new 0 0 272.6 69.8" xml:space="preserve">
+        </svg>
+      </span>
+      <div class="row form-banner">
+        <div class="col-sm-5 col-xs-3">
+          <span class="back-to-MNZ">
+          <a href="https://www.maritimenz.govt.nz/about/careers/">Back to <span class="hidden-xs">maritimenz.govt.nz</span><span class="visible-xs">website</span></a>
+          </span>
+        </div>
+        <div class="col-sm-7 col-xs-9">
+          <a href="https://www.maritimenz.govt.nz/about/careers/" class="form-brand">
+          <img src="https://www.maritimenz.govt.nz/images/mnz-logo-te-reo.png" class="img-responsive hidden-xs hidden-print" alt="The MNZ logo for tablet and wide screen devices"><img src="https://www.maritimenz.govt.nz/images/mnz-logo.png" class="img-responsive visible-xs hidden-print" alt="The MNZ logo for mobile devices">
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- Main Section -->
+    <div id="main">
+      <form method="post" action="index.html" id="Form1">
+        <div class="aspNetHidden">
+          <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MQ8WAh4TVmFsaWRhdGVSZXF1ZXN0TW9kZQIBZGSpmZSvLXa4rjw8EOo0krpi4BTwCw==" />
+        </div>
+        <!-- Content -->
+        <main role="main">
+          <div class="container">
+            <!-- Breadcrumbs -->
+            <!--<div class="row">        
+              <div class="col-sm-12 breadcrumb-panel">
+              </div>
+              </div>-->
+            <div class="row">
+              <div class="col-md-1 visible-lg visible-md"></div>
+              <div class="col-md-3 visible-lg visible-md extra-nav-aside">
+                <ul class="form-nav">
+                  <li class="this-task">Please note the following:</li>
+                  <li>As part of the application process you are required to complete an online application form and submit your CV and cover letter.</li>
+                </ul>
+                <ul class="extra-nav">
+                  <li><a href="http://" title="Browse Jobs">Browse Jobs</a></li>
+                  <li><a href="http://" title="Applications">Applications</a></li>
+                  <li><a href="http://" title="Drafts">Drafts</a></li>
+                  <li><a href="http://" title="Profile">Profile</a></li>
+                  <li><a href="http://" title="Logout">Logout</a></li>
+                </ul>
+              </div>
+              <div class="col-md-8">
+                <div id="content">
+                  <!-- [CONTENT] Title + introduction -->
+                  <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                      <!-- InstanceBeginEditable name="Page_intro" --><!-- InstanceEndEditable -->
+                      <div class="left-column">
+                        <!-- Render QJumpers Body Here -->
+                        <div id="bodyHere" class="qjumpers"></div>
+                        <script src="/embed/embed.js"></script>
+                        <script>
+                          var params = (new URL(document.location)).searchParams;
+                          var page = params.get("page");
+                          makeCorsRequest('https://subsitescontent.qjumpers.com/' + page + '.html', "bodyHere");
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- [GRID] General content (8) -->
+                  <!--<div id="sub-content" class="col-lg-8 col-md-12">
+                    </div>-->
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <div class="aspNetHidden">
+          <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+        </div>
+      </form>
+    </div>
+    <!-- Footer -->
+    <footer role="contentinfo" id="MNZfooter">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2 col-sm-2 footer-links"> 
+              <a href="http://www.maritimenz.govt.nz/sitemap/default.asp">Sitemap</a>
+              <a href="http://www.maritimenz.govt.nz/privacy.asp">Privacy</a>
+              <a href="http://www.maritimenz.govt.nz/copyright.asp">Copyright</a>
+              <a href="http://www.maritimenz.govt.nz/disclaimer.asp">Disclaimer</a>
+              <a href="http://www.maritimenz.govt.nz/accessibility.asp">Accessibility</a>
+            </div>
+            <div class="col-md-7 col-sm-6 footer-links"> 
+              <a>0508 22 55 22 or +64 4 473 0111</a>
+              <a>enquiries@maritimenz.govt.nz</a>
+              <a href="http://www.maritimenz.govt.nz/contact-us/default.asp">More contact details</a>
+            </div>
+            <div class="col-md-3 col-sm-4 footer-vision">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 1121.8 1536 926.2" enable-background="new 0 1121.8 1536 926.2" xml:space="preserve">
+                <path fill="#74BBDC" d="M285.1,1860.4c-1.3-60.2-60.2-94.3-113.5-94.3c-75.2,0-124.4,57.4-124.4,129.9s49.2,129.9,124.4,129.9 c62.9,0,110.7-38.3,113.5-101.2h-64.2c-2.7,28.7-20.5,46.5-50.5,46.5c-42.3,0-57.4-36.9-57.4-73.8c0-37,16.4-73.8,57.4-73.8 c27.4,0,46.5,13.7,50.5,38.3h64.2L285.1,1860.4L285.1,1860.4z"></path>
+                <polygon fill="#74BBDC" points="320.7,2020.5 501.1,2020.5 501.1,1964.3 384.9,1964.3 384.9,1771.6 320.7,1771.6 "></polygon>
+                <polygon fill="#74BBDC" points="533.9,2020.5 736.3,2020.5 736.3,1964.3 598.2,1964.3 598.2,1916.5 721.3,1916.5 721.3,1867.3 598.2,1867.3 598.2,1823.5 732.3,1823.5 732.3,1771.6 533.9,1771.6 "></polygon>
+                <polygon fill="#74BBDC" points="747.3,2020.5 814.2,2020.5 830.6,1975.3 916.8,1975.3 931.8,2020.5 1000.2,2020.5 907.2,1771.6 840.2,1771.6 "></polygon>
+                <polygon fill="#0099CC" points="873.1,1839.9 874.4,1839.9 901.7,1927.5 845.7,1927.5 "></polygon>
+                <polygon fill="#74BBDC" points="1017.9,2020.5 1079.5,2020.5 1079.5,1864.6 1080.8,1864.6 1167,2020.5 1234,2020.5 1234,1771.6 1172.5,1771.6 1172.5,1924.7 1172.5,1924.7 1085,1771.6 1017.9,1771.6 "></polygon>
+                <path fill="#74BBDC" d="M106,1628c1.3,28.7,19.1,38.3,47.8,38.3c19.1,0,39.6-6.8,39.6-25.9c0-21.9-35.6-25.9-71.1-35.6 s-72.4-25.9-72.4-71.1c0-54.7,54.7-75.2,101.2-75.2c49.2,0,99.8,24.6,99.8,80.6h-65.6c1.3-23.2-20.5-30.1-39.6-30.1 c-13.7,0-31.4,5.5-31.4,21.9c0,19.1,35.6,23.2,72.4,32.8c35.6,9.5,72.4,27.4,72.4,71.1c0,62.9-53.3,83.4-108,83.4 c-57.4,0-108-24.6-108-88.8H106V1628z"></path>
+                <polygon fill="#74BBDC" points="287.9,1462.6 487.5,1462.6 487.5,1514.6 353.5,1514.6 353.5,1558.3 475.2,1558.3 475.2,1608.9 353.5,1608.9 353.5,1655.4 490.3,1655.4 490.3,1711.4 287.9,1711.4 "></polygon>
+                <path fill="#74BBDC" d="M692.6,1551.4c-4.1-24.6-23.2-38.3-50.5-38.3c-42.3,0-57.4,36.9-57.4,73.8c0,37,16.4,73.8,57.4,73.8 c30.1,0,47.8-17.7,50.5-46.5h65.6c-4.1,64.2-50.5,101.2-113.5,101.2c-75.2,0-124.4-57.4-124.4-129.9c0-72.4,49.2-129.9,124.4-129.9 c53.3,0,112.1,34.1,113.5,94.3h-65.6V1551.4z"></path>
+                <path fill="#74BBDC" d="M1008.4,1608.9c0,72.4-32.8,108-108,108s-108-35.6-108-108v-146.3H858V1613c0,31.4,12.3,47.8,43.8,47.8 c31.4,0,43.8-16.4,43.8-47.8v-150.4h65.6v146.3H1008.4z"></path>
+                <path fill="#74BBDC" d="M1052.2,1462.6h127.1c43.8,0,87.5,20.5,87.5,69.7c0,27.4-12.3,52-39.6,62.9v1.3 c25.9,6.8,34.1,35.6,36.9,60.2c1.3,10.9,1.3,46.5,10.9,56h-64.2c-5.5-8.2-6.8-32.8-6.8-39.6c-1.3-24.6-5.5-50.5-36.9-50.5h-49.2 v90.3h-65.6L1052.2,1462.6L1052.2,1462.6z"></path>
+                <path fill="#0099CC" d="M1116.4,1570.6h54.7c19.1,0,30.1-10.9,30.1-28.7c0-19.1-15-27.4-32.8-27.4h-52L1116.4,1570.6L1116.4,1570.6z "></path>
+                <polygon fill="#74BBDC" points="1303.7,1462.6 1503.3,1462.6 1503.3,1514.6 1369.3,1514.6 1369.3,1558.3 1491.1,1558.3 1491.1,1608.9 1369.3,1608.9 1369.3,1655.4 1506.1,1655.4 1506.1,1711.4 1303.7,1711.4 "></polygon>
+                <path fill="#74BBDC" d="M40.4,1319.1c0,64.2,50.5,88.8,108,88.8c54.7,0,108-20.5,108-83.4c0-45.1-36.9-61.5-72.4-71.1 c-36.9-9.5-72.4-13.7-72.4-32.8c0-16.4,17.7-21.9,31.4-21.9c20.5,0,41,6.8,39.6,30.1h65.6c0-56-50.5-80.6-99.8-80.6 c-45.1,1.3-99.8,21.9-99.8,76.6c0,45.1,36.9,61.5,72.4,71.1c35.6,9.6,71.1,13.7,71.1,35.6c0,19.1-20.5,25.9-39.6,25.9 c-27.4,0-45.1-9.5-47.8-38.3L40.4,1319.1L40.4,1319.1z"></path>
+                <polygon fill="#74BBDC" points="261.8,1402.4 328.9,1402.4 345.3,1358.7 431.4,1358.7 447.8,1402.4 514.8,1402.4 421.9,1155 356.2,1155 "></polygon>
+                <polygon fill="#0099CC" points="387.6,1223.3 389.1,1223.3 416.4,1310.9 360.3,1310.9 "></polygon>
+                <polygon fill="#74BBDC" points="533.9,1402.4 599.6,1402.4 599.6,1306.7 702.2,1306.7 702.2,1257.5 599.6,1257.5 599.6,1206.9 717.2,1206.9 717.2,1155 533.9,1155 "></polygon>
+                <polygon fill="#74BBDC" points="747.3,1402.4 949.6,1402.4 949.6,1347.7 812.9,1347.7 812.9,1299.9 934.6,1299.9 934.6,1249.3 812.9,1249.3 812.9,1206.9 946.9,1206.9 946.9,1155 747.3,1155 "></polygon>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-footer">
+        <div class="container">
+          <div class="row col-sm-12"> 
+            <a href="https://www.govt.nz/" target="_blank"><img class="img-responsive nzgovt-logo" src="../images/maritime/nz-government.png" alt="newzealand.govt.nz" title="Connect to New Zealand central &amp; local government services"></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://www.maritimenz.govt.nz/js/vendor/bootstrap.min.js"></script>
+    <script>
+      // ***** NAVIGATIONAL *****
+      $(function() {
+        $(document).on('click', '.MNZ-nav .dropdown-menu', function(e) {
+          e.stopPropagation()
+        })
+      })
+      
+      function menuPop(popTarget, popLevel) {
+      switch(popLevel){
+      case(1):
+        popLevel = ("active-L" + popLevel);
+        $("#" + popTarget).children("li:first").addClass("sub-active");
+        $("#" + popTarget).children("li:first").attr('id', popLevel);
+        $("#" + popLevel).children("span:first").toggleClass("menu-plus menu-minus");
+        $("#" + popLevel).children("ul:first").show("fast");
+        break;
+      case(2):
+      case(3):
+        popLevel = ("active-L" + popLevel);
+        $("#" + popTarget).parent("li:first").addClass("sub-active");
+        $("#" + popTarget).parent("li:first").attr('id', popLevel);
+        $("#" + popLevel).children("span:first").toggleClass("menu-plus menu-minus");
+        $("#" + popLevel).children("ul:first").show("fast");
+        break;  
+      }
+      };        
+      
+      $( document ).ready(function(){
+                                
+        // ***** NAVIGATIONAL *****
+        //Make Meganavs visible for realtime - hidden in design view
+        $(".MNZ-nav-grid").css('display','block');
+        
+        // Accordian functionality to Meganavs and Sidenavs menus
+        var activeLevel;
+        var myX;
+        $(".menu-plus, .sr-only").click(function() {
+      myX = (($(this).closest("ul").attr('class')).charAt(9));
+      activeLevel = ("active-L" + myX);
+      if($(this).parent("li:first").hasClass("sub-active")){
+      $("#active-L" + myX).children("ul:first").hide("fast");
+      $(this).parent("li:first").removeAttr('id');
+      $(this).toggleClass("menu-minus menu-plus");
+      $(this).parent("li:first").removeClass("sub-active");
+      $(this).attr('aria-expanded', 'false');
+      $(this).text(function () {
+        return $(this).text().replace("hide","show");
+      });
+      }else{
+      $("#active-L" + myX).children("ul:first").hide("fast");
+      $("#active-L" + myX).children("span:first").toggleClass("menu-minus menu-plus");
+      $("#active-L" + myX).removeClass("sub-active");
+      $("#active-L" + myX).removeAttr('id');
+      $(this).toggleClass("menu-plus menu-minus");
+      $(this).parent("li:first").addClass("sub-active");
+      $(this).parent("li:first").attr('id', activeLevel);
+      $("#active-L" + myX).children("ul:first").show("fast");
+      $(this).attr('aria-expanded', 'true');
+      $(this).text(function () {
+        return $(this).text().replace("show","hide");
+      });
+      }
+        });
+        
+      // Set the appropriate menu item(s) to active
+      menuPop('abt-careers',1);
+      //menuPop('abt-safety-response',2);
+      
+      $("#abt-nav").addClass("active");
+      
+      //$("#com-target-seafarers").addClass("active");        
+      
+      $(".navbar-toggle").click(function() {
+            $(this).toggleClass("black-toggle");
+        });
+        // Close menu functionality for mega-nav on large screens
+        $('.close-Mega').on('click', function(){
+          $('.open').removeClass("open");
+        });
+        $('#close-search').on('click', function(){
+          $('.open').removeClass("open");
+        });
+        // Removes black toggle class when closing mega-nav on small screens
+        $(".close-All-Mega").click(function() {
+            $(".navbar-toggle").removeClass("black-toggle");
+        });
+          
+      
+      
+      
+      // Breadcrumbs generation
+      var pathX = "";
+      var href = document.location.href;
+      var s = href.split("/");
+      var myZ, myCrumb;
+      for (var i=3;i<(s.length-1);i++) {
+      myZ = (s[i].replace(/\-/g, ' '));
+      myCrumb='<li><a href="http://maritimenz.qjumpers.co.nz/jobs/\&quot;&quot;+href.substring(0,href.indexOf(&quot;/&quot;+s[i])+s[i].length+1)+&quot;/\&quot;">"+myZ+"</a></li>';
+      pathX=(pathX+myCrumb);
+      }
+      $("#breadcrumb-insert").append(pathX);
+      
+      
+        // ***** GOOGLE SITE SEARCH CODE BLOCK *****
+      (function() {
+      var cx = '011974975502968979569:sxry9heew8c';
+      var gcse = document.createElement('script');
+      gcse.type = 'text/javascript';
+      gcse.async = true;
+      gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//www.google.com/cse/cse.js?cx=' + cx;
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(gcse, s);
+      })();
+      
+            
+      });
+      
+    </script>
+    <!-- InstanceEndEditable -->
+    <!-- ***** GOOGLE ANALYTICS SECTION *****  -->
+    <!-- ******main GA code******  -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-5718912-2', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
