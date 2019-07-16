@@ -13,6 +13,18 @@
     width: 100px;
     margin-left: 15px;
 }
+.breadcrumbs .extra-nav {
+    float: right;
+}
+.breadcrumbs .extra-nav a {
+    color: #000;
+}
+.breadcrumbs .extra-nav:hover a {
+    color: #E4081C;
+}
+.extra-nav-mobile {
+    display: none;
+}
 @media (max-width: 1440px) and (min-width: 991px) {
     #Header .header-top .header-right {
         width: 20%;
@@ -38,6 +50,19 @@
     #Header .header-top .header-right {
         position: static;
         padding: 0 15px;
+    }
+    .extra-nav-mobile {
+        display: flex;
+        justify-content: space-between;
+    }
+    .extra-nav-mobile .btn-red {
+        background: #e4081c;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 7px 0 17px;
+    }
+    .breadcrumbs .extra-nav {
+        display: none;
     }
 }
 /* Global */
