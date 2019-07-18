@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 112">
+  <style>
+    @-webkit-keyframes validateSpin{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes validateSpin{from{-webkit-transform:rotate(0);transform:rotate(0)}to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.thinking{-webkit-transform-origin:56px 55px;transform-origin:56px 55px;-webkit-animation:validateSpin 1.5s linear infinite;animation:validateSpin 1.5s linear infinite}
+  </style>
+  <g fill="none" fill-rule="evenodd">
+    <path fill="#636363" d="M11 55.7c0 36.1 41.83 51.83 43.63 52.47a3.7 3.7 0 0 0 2.54 0c1.8-.64 43.63-16.37 43.63-52.47V21.82a3.76 3.76 0 0 0-2.47-3.54L57.17 3.23a3.7 3.7 0 0 0-2.54 0L13.47 18.28A3.76 3.76 0 0 0 11 21.82V55.7z"/>
+    <path fill="#FFF" d="M17.9 26.77V55.7c0 30.82 35.4 44.26 36.93 44.8a3.1 3.1 0 0 0 2.15 0c1.52-.54 36.92-13.98 36.92-44.8V26.77a3.2 3.2 0 0 0-2.09-3.02L56.98 10.89a3.1 3.1 0 0 0-2.15 0L19.99 23.75a3.21 3.21 0 0 0-2.09 3.02z"/>
+    <path fill="#636363" d="M22.9 31.27V55.7c0 26.03 30.75 37.38 32.07 37.84a2.77 2.77 0 0 0 1.87 0c1.32-.47 32.06-11.81 32.06-37.84V31.27a2.72 2.72 0 0 0-1.81-2.55L56.84 17.86a2.77 2.77 0 0 0-1.87 0L24.72 28.72a2.72 2.72 0 0 0-1.82 2.55z"/>
+    <g fill="#FFF" class="thinking">
+      <path d="M38.96 66.24a3 3 0 0 1-2.7-1.67A21.8 21.8 0 0 1 34 54.83a22.02 22.02 0 0 1 26.58-21.52 3 3 0 1 1-1.24 5.87 16.13 16.13 0 0 0-3.34-.35A16.02 16.02 0 0 0 41.65 61.9a3 3 0 0 1-2.69 4.33"/>
+      <path d="M54.5 42.46l14.92-1.08L61.02 29zM56 76.83c-1.56 0-3.12-.17-4.63-.49a3 3 0 0 1 1.26-5.87 16.02 16.02 0 0 0 17.86-22.46 3 3 0 0 1 5.42-2.55A21.82 21.82 0 0 1 78 54.83c0 12.13-9.87 22-22 22"/>
+      <path d="M57.47 67.2l-14.92 1.05 8.37 12.4z"/>
+    </g>
+  </g>
+</svg>
