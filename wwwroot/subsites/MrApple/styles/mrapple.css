@@ -1,0 +1,1208 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap&subset=latin-ext');
+
+/* Global */
+.qjumpers .dashboard-list--header,
+.qjumpers .dashboard-list-item--content .img-wrap,
+.qjumpers .dashboard-list-item > .row:not(.dashboard-list-item--content) .text-right,
+.qjumpers .job-detail--sidebar .cta-wrap > div:not(.clearfix),
+.qjumpers .job-summary-wrap,
+.qjumpers .job-detail--header .time-icon,
+.qjumpers .dashboard-list-item > .row:not(.dashboard-list-item--content) h4 + .black-txt,
+.qjumpers .navbar-nav:before,
+.qjumpers .navbar-nav:after {
+    display: none;
+}
+
+.qjumpers#bodyHere {
+    padding-top: 35px;
+}
+
+.qjumpers {
+    color: #000;
+    font-weight: 400;
+    width: 100%;
+    font-family: "Adelle-Bold", georgia, sans-serif;
+}
+.qjumpers#bodyHere {
+    margin-top: 35px;
+}
+.qjumpers .App_appPage * {
+    font-family: Roboto;
+}
+.qjumpers, .qjumpers *, .qjumpers *:before, .qjumpers *:after {
+    box-sizing: border-box;
+}
+.qjumpers .container {
+    max-width: 100%;
+    padding: 0;
+}
+.qjumpers a, .qjumpers b, .qjumpers strong, .qjumpers p, .qjumpers label, .qjumpers a:link span, .qjumpers button span {
+    font: inherit;
+    color: inherit;
+}
+.qjumpers button {
+    margin: 0;
+}
+.qjumpers fieldset, .qjumpers a:link span, .qjumpers button span {
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+}
+.qjumpers a:hover {
+    text-decoration: none;
+}
+.qjumpers h1, .qjumpers h2, .qjumpers h3, .qjumpers h4 {
+    font-family: inherit;
+    font-weight: inherit;
+    line-height: 1.1;
+    color: #000;
+}
+.qjumpers h1 {
+    font-size: 30px;
+    margin: 0;
+}
+.qjumpers h2 {
+    font-size: 24px;
+}
+.qjumpers h3 {
+    font-size: 18px;
+    margin: 0 0 15px;
+}
+.qjumpers form {
+    font-size: 14px;
+}
+.qjumpers .row > ul {
+    padding-left: 15px !important;
+}
+
+.qjumpers .pull-left {
+    float: left;
+}
+.qjumpers .pull-right {
+    float: right;
+}
+.qjumpers .job-detail--header, .qjumpers .job-detail--header--body, .qjumpers .dashboard-list--inner {
+    font-family: "proxima-nova", sans-serif;
+}
+.qjumpers .job-detail--header {
+    margin: 0 0 20px;
+    font-size: 17px;
+}
+.qjumpers .job-detail--header h1 {
+    font-weight: 400;
+    font-size: 23px;
+}
+.qjumpers .App_appPage .job-detail--header h1 {
+    font-size: 26px;
+    color: #EE3A43;
+}
+.qjumpers li:empty {
+    display: none;
+}
+.qjumpers .multi-step {
+    padding-bottom: 20px;
+}
+.qjumpers .job-detail > div:first-child .multi-step {
+    padding-top: 50px;
+}
+.qjumpers input, .qjumpers textarea, .qjumpers select {
+    color: #000;
+}
+.qjumpers input:focus, .qjumpers textarea:focus, .qjumpers select:focus {
+    border-color: #EE3A43 !important;
+}
+
+/* Grid */
+.qjumpers .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.qjumpers .row form .row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.qjumpers .row > * {
+    padding: 0 15px;
+}
+.qjumpers .row > [class^="Address__address"] {
+    padding: 0;
+}
+.qjumpers .col-xs-12 {
+    width: 100%;
+}
+.qjumpers .col-xs-10 {
+    width: calc(100% * 5 / 6);
+}
+.qjumpers .col-xs-8 {
+    width: calc(100% * 2 / 3);
+}
+.qjumpers .col-xs-6 {
+    width: 50%;
+}
+.qjumpers .col-xs-4 {
+    width: calc(100% / 3);
+}
+.qjumpers .col-xs-2 {
+    width: calc(100% / 6);
+}
+.qjumpers .row > *:not([class*="col-"]) {
+    width: 100%;
+}
+.qjumpers [class*='col-'] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.qjumpers .btn {
+    border: 0;
+    background: #EE3A43;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1.25;
+    padding: 9px;
+    height: 47px;
+    min-width: 150px;
+    border-radius: 0;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.qjumpers .btn-border,
+.qjumpers .btn-add {
+    background: transparent;
+    border: 1px solid #EE3A43;
+    color: #EE3A43;
+}
+.qjumpers .btn:hover {
+    background: #DB3A42;
+}
+.qjumpers .btn-border:hover {
+    background: #DB3A42;
+    color: #fff;
+    border-color: #DB3A42;
+}
+.qjumpers .btn-add {
+    font-size: 14px;
+    min-width: 115px;
+    color: #000;
+    border-color: #000 !important;
+    height: 48px;
+}
+.qjumpers .btn-add:hover, 
+.qjumpers .array-item-toolbox .btn:hover {
+    border-color: #DB3A42 !important;
+    color: #DB3A42;
+    background: transparent;
+}
+
+/* Menu */
+.qjumpers .job-detail--header + div .navbar:first-child {
+    padding-top: 20px;
+}
+.qjumpers .navbar, #bodyHere.qjumpers .navbar .container {
+    padding: 0;
+}
+.qjumpers .navbar + div:not([class]) {
+    position: relative;
+    z-index: 1;
+}
+.qjumpers .navbar {
+    margin: 0 0 28px;
+    background: transparent;
+    border-bottom: 0;
+}
+.qjumpers .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border: 1px solid #EE3A43;
+    border-radius: 0;
+    border-right: 0;
+    box-shadow: inset -1px 0 0 0 #EE3A43;
+}
+.qjumpers .navbar-nav > li {
+    flex: 1 0 auto;
+    border: 0;
+    list-style: none;
+    color: #EE3A43;
+    margin: 0;
+}
+.qjumpers .navbar-nav > li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    font-size: 12px;
+    line-height: 1.17;
+    text-transform: uppercase;
+    transition: none;
+    font-family: Roboto;
+}
+.qjumpers .navbar-nav > li a, .qjumpers .navbar-nav > li a:hover, .qjumpers .navbar-nav > li a:focus {
+    color: inherit;
+}
+.qjumpers .navbar-nav > li a:before {
+    content: '';
+    display: inline-block;
+    height: 33px;
+    width: 1px;
+    margin-right: -1px;
+    opacity: 0;
+    visibility: hidden;
+}
+.qjumpers .navbar-nav > li.step-doing,
+.qjumpers .navbar-nav > li:hover {
+    color: #fff;
+    background: #EE3A43;
+}
+
+/* Forms */
+.qjumpers [class^="PathForm__stepper"] [class^="PathForm__pathForm"] > div > .row {
+    padding: 25px 0;
+}
+.qjumpers .form-actions {
+    border-top: 1px solid #C4C4C4;
+    padding: 32px 0 39px;
+}
+.qjumpers .form-actions .pull-right .btn {
+    margin-left: 10px;
+    float: right;
+}
+.qjumpers .form-actions .pull-left .btn {
+    margin-right: 10px;
+}
+.qjumpers .form-actions .pull-left .btn-prev {
+    cursor: pointer;
+    font-size: 12px;
+    display: inline-block;
+    padding: 10px;
+}
+.qjumpers .form-actions .pull-left .btn-prev:hover {
+    text-decoration: underline;
+}
+.qjumpers [class^="PathForm__stepper"] [class^="PathForm__pathForm"] > div > .row:first-child {
+    padding-top: 0;
+}
+.qjumpers [class^="PathForm__stepper"] [class^="PathForm__pathForm"] > div > .row.no-bottom-line {
+    padding-bottom: 0;
+}
+.qjumpers [class^="PathForm__stepper"] [class^="PathForm__pathForm"] > div > .row.no-bottom-line + .row {
+    padding-top: 0;
+}
+.qjumpers [class^="PathForm__stepper"] [class^="PathForm__pathForm"] > div > .row:not(.no-bottom-line) + .row {
+    box-shadow: 0 -16px 0 -15px #C4C4C4;
+}
+.qjumpers [class^="PathForm__stepper"] [class^="PathForm__pathForm"] > div > .row:not(.no-bottom-line) > div:last-child .form-group,
+.qjumpers [class^="PathForm__stepper"] [class^="PathForm__pathForm"] > div > .row:not(.no-bottom-line) > div:last-child .form-control,
+.qjumpers [class^="PathForm__stepper"] [class^="PathForm__pathForm"] > div > .row:not(.no-bottom-line) > div:last-child .rw-dropdownlist {
+    margin-bottom: 0;
+}
+.qjumpers [class^="FileUpload__dropZone"].btn {
+    border: 1px solid #000 !important;
+    color: #000;
+    font-size: 13px;
+    text-transform: none;
+    padding: 15px;
+    min-width: 120px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 0;
+    text-align: center;
+    height: 43px;
+}
+.qjumpers [class^="FileUpload__dropZone"].btn:hover {
+    background: #000;
+    color: #fff;
+}
+.qjumpers [class^="FileUpload__files"] {
+    margin-bottom: 30px;
+}
+.qjumpers [class^="PathForm__stepper"] h2 {
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: #EE3A43;
+    font-size: 22px;
+}
+.qjumpers [class^="PathForm__stepper"] h3 {
+    width: 100%;
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #EE3A43;
+}
+.qjumpers .control-label {
+    font-weight: 400;
+    color: #000;
+}
+.qjumpers .control-label[for="root_qualification"],
+.qjumpers .control-label[for="root_employment"],
+.qjumpers .control-label[for="root_referee"] {
+    display: block;
+    border-bottom: 1px solid #E7E7E7;
+    font-size: 16px;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+    color: #EE3A43;
+}
+.qjumpers .form-group {
+    margin-bottom: 15px;
+}
+.qjumpers [class^="PathForm__stepper"] .array-item .form-control {
+    margin-bottom: 15px !important;
+}
+.qjumpers .form-group .form-control {
+    margin-bottom: 0;
+}
+.qjumpers .form-control,
+.qjumpers .rw-datetimepicker input,
+.qjumpers .rw-dropdownlist {
+    height: 40px;
+    padding: 10px 6px;
+    margin-bottom: 15px;
+    border: 0 !important;
+    border-radius: 0;
+    box-shadow: none;
+    background: #E5E5E5;
+}
+.qjumpers .rw-dropdownlist {
+    color: #000;
+    height: 41px;
+    padding: 10px 6px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.qjumpers .rw-dropdownlist .rw-dropdownlist-picker:before {
+    content: '' !important;
+    display: inline-block !important;
+    width: 26px;
+    height: 100%;
+    background: #C4C4C4;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 0;
+
+}
+.qjumpers .rw-dropdownlist .rw-dropdownlist-picker .rw-i-caret-down,
+.qjumpers .rw-dropdownlist .rw-dropdownlist-picker .rw-i-caret-up {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: solid transparent;
+    border-width: 7px 5px 0;
+    border-top-color: #fff;
+}
+.qjumpers .rw-dropdownlist .rw-dropdownlist-picker .rw-i-caret-up {
+    border-width: 0 5px 7px;
+    border-bottom-color: #fff;
+}
+.qjumpers textarea {
+    min-height: 85px;
+}
+.qjumpers [class^="PathForm__stepper"] [class^="PathForm__pathForm"] > div > .row:last-child input[type="checkbox"] {
+    display: block;
+    margin-top: 5px;
+    position: relative;
+}
+.qjumpers [class^="PathForm__stepper"] [class^="PathForm__pathForm"] > div > .row:last-child input[type="checkbox"]:after {
+    content: '';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #C4C4C4;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.qjumpers [class^="PathForm__stepper"] [class^="PathForm__pathForm"] > div > .row:last-child input[type="checkbox"]:checked:after {
+    content: '\2714';
+    color: #EE3A43;
+}
+.qjumpers .rw-datetimepicker input {
+    width: 100%;
+    height: 41px;
+    font-size: 16px;
+    padding: 10px 6px;
+}
+.qjumpers .rw-datetimepicker {
+    position: relative;
+}
+.qjumpers .rw-datetimepicker .rw-select {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 21px;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    background: #C4C4C4 url(data:image/svg+xml;charset=utf-8,%3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22%23fff%22%20viewBox%3D%220%200%2026%2028%22%3E%3Ctitle%3Ecalendar%3C%2Ftitle%3E%3Cpath%20d%3D%22M2%2026h4.5v-4.5h-4.5v4.5zM7.5%2026h5v-4.5h-5v4.5zM2%2020.5h4.5v-5h-4.5v5zM7.5%2020.5h5v-5h-5v5zM2%2014.5h4.5v-4.5h-4.5v4.5zM13.5%2026h5v-4.5h-5v4.5zM7.5%2014.5h5v-4.5h-5v4.5zM19.5%2026h4.5v-4.5h-4.5v4.5zM13.5%2020.5h5v-5h-5v5zM8%207v-4.5c0-0.266-0.234-0.5-0.5-0.5h-1c-0.266%200-0.5%200.234-0.5%200.5v4.5c0%200.266%200.234%200.5%200.5%200.5h1c0.266%200%200.5-0.234%200.5-0.5zM19.5%2020.5h4.5v-5h-4.5v5zM13.5%2014.5h5v-4.5h-5v4.5zM19.5%2014.5h4.5v-4.5h-4.5v4.5zM20%207v-4.5c0-0.266-0.234-0.5-0.5-0.5h-1c-0.266%200-0.5%200.234-0.5%200.5v4.5c0%200.266%200.234%200.5%200.5%200.5h1c0.266%200%200.5-0.234%200.5-0.5zM26%206v20c0%201.094-0.906%202-2%202h-22c-1.094%200-2-0.906-2-2v-20c0-1.094%200.906-2%202-2h2v-1.5c0-1.375%201.125-2.5%202.5-2.5h1c1.375%200%202.5%201.125%202.5%202.5v1.5h6v-1.5c0-1.375%201.125-2.5%202.5-2.5h1c1.375%200%202.5%201.125%202.5%202.5v1.5h2c1.094%200%202%200.906%202%202z%22%3E%3C%2Fpath%3E%3C%2Fsvg%3E) center / 13px no-repeat;
+    border-radius: 0;
+}
+.qjumpers .rw-datetimepicker .rw-select button {
+    opacity: 0;
+}
+.qjumpers [class^="PathForm__stepper"] .array-item {
+    padding-bottom: 13px;
+    border-bottom: 1px solid #E7E7E7;
+    margin-bottom: 36px;
+}
+.qjumpers .array-item-toolbox {
+    display: flex;
+    align-items: flex-end;
+}
+.qjumpers .array-item-toolbox .btn-group {
+    width: 100%;
+}
+.qjumpers .array-item-toolbox .btn {
+    min-width: 120px;
+    font-size: 14px;
+    font-weight: 400 !important;
+    margin: 0 0 15px;
+    padding: 11px;
+    width: 100%;
+    height: auto;
+    color: #000;
+    border-color: #000 !important;
+}
+.qjumpers [class^="PathForm__stepper"] .well {
+    margin: -15px 0 -1px;
+    border: 1px solid #E7E7E7;
+    padding: 16px;
+    border-radius: 4px;
+    background: transparent;
+    box-shadow: none;
+    box-shadow: 0 5px 0 0 #fff;
+}
+.qjumpers [class^="PathForm__stepper"] .well .form-group > .control-label {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+.qjumpers [class^="PathForm__stepper"] .well .surveyjsContainer {
+    padding: 40px 11px 0;
+}
+.qjumpers [class^="PathForm__stepper"] .well .surveyjsContainer .panel-body {
+    padding: 0;
+}
+.qjumpers [class^="PathForm__stepper"] .well .surveyjsContainer h5 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.qjumpers .form-inline label {
+    justify-content: flex-start;
+}
+.qjumpers .radio {
+    margin-bottom: 10px;
+    position: relative;
+}
+.qjumpers .radio label {
+    margin-bottom: 0;
+    padding-left: 10px;
+}
+.qjumpers .radio span {
+    line-height: 1;
+}
+.qjumpers .form-inline .radio input {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+}
+.qjumpers .radio .circle {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    background: #fff;
+    margin-right: 5px;
+    border: 1px solid #000;
+}
+.qjumpers .radio input:checked + .circle {
+    background: #000;
+    box-shadow: inset 0 0 0 2px #fff;
+}
+.qjumpers .surveyjsContainer .form-inline {
+    margin-bottom: 25px;
+}
+.qjumpers .surveyjsContainer .sv_complete_btn {
+    margin-bottom: 27px;
+    font-size: 11px;
+    min-width: 115px;
+}
+.qjumpers .panel-footer {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+}
+.qjumpers .surveyjs-save-info em {
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* List page */
+#bodyHere.qjumpers .dashboard-list--inner {
+    margin-top: 15px;
+}
+#bodyHere.qjumpers .dashboard-list--inner > .container {
+    padding: 0;
+}
+.qjumpers .dashboard-list-item--content .text-wrap {
+    width: 100%;
+    max-width: 100%;
+    flex-basis: 100%;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.qjumpers .dashboard-list-item {
+    display: block;
+    margin-bottom: 25px;
+    border: 0;
+    padding: 0;
+}
+.qjumpers .dashboard-list-item > .row:not(.dashboard-list-item--content) {
+    display: flex;
+    flex-direction: column;
+}
+.qjumpers .dashboard-list-item > .row:not(.dashboard-list-item--content) h4 {
+    font: 400 25px/1.18 'Roboto Slab', serif;
+    margin: 0 0 10px;
+    color: #EE3A43;
+}
+.qjumpers .dashboard-list-item:hover h4 {
+    text-decoration: underline;
+}
+.qjumpers .dashboard-list-item > .row:not(.dashboard-list-item--content) .black-txt {
+    margin-bottom: 10px;
+    font: 400 18px/1.18 'Roboto Slab', serif;
+    display: block;
+    color: #000;
+}
+
+/* Profile page */
+.qjumpers [class^="Address__selectLocation"] > div {
+    display: flex;
+    margin: 0;
+    width: 100%;
+}
+.qjumpers [class^="Address__selectLocation"] [class*="col-"] {
+    padding: 0 15px;
+}
+.qjumpers [class^="Address__address"] .rw-dropdownlist,
+.qjumpers [class^="Address__address"] .form-control {
+    margin-bottom: 15px !important;
+}
+.qjumpers [class^="Address__selectLocation"] .rw-dropdownlist {
+    margin-bottom: 0 !important;
+}
+
+/* Detail page */
+.qjumpers .job-detail--body > .container > .row {
+    flex-wrap: wrap;
+}
+.qjumpers .job-detail--body .col-md-9 {
+    max-width: 100%;
+    flex-basis: 100%;
+}
+.qjumpers .job-detail--header .border-bottom {
+    border-bottom: 0 !important;
+    margin-bottom: 15px;
+}
+.qjumpers .job-detail--header .border-bottom + .row {
+    margin-bottom: 0;
+}
+.qjumpers .job-detail--body {
+    font-size: 18px;
+    padding-bottom: 50px;
+}
+.qjumpers .job-detail--body .cta-wrap {
+    margin-top: 16px;
+}
+.qjumpers .job-detail--body .btn {
+    font-size: 12px;
+    line-height: 1.2;
+    min-width: 186px;
+    border-width: 4px;
+    height: 37px;
+    font-family: Roboto, sans-serif;
+}
+
+/* Employment history page */
+.qjumpers .control-label[for="root_employment"] + .field-array > div:last-child {
+    box-shadow: 0 30px 0 0 #fff;
+}
+
+/* Terms */
+.qjumpers #kc-content-wrapper {
+    font-size: 12px;
+}
+.qjumpers #kc-content-wrapper h2 {
+    font-size: 30px;
+    margin-bottom: 34px;
+}
+.qjumpers #kc-content-wrapper ul,
+.qjumpers #kc-content-wrapper ol,
+.qjumpers #kc-content-wrapper li {
+    font-size: inherit;
+}
+.qjumpers #kc-content-wrapper ol li {
+    list-style-position: inside;
+}
+.qjumpers #kc-content-wrapper ul li {
+    list-style: none;
+    position: relative;
+    padding-left: 20px;
+}
+.qjumpers #kc-content-wrapper ol li,
+.qjumpers #kc-content-wrapper ul li {
+    margin-bottom: 10px;
+}
+.qjumpers #kc-content-wrapper ul li:before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 6px;
+    left: 10px;
+    top: .75em;
+    background: currentColor;
+}
+
+/* Review page */
+.qjumpers .form-actions:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.qjumpers .form-actions .pull-right .btn:nth-last-child(3) {
+    float: left;
+}
+.qjumpers .form-actions .pull-right .btn:nth-last-child(2):nth-child(2) {
+    float: left;
+}
+.qjumpers [class^="PathForm__review"] {
+    margin-top: -10px;
+}
+.qjumpers [class^="PathForm__review"] .panel {
+    border: 1px solid #C4C4C4;
+    background: #E7E7E7;
+    padding: 0;
+    margin-bottom: 13px;
+    border-radius: 3px;
+}
+.qjumpers [class^="PathForm__review"] .panel-heading {
+    background: transparent;
+    padding: 0;
+}
+.qjumpers [class^="PathForm__review"] .panel-title {
+    margin: 0;
+}
+.qjumpers [class^="PathForm__review"] .panel-title > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-size: 20px;
+    line-height: 1.25;
+    font-weight: 400;
+    padding: 13px;
+}
+.qjumpers [class^="PathForm__review"] .panel-title > a .toggle-show {
+    display: none;
+}
+.qjumpers [class^="PathForm__review"] .panel-title > a .toggle-hide {
+    display: flex;
+}
+.qjumpers [class^="PathForm__review"] .panel-title > a .title {
+    margin: 0 10px 0 0;
+    font-size: 18px;
+    color: #EE3A43;
+}
+.qjumpers [class^="PathForm__review"] .panel-title > a.collapsed .toggle-show {
+    display: flex;
+}
+.qjumpers [class^="PathForm__review"] .panel-title > a.collapsed .toggle-hide {
+    display: none;
+}
+.qjumpers [class^="PathForm__review"] .panel-title .qjicon-chevron-up,
+.qjumpers [class^="PathForm__review"] .panel-title .qjicon-chevron-down {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border: solid #000;
+    border-width: 1px 1px 0 0;
+    margin: 0 10px;
+    transform: translateY(-2px) rotate(135deg);
+}
+.qjumpers [class^="PathForm__review"] .panel-title .qjicon-chevron-up {
+    transform: translateY(6px) rotate(-45deg);
+}
+.qjumpers [class^="PathForm__review"] .panel-title .toggle-hide,
+.qjumpers [class^="PathForm__review"] .panel-title .toggle-show {
+    font-size: 16px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+.qjumpers [class^="PathForm__review"] .panel-title .toggle-show {
+    color: #949292;
+}
+.qjumpers [class^="PathForm__review"] .panel-body {
+    padding: 13px;
+}
+.qjumpers [class^="PathForm__review"] .panel-body [class*="col-"] {
+    width: 100%;
+    max-width: 100%;
+    flex-basis: 100%;
+}
+.qjumpers [class^="PathForm__review"] .panel-group .panel-heading+.panel-collapse>.panel-body, 
+.qjumpers [class^="PathForm__review"] .panel-group .panel-heading+.panel-collapse>.list-group {
+    border: 0;
+}
+.qjumpers [class^="PathForm__review"] .panel-body .form-group,
+.qjumpers [class^="PathForm__review"] .panel-body [class^="FileUpload__files"],
+.qjumpers [class^="PathForm__review"] .panel-body [class^="FileUpload__files"],
+.qjumpers [class^="PathForm__review"] .panel-body [class^="Address__address"] > div,
+.qjumpers [class^="PathForm__review"] .panel-body [class^="Address__selectLocation"] .field {
+    display: flex;
+    align-items: center;
+}
+.qjumpers [class^="PathForm__review"] .panel-body [class^="Address__address"] > div {
+    width: 100%;
+    padding: 0 15px;
+}
+.qjumpers [class^="PathForm__review"] .panel-body .form-group .control-label,
+.qjumpers [class^="PathForm__review"] .panel-body [class^="FileUpload__files"] .control-label,
+.qjumpers [class^="PathForm__review"] .panel-body [class^="FileUpload__files"] .control-label,
+.qjumpers [class^="PathForm__review"] .panel-body [class^="Address__address"] .control-label {
+    width: 320px;
+    flex: 0 0 320px;
+    margin-bottom: 0;
+    padding-right: 10px;
+    max-width: 33%;
+    font-weight: 700;
+}
+.qjumpers [class^="PathForm__review"] .panel-body .form-group .control-label + div,
+.qjumpers [class^="PathForm__review"] .panel-body [class^="FileUpload__files"] .control-label + div,
+.qjumpers [class^="PathForm__review"] .panel-body [class^="FileUpload__files"] .control-label + div,
+.qjumpers [class^="PathForm__review"] .panel-body [class^="Address__address"] .control-label + div {
+    max-width: calc(100% - 320px);
+}
+.qjumpers .panel-body [class^="Address__selectLocation"] > div {
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+.qjumpers [class^="PathForm__review"] .panel-body input,
+.qjumpers [class^="PathForm__review"] .panel-body .rw-widget {
+    width: 100%;
+    border: 0;
+    background: transparent;
+}
+.qjumpers [class^="PathForm__review"] .panel-body .error-detail {
+    margin-bottom: 10px;
+    padding-left: 20px !important;
+    list-style: none;
+    color: #EE3A43;
+}
+.qjumpers [class^="PathForm__review"] .panel-body .rw-dropdownlist-picker {
+    display: none;
+}
+.qjumpers [class^="PathForm__review"] .panel-body [class^="PathForm__pathForm"] + div,
+.qjumpers [class^="PathForm__review"] .panel-body >div:last-child {
+    border: 1px solid #C4C4C4;
+    background: transparent;
+    padding: 15px;
+    border-radius: 3px;
+}
+.qjumpers [class^="PathForm__review"] .panel-body [class^="PathForm__pathForm"] + div .btn,
+.qjumpers [class^="PathForm__review"] .panel-body > div:last-child .btn {
+    min-width: 54px;
+    border-radius: 6px;
+    height: 49px;
+    line-height: 1;
+    background: #000;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    margin-right: 15px;
+    text-transform: none;
+    border: 1px solid #000 !important;
+}
+.qjumpers [class^="PathForm__review"] .panel-body [class^="PathForm__pathForm"] + div .btn:hover,
+.qjumpers [class^="PathForm__review"] .panel-body > div:last-child .btn:hover {
+    background: transparent;
+    color: #000;
+}
+
+.qjumpers [class^="PathForm__review"] .panel-body .alert-warning {
+    color: #EE3A43;
+}
+.qjumpers [class^="PathForm__review"] .panel-body > div:not([class]) > .row {
+    padding: 30px 0;
+    box-shadow: 0 16px 0 -15px #C4C4C4;
+}
+.qjumpers [class^="PathForm__review"] .panel-body > div:not([class]) > .row:last-child {
+    margin-bottom: 30px;
+}
+.qjumpers [class^="PathForm__review"] .panel-body > div:not([class]) > .row > div:last-child .form-group {
+    margin-bottom: 0;
+}
+.qjumpers [class^="PathForm__stepper"] .panel-body > div:not([class]) > .row:last-child > h3 {
+    margin-bottom: 0;
+}
+.qjumpers [class^="PathForm__review"] .panel-body .well {
+    border-bottom: 1px solid #C4C4C4;
+    padding: 0;
+    margin-bottom: 26px;
+    border-radius: 0;
+    box-shadow: none;
+}
+.qjumpers [class^="PathForm__review"] .panel-body .well .form-group {
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.qjumpers [class^="PathForm__review"] .panel-body .well .control-label {
+    font-weight: 700;
+    font-size: 14px;
+}
+.qjumpers [class^="PathForm__review"] .panel-body .well .form-group > div:not([class]) {
+    width: 100%;
+}
+.qjumpers [class^="PathForm__review"] .panel-body .well .surveyjsContainer {
+    padding: 0;
+}
+.qjumpers [class^="PathForm__review"] .panel-body .well .surveyjsContainer h5 {
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.qjumpers [class^="PathForm__review"] .panel-body .well .surveyjsContainer .answers {
+    font-size: 14px;
+}
+.qjumpers [class^="PathForm__review"] .panel-body .well .surveyjsContainer .answers p:last-child {
+    margin-bottom: 0;
+}
+.qjumpers [class^="PathForm__review"] .panel-body .well .surveyjsContainer .question:not(:last-child) {
+    margin-bottom: 36px;
+}
+
+.qjumpers [class^="PathForm__review"] .panel-body .control-label[for="root_qualification"], 
+.qjumpers [class^="PathForm__review"] .panel-body .control-label[for="root_employment"], 
+.qjumpers [class^="PathForm__review"] .panel-body .control-label[for="root_referee"] {
+    border-bottom: 0;
+    padding-bottom: 0;
+    color: #000;
+    font-size: 14px;
+}
+.qjumpers [class^="PathForm__review"] h3 {
+    display: none;
+}
+.qjumpers [class^="PathForm__review"] .panel-body .array-item-add {
+    margin-bottom: 0;
+}
+.qjumpers [class^="PathForm__review"] {
+    box-shadow: 0 15px 0 0 #fff;
+}
+.qjumpers .panel-body .control-label[for="root_employment"] + .field-array > div:last-child {
+    box-shadow: none;
+}
+.qjumpers [class^="PathForm__review"] .panel-body .question hr {
+    display: none;
+}
+
+/* Media queries */
+@media screen and (max-width: 992px) {
+    .form.qjumpers-form {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .qjumpers .navbar-nav > li a {
+        font-size: 11px;
+    }
+    .qjumpers .array-item-toolbox .btn {
+        min-width: 90px;
+    }
+    .qjumpers .dashboard-list--inner {
+        padding-top: 50px;
+    }
+} 
+@media screen and (max-width: 767px) {
+    .qjumpers .row > *,
+    .qjumpers [class^="PathForm__review"] .panel-body [class^="Address__address"] > div {
+        padding: 0 5px;
+    }
+    .qjumpers .row {
+        margin: 0;
+    }
+    .qjumpers .row .row,
+    .qjumpers .row form .row,
+    .qjumpers .panel-body [class^="Address__selectLocation"] > div {
+        margin: 0 -5px;
+    }
+    .qjumpers h1 {
+        margin-top: 50px;
+    }
+    .qjumpers .job-detail--header {
+        margin-top: 0;
+    }
+    .qjumpers .dashboard-list--inner:before {
+        font-size: 30px;
+    }
+    .qjumpers .navbar-nav {
+        position: relative;
+        margin-top: 34px;
+        margin-left: 0;
+        margin-right: 0;
+        counter-reset: menu-items;
+        border-radius: 0;
+        box-shadow: none;
+        border-right: 1px solid #EE3A43;
+    }
+    .qjumpers .navbar-nav li, .qjumpers .navbar-nav li a {
+        position: static;
+    }
+    .qjumpers .navbar-nav > li a {
+        padding: 6px 10px;
+    }
+    .qjumpers .navbar-nav li {
+        counter-increment: menu-items;
+    }
+    .qjumpers .navbar-nav li a .text {
+        position: absolute;
+        width: calc(100% + 2px);
+        text-align: center;
+        bottom: 100%;
+        left: -1px;
+        color: #fff;
+        background: #EE3A43;
+        display: none;
+        margin: 0;
+        max-width: initial;
+        padding: 9px;
+        border: 1px solid #EE3A43;
+        border-radius: 0;
+    }
+    .qjumpers .navbar-nav li.step-doing a .text {
+        font-size: 12px;
+        display: block;
+    }
+    .qjumpers .navbar-nav li.step-doing a .text:before{
+        content: counter(menu-items)". ";
+        display: inline;
+    }
+    .qjumpers .navbar-nav li.step-doing,
+    .qjumpers .navbar-nav li:hover {
+        background: #EE3A43;
+    }
+    .qjumpers .navbar-nav li a .tabicon span {
+        display: block;
+    }
+    .qjumpers .navbar-nav li a span[class^="qjicon-"]:before {
+        width: 32px;
+        height: 32px;
+        background-size: 16px 16px;
+        border-radius: 100%;
+        border: 1px solid currentColor;
+        content: '';
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .qjumpers .navbar-nav li.step-doing a span[class^="qjicon-"]:before, .qjumpers .navbar-nav li:hover a span[class^="qjicon-"]:before {
+        border-color: #fff;
+    }
+    .qjumpers .navbar-nav li a span.qjicon-profile:before {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%2012%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M11%2016C11%2012.6863%208.76142%2010%206%2010C3.23858%2010%201%2012.6863%201%2016%22%20stroke%3D%22%23EE3A43%22%2F%3E%3Ccircle%20cx%3D%226%22%20cy%3D%225%22%20r%3D%224.5%22%20stroke%3D%22%23EE3A43%22%2F%3E%3C%2Fsvg%3E');
+    }
+    .qjumpers .navbar-nav li.step-doing a span.qjicon-profile:before,
+    .qjumpers .navbar-nav li a:hover span.qjicon-profile:before {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%2012%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M11%2016C11%2012.6863%208.76142%2010%206%2010C3.23858%2010%201%2012.6863%201%2016%22%20stroke%3D%22%23fff%22%2F%3E%3Ccircle%20cx%3D%226%22%20cy%3D%225%22%20r%3D%224.5%22%20stroke%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E');
+    }
+    .qjumpers .navbar-nav li a span.qjicon-suitcase:before {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2015%2014.82%22%20fill%3D%22none%22%3E%3Crect%20x%3D%22.5%22%20y%3D%224.32%22%20width%3D%2214%22%20height%3D%2210%22%20rx%3D%223.5%22%20stroke%3D%22%23EE3A43%22%2F%3E%3Cpath%20d%3D%22M4.046%203.862c.02-4.29%207.05-4.671%207%200%22%20stroke%3D%22%23EE3A43%22%2F%3E%3C%2Fsvg%3E');
+    }
+    .qjumpers .navbar-nav li.step-doing a span.qjicon-suitcase:before,
+    .qjumpers .navbar-nav li a:hover span.qjicon-suitcase:before {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2015%2014.82%22%20fill%3D%22none%22%3E%3Crect%20x%3D%22.5%22%20y%3D%224.32%22%20width%3D%2214%22%20height%3D%2210%22%20rx%3D%223.5%22%20stroke%3D%22%23fff%22%2F%3E%3Cpath%20d%3D%22M4.046%203.862c.02-4.29%207.05-4.671%207%200%22%20stroke%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E');
+    }
+    .qjumpers .navbar-nav li a span.qjicon-bars:before {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2013.039%2014%22%20fill%3D%22none%22%3E%3Cpath%20fill%3D%22%23EE3A43%22%20d%3D%22M3.579%200h2v14h-2zM7.249%203.988h2v10h-2zM0%203.974h2v10H0zM11.039%201.978h2v12h-2z%22%2F%3E%3C%2Fsvg%3E');
+    }
+    .qjumpers .navbar-nav li.step-doing a span.qjicon-bars:before,
+    .qjumpers .navbar-nav li a:hover span.qjicon-bars:before {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2013.039%2014%22%20fill%3D%22none%22%3E%3Cpath%20fill%3D%22%23fff%22%20d%3D%22M3.579%200h2v14h-2zM7.249%203.988h2v10h-2zM0%203.974h2v10H0zM11.039%201.978h2v12h-2z%22%2F%3E%3C%2Fsvg%3E');
+    }
+    .qjumpers .navbar-nav li a span.qjicon-star:before {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%2016%2014%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M8%200.536954L9.43177%204.69867C9.57065%205.10235%209.95047%205.37336%2010.3774%205.37336L14.9471%205.37336L11.3002%207.87579C10.9295%208.13013%2010.7741%208.60056%2010.9204%209.02566L12.3248%2013.1079L8.56579%2010.5286C8.22487%2010.2946%207.77513%2010.2946%207.43421%2010.5286L3.67518%2013.1079L5.07961%209.02566C5.22585%208.60057%205.07047%208.13014%204.69979%207.87579L1.05289%205.37336L5.62263%205.37336C6.04953%205.37336%206.42935%205.10235%206.56823%204.69867L8%200.536954Z%22%20stroke%3D%22%23EE3A43%22%2F%3E%3C%2Fsvg%3E');
+    }
+    .qjumpers .navbar-nav li.step-doing a span.qjicon-star:before,
+    .qjumpers .navbar-nav li a:hover span.qjicon-star:before {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20viewBox%3D%220%200%2016%2014%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M8%200.536954L9.43177%204.69867C9.57065%205.10235%209.95047%205.37336%2010.3774%205.37336L14.9471%205.37336L11.3002%207.87579C10.9295%208.13013%2010.7741%208.60056%2010.9204%209.02566L12.3248%2013.1079L8.56579%2010.5286C8.22487%2010.2946%207.77513%2010.2946%207.43421%2010.5286L3.67518%2013.1079L5.07961%209.02566C5.22585%208.60057%205.07047%208.13014%204.69979%207.87579L1.05289%205.37336L5.62263%205.37336C6.04953%205.37336%206.42935%205.10235%206.56823%204.69867L8%200.536954Z%22%20stroke%3D%22%23fff%22%2F%3E%3C%2Fsvg%3E');
+    }
+    .qjumpers .navbar-nav li a span.qjicon-tick:before {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%3E%3Ccircle%20cx%3D%228%22%20cy%3D%228%22%20r%3D%227.5%22%20stroke%3D%22%23EE3A43%22%2F%3E%3Cpath%20stroke%3D%22%23EE3A43%22%20d%3D%22M7.355%2010l4-4M5.424%208.61l2%202%22%2F%3E%3C%2Fsvg%3E');
+    }
+    .qjumpers .navbar-nav li.step-doing a span.qjicon-tick:before,
+    .qjumpers .navbar-nav li a:hover span.qjicon-tick:before {
+        background-image: url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%3E%3Ccircle%20cx%3D%228%22%20cy%3D%228%22%20r%3D%227.5%22%20stroke%3D%22%23fff%22%2F%3E%3Cpath%20stroke%3D%22%23fff%22%20d%3D%22M7.355%2010l4-4M5.424%208.61l2%202%22%2F%3E%3C%2Fsvg%3E');
+    }
+
+    .qjumpers [class^="PathForm__stepper"] [class^="PathForm__pathForm"] > div > .row [class*="col-"] {
+        width: 100%;
+        padding: 0 5px;
+    }
+    .qjumpers [class^="FileUpload__dropZone"].btn {
+        height: 45px;
+        min-width: 125px;
+    }
+    .qjumpers [class^="Address__selectLocation"] > div {
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+    }
+    .qjumpers .panel-body [class^="Address__selectLocation"] > div {
+        width: calc(100% + 30px);
+    }
+    .qjumpers [class^="Address__selectLocation"] .rw-dropdownlist {
+        margin-bottom: 15px !important;
+    }
+    .qjumpers .form-actions {
+        display: flex;
+        flex-direction: column;
+        border-top: 0;
+    }
+    .qjumpers .form-actions .pull-left .btn,
+    .qjumpers .form-actions .pull-right .btn {
+        width: 100%;
+        margin: 0 0 10px;
+        display: block;
+        padding: 8px 10px;
+        height: 40px;
+        line-height: 1;
+    }
+    .qjumpers .form-actions .pull-left .btn-prev {
+        display: block;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 13px;
+        padding: 5px;
+    }
+    .qjumpers .form-actions .pull-right span {
+        display: flex;
+        flex-direction: column;
+    }
+    .qjumpers .job-detail--header .border-bottom + .row > div {
+        width: 100%;
+    }
+    .qjumpers [class^="PathForm__review"] .panel-body > div:not([class]) > .row {
+        box-shadow: 0 6px 0 -5px #C4C4C4;
+    }
+    .qjumpers [class^="PathForm__stepper"] .well .form-group > .control-label {
+        font-size: 12px;
+    }
+    .qjumpers .array-item-toolbox .btn-group {
+        padding-top: 15px;
+    }
+    .qjumpers .array-item-toolbox .btn-group,
+    .qjumpers .array-item-toolbox .btn {
+        width: 100%;
+    }
+    .qjumpers [class^="PathForm__stepper"] [class^="PathForm__pathForm"] > div > .row:not(.no-bottom-line) > div:last-child .array-item .form-group {
+        margin-bottom: 15px;
+    }
+    .qjumpers .radio .circle {
+        border-color: #C4C4C4;
+        background: #E7E7E7;
+        width: 11px;
+        height: 11px;
+    }
+    .qjumpers [class^="PathForm__stepper"] .well .surveyjsContainer h5 {
+        font-size: 15px;
+    }
+    .qjumpers .form-inline label {
+        margin-bottom: 0;
+    }
+    .qjumpers .radio label {
+        font-size: 11px;
+        display: inline-flex;
+        align-items: center;
+        padding-left: 0;
+    }
+    .qjumpers .surveyjsContainer .sv_complete_btn {
+        height: 45px;
+        line-height: 1;
+    }
+    .qjumpers [class^="PathForm__review"] .panel-title > a .title {
+        font-size: 18px;
+    }
+    .qjumpers [class^="PathForm__review"] .panel-title > a .toggle-show {
+        color: #5E5E5E;
+    }
+    .qjumpers [class^="PathForm__review"] .panel-title .qjicon-chevron-down {
+        border-color: #000;
+        transform: translateY(0px) rotate(135deg);
+    }
+    .qjumpers [class^="PathForm__review"] .panel-body .form-group, 
+    .qjumpers [class^="PathForm__review"] .panel-body [class^="FileUpload__files"], 
+    .qjumpers [class^="PathForm__review"] .panel-body [class^="FileUpload__files"], 
+    .qjumpers [class^="PathForm__review"] .panel-body [class^="Address__address"] > div, 
+    .qjumpers [class^="PathForm__review"] .panel-body [class^="Address__selectLocation"] .field {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .qjumpers [class^="PathForm__review"] .panel-body .form-group .control-label, 
+    .qjumpers [class^="PathForm__review"] .panel-body [class^="FileUpload__files"] .control-label, 
+    .qjumpers [class^="PathForm__review"] .panel-body [class^="FileUpload__files"] .control-label, 
+    .qjumpers [class^="PathForm__review"] .panel-body [class^="Address__address"] .control-label {
+        flex-basis: 0;
+        width: auto;
+        max-width: 100%;
+        margin-bottom: 5px;
+    }
+    .qjumpers .control-label[for="root_employment"] + .field-array > div:last-child {
+        box-shadow: none;
+    }
+    .qjumpers [class^="PathForm__review"] .panel-body .form-group .control-label + div, 
+    .qjumpers [class^="PathForm__review"] .panel-body [class^="FileUpload__files"] .control-label + div, 
+    .qjumpers [class^="PathForm__review"] .panel-body [class^="FileUpload__files"] .control-label + div, 
+    .qjumpers [class^="PathForm__review"] .panel-body [class^="Address__address"] .control-label + div {
+        max-width: 100%;
+    }
+    .qjumpers #kc-content-wrapper.row > *,
+    .qjumpers #kc-content-wrapper.row > ul,
+    .qjumpers #kc-content-wrapper.row > ol {
+        padding: 0 !important;
+    }
+    .qjumpers [class^="PathForm__stepper"] .well {
+        border-radius: 2px;
+    }
+    .qjumpers [class^="PathForm__review"] .panel-body .well {
+        padding: 0;
+    }
+    .qjumpers [class^="PathForm__stepper"] .well .surveyjsContainer {
+        padding-top: 30px;
+    }
+    .qjumpers [class^="PathForm__stepper"] .array-item {
+        margin-bottom: 30px;
+    }
+    .qjumpers [class^="PathForm__stepper"] [class^="PathForm__pathForm"] > div > .row:not(.no-bottom-line) + .row {
+        box-shadow: 0 -6px 0 -5px #C4C4C4;
+    }
+    .qjumpers [class^="PathForm__stepper"] h2 {
+        font-size: 23px;
+    }
+    .qjumpers [class^="PathForm__review"] .panel-body .well .surveyjsContainer h5 {
+        font-size: 15px;
+    }
+    .qjumpers .rw-datetimepicker .rw-select {
+        width: 27px;
+    }
+    .qjumpers .rw-dropdownlist .rw-dropdownlist-picker .rw-i-caret-down, 
+    .qjumpers .rw-dropdownlist .rw-dropdownlist-picker .rw-i-caret-up {
+        right: 8px;
+    }
+}
