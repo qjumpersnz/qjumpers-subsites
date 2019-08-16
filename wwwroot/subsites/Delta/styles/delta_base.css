@@ -1,0 +1,777 @@
+﻿html {
+    height: 100%;
+    text-rendering: optimizeLegibility;
+    font-size: 16px;
+}
+
+body {
+    min-width: 320px;
+    height: 100%;
+    background-color: #E5E5E5;
+    font-size: 62.5%;
+    font-family: "Titillium Web", Helvetica, Arial, sans-serif;
+    line-height: 1.6em;
+    color: #000;
+    -webkit-text-size-adjust: none;
+}
+
+#topheader {
+    position: relative;
+    height: 120px;
+    padding: 0 5.2%;
+    background-color: #00b3f1;
+}
+
+#topheader>* {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#header
+{
+    display:none;
+}
+
+#topheader h1 {
+    padding: 35px 0 0;
+}
+
+div.logo-area
+{
+    float:left;
+}
+
+#topheader [rel="logo"] {
+    display: block;
+    width: 170px;
+    height: 64px;
+    background: url("/images/delta/delta-logo.png") no-repeat 0 0;
+    background-size: 100%;
+    text-indent:-999px;
+}
+
+form, .form {
+    position: relative;
+}
+
+.main-nav {
+    float: right;
+    margin-top: 70px;
+}
+
+.mobile-icon {
+    display: none;
+    width: 50px;
+    height: 39px;
+    background: url("/images/delta/assets.png") no-repeat -51px -3px;
+    background-size: 383px 143px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.main-nav li {
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 1.4em;
+    line-height: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #202b2f;
+}
+
+.main-nav li:before {
+    display: inline-block;
+    vertical-align: bottom;
+    content: '';
+    width: 11px;
+    height: 30px;
+    margin: 0 7px 0 12px;
+    background: url("/images/delta/assets.png") no-repeat -1px -1px;
+    background-size: 383px 143px;
+}
+
+.main-nav li.minor {
+    color: #fff;
+}
+
+.main-nav a {
+    color: inherit;
+    font-size:14px;
+    line-height:12px;
+    font:"Titillium Web" !important;
+    font-weight:600;
+}
+
+.main-nav a:hover, .footer-nav a:hover 
+{
+    color:#fff;
+}
+
+a
+{
+    font-size: inherit;
+    text-decoration: none;
+    -webkit-transition: color 60ms linear;
+    transition: color 60ms linear;
+}
+
+h1, h2, h3, h4 
+{
+    font-family:"Titillium Web" !important;
+    margin: 0 0 5px;
+    line-height: 1.4em;
+    font-weight: 600;
+    color: #00b3f1;
+}
+h1{font-size: 1.9em; font-weight:bold;}
+h2{font-size:1.4em}
+h3{font-size:1.3em}
+h4{font-size:1.2em}
+
+#content
+{
+    padding:0;
+}
+fieldset
+{
+    padding:0;
+    margin:0;
+}
+.main-title
+{
+    display:none;
+}
+/* ##########################   main  ############################# */
+
+#sidebar.columns, #sidebar.column
+{
+    padding:0;
+}
+
+#aside, .sub-nav 
+{
+    width:210px;
+    margin-right: 2.1%;
+    display: inline-block;
+    vertical-align: top;
+}
+#aside h1 {
+    margin: 0 0 5px;
+    line-height: 1.4em;
+    color: #00b3f1;
+}
+
+#aside .features {
+    width: 100%;
+    margin: 0 0 20px;
+    overflow: hidden;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+#aside .features div {
+    padding: 9px 4.2%;
+    background-color: #fff;
+    border: 1px solid #cfcfcf;
+    zoom: 1;
+    height:113px;
+}
+
+#aside .features h3 a{
+    margin: 0;
+    padding: 0;
+    color: #00b3f1;
+    
+}
+ #figcaption {
+padding-top: 6px;
+font-size: 12px;
+display: block;
+clear: both;
+}
+#figure
+{
+    position:relative;
+}
+
+#figure h1 {
+width: 297px;
+margin: 0 0 12px;
+color: #fff;
+text-shadow: 2px 2px 7px rgba(0,0,0,0.7);
+position: absolute;
+top: 25px;
+left: 43px;
+font-size:38px;
+line-height:46px;
+}
+
+.features h3 {
+    max-width: 180px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.07em;
+    text-transform: uppercase;
+    color: #00b3f1;
+    text-align:center;
+}
+
+#aside .features a {
+    float: right;
+    margin: 5px 0 0;
+    position: relative;
+    bottom: 0;
+    right: 0;
+}
+.features a:before {
+    display: block;
+    content: '';
+    width: 10px;
+    height: 27px;
+    background: #fff;
+    border-right: 1px solid #00b3f1;
+    position: absolute;
+    top: -3px;
+    left: -6px;
+    -webkit-transform: rotate(18.5deg);
+    -moz-transform: rotate(18.5deg);
+    -ms-transform: rotate(18.5deg);
+    -o-transform: rotate(18.5deg);
+    transform: rotate(18.5deg);
+}
+
+.features a {
+    display: block;
+    width: 70px;
+    height: 26px;
+    padding-left: 10px;
+    background-color: #fff;
+    border: 1px solid #00b3f1;
+    border-left: none;
+    font-size: 12px;
+    line-height: 26px;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: center;
+    color: #00b3f1;
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+    z-index: 2;
+}
+
+.sub-nav ol {
+    margin: 0;
+    background-color: #fff;
+    list-style: none;
+}
+
+.sub-nav li {
+    display: block;
+    padding: 8px 0;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 12px;
+    line-height: 1.5em;
+    font-family:"Droid Sans";
+}
+.sub-nav a 
+{
+    color: #00b3f1;
+    display: block;
+    padding: 0 20px;
+}
+
+.sub-nav a:hover
+{
+    color:#000;
+}
+
+.sub-nav li.current {
+    background-color: #00b3f1;
+    border-color: #00b3f1;
+    font-size: 15px;
+}
+.sub-nav li.current, .sub-nav li.current a {
+    color: #fff;
+}
+
+#main
+{
+    margin:30px auto;
+}
+
+.row
+{
+    width:944px;
+}
+
+#no-vacancy-text
+{
+    margin-left:15px;
+}
+
+/* ##########################   footer  ############################# */
+#footer {
+    width: 89.6%;
+    height: 50px;
+    margin: 0 auto 20px;
+    padding: 0 1.56%;
+    background-color: #bfc3c4;
+    overflow: hidden;
+}
+
+#footer>* {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#footer .copyright p {
+    color: #202b2f;
+    line-height:50px;
+    font-size:14px;
+}
+
+.footer-nav a, #footer .copyright p 
+{
+    font-family:"Titillium Web" !important;
+}
+
+.footer-nav {
+    float: right;
+}
+
+.footer-nav li {
+color: #202b2f;
+}
+
+.footer-nav li:first-child:before 
+{
+    display:none;
+}
+
+.footer-nav li {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.4em;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #858f92;
+}
+
+.footer-nav li:before {
+    display: inline-block;
+    vertical-align: top;
+    content: '/';
+    margin: 0 15px;
+    font-size: 1.6em;
+    font-weight: 300;
+}
+
+.footer-nav li {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 1.4em;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: #858f92;
+}
+
+.footer-nav li {
+    color: #202b2f;
+}
+
+.footer-nav a {
+    color: inherit;
+    font-size:14px;
+}
+
+/* ##### result item #####*/
+
+.result-item
+{
+  border:1px solid #eee;  
+  padding:10px;
+  margin-bottom:5px;
+}
+
+.result-item:hover
+{
+    background-color:#eee;
+}
+
+.result-item a
+{
+    font-family:"Arial", Helvetica, Sans-Serif;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.result-item h5, .job-short-description, p
+{
+    font-family:"Arial", Helvetica, Sans-Serif;
+    font-size:13px;
+    font-weight:normal;
+}
+.result-item h2 a:hover
+{
+    text-decoration:underline;
+}
+
+.button, .buttons > .button
+{
+    background:#00B3F1;
+    text-transform:uppercase;
+    font-weight:600;
+    border:none;
+}
+
+.buttons
+{
+    margin-left:5px;
+}
+
+select
+{
+    height:30px;
+}
+
+.button:hover
+{
+    background:#fff;
+    color:#00B3F1;
+    border:none;
+}
+
+.navbar-header button
+{
+    display:none;
+}
+.mobile-sub-nav {
+  display: none;
+  position: relative;
+}
+
+.mobile-sub-nav span {
+    display: block;
+    height: 33px;
+    padding: 0 20px;
+    background-color: #00b3f1;
+    border-bottom: 1px solid #00b3f1;
+    font-size: 15px;
+    line-height: 34px;
+    color: #fff;
+}
+.mobile-sub-nav span:after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    margin-top: -2px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #fff;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+}
+.mobile-sub-nav select {
+    width: 100%;
+    height: 33px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-appearance: menulist-button;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+}
+.mobile-sub-nav select option {
+    font-size: 13px;
+}
+.paging-nav a.active {
+    color: #202b2f;
+}
+/*  ##### mobile Optimising stuff ### */
+
+@media (max-width: 767px), (max-width: 799px) and (orientation: landscape)
+{
+    #topheader
+    {
+        padding: 0 3.125% !important;
+    }
+    .mobile-sub-nav {
+        display: block;
+        margin-bottom: 8px;
+    }
+    #sidebar 
+    {
+        display:none;
+    }
+    #content
+    {
+        padding: 0 3.125%;
+    }
+    .main-title
+    {
+        display:block;
+    }
+    #figure h1 {
+    font-size: 2.6em;
+    top: 2px;
+    left: 12px;
+    }
+    #footer
+    {
+       height:auto;
+       width:100%;
+       margin:0;
+    }
+   #footer ol
+   {
+       margin:0;
+   }
+   #footer .footer-nav
+   {
+       margin-bottom:10px;
+   }
+   #footer .copyright, #footer .footer-nav
+   {
+       float:left;
+       display:block;
+       padding-left:10px;
+       width:100%;
+   }
+   #footer .copyright p
+   {
+       margin:0;
+       color:#202b2f;
+       font-size:12px;
+   }
+   .footer-nav li:before {
+        content:normal;
+   }
+    .footer-nav li
+    {
+        display:block;
+        height:1.4em;
+    }
+    .footer-nav a, .copyright p
+    {
+        font-size:12px;
+    }
+}
+
+@media (max-width: 1200px)
+{
+      #topheader {
+        height: 100px;
+        padding: 0 1.95%;
+      }
+      #topheader h1 {
+        padding: 24px 0;
+      }
+      #topheader [rel="logo"] {
+        width: 141px;
+        height: 52px;
+      }
+      #topheader form {
+        margin-top: 50px;
+      }
+      .main-nav, #topheader form.search-form
+      {
+          margin-top:50px !important;
+      }
+      .main-nav li:before
+      {
+          margin: 0 2px;
+      }
+}
+
+@media (max-width: 1023px)
+{
+    .main-nav li:before, #topheader form.search-form 
+    {
+        display:none;
+    }
+    #navbar-primary ol.active, .mobile-icon 
+    {
+        display:block;
+    }
+    #topheader h1
+    {
+        padding:10px 0 !important;
+        margin:0;
+    }
+    .main-nav ol {
+        width: 77%;
+        height: 100%;
+        padding: 27px 3.125% 1.5%;
+        background: #202b2f;
+        position: fixed;
+        top: 0;
+        right: -77%;
+        z-index: 10;
+    }
+    #aside h1
+    {
+        padding-left: 15px;
+    }
+  .main-nav li {
+    display: block;
+    margin: 0 0 10px;
+    line-height: 1.4em;
+    color: white;
+  }
+    .main-nav li a:hover {
+    color: #00b3f1;
+  }
+    .main-nav li.minor {
+    color: white;
+  }
+  .main-nav li.minor a:hover {
+    color: #00b3f1;
+  }
+    .logo-area
+    {
+        padding-top:20px;
+    }
+    .main-nav 
+    {
+        margin:0 !important;
+    }
+ }
+ 
+@media (max-width: 960px)
+{
+    .features {
+    bottom: 45px;
+    }
+    .features p {
+    width: 65%;
+    }
+    #aside .features {
+    display: none;
+    }
+    .footer-nav a, #footer .copyright p
+    {
+        font-size:12px;
+    }
+}
+@media (max-width: 1024px) {
+  .home-page #footer {
+    left: 0;
+  }
+}
+.features a:hover 
+{
+    color:#000;
+}
+
+.main-nav li.minor:before {
+    background-position: -1px -40px;
+}
+
+#topheader form.search-form {
+    float: right;
+    width: 180px;
+    margin-top: 70px;
+    margin-left: 20px;
+}
+
+#topheader form.search-form input {
+    float: left;
+    width: 137px;
+    padding: 7px 15px !important;
+    font-size: 1.4em;
+    line-height: 1em;
+    color: #fff;
+}
+
+#topheader form.search-form input, #header form.search-form button {
+    height: 30px;
+    border: none;
+    background: url("/images/delta/assets.png") no-repeat -1px -81px;
+    background-size: 383px 143px;
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+#topheader form button {
+    float: right;
+    width: 43px;
+    background-position: -138px -81px;
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+}
+
+#topheader form button {
+    height: 30px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: url("/images/delta/assets.png") no-repeat -1px -81px;
+    background-position: -138px -81px;
+    background-size: 383px 143px;
+    -webkit-appearance: none;
+    border-radius: 0;
+    cursor:pointer;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 1.6em;
+    font-weight: 400;
+    color: #000;
+}
+
+input, textarea {
+    border: none !important;
+    font-family: 'Arial', 'Helvetica', sans-serif !important;
+    font-size: 13px !important;
+    color:#000000 !important;
+   -webkit-box-shadow: none;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+}
+
+textarea {
+    padding: 10px;
+}
+
+input:focus, button:focus
+{
+    outline:none!important;
+    -moz-outline-style: none;
+}
+.basic div
+{
+    margin-bottom:25px;
+}
+
+input[type="checkbox"]
+{
+    nfloat:left!important;
+    width:32px;
+    height:20px !important;
+}
+
+input[type="file"], .checkbox-label, .basic .basic
+{
+    padding:0 !important;
+}
+#figure+p,.left-column+p
+{
+    margin-top:20px;
+}

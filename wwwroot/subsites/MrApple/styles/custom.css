@@ -1,0 +1,195 @@
+﻿.row{
+	width:1200px;
+	min-width: auto;
+}
+div.wrapper {
+	background: #eeeeee;
+}
+div#job-info {
+	min-height: 500px;
+	padding-top:20px;
+	padding-bottom:20px;
+	overflow:hidden;
+}
+div#job-info h3{
+	font-size: 1.8em;
+}
+div#job-info h4{
+	margin-bottom: 1em;
+}
+div.terms li {
+	font-size: 18px;
+}
+div.terms{ 
+	width: 70%;
+    margin: 0px auto;
+    left: 20px;
+    font-size: 18px;
+    padding: 30px 20px 20px 20px;
+	background: white;
+	border-bottom: 20px solid #eeeeee;
+}
+div.terms p {
+	font-size: 18px;
+}
+.btn, .apply-btn, .buttons input {
+	background: none;
+	border: 1px solid #EE3A43 !important;
+}
+
+* {
+  font-family: 'Roboto Slab', serif;  
+}
+
+section.grey.s-nip-white.first-section {
+    display: none;
+}		
+.inner {
+    margin-bottom: 110px;
+}
+
+#registration-of-interest {
+    background: white;
+    margin-top: -110px;
+    margin-bottom: 0px;
+	border-bottom: 20px solid #EEEEEE;
+}
+#mobNav {
+	display: block
+}
+
+input#ContentPlaceHolderDefault_ContentContainer_ctl00_RegistrationOfInterest_1_btnSubmit {
+    width: 15vw;
+    margin-left: 10px;
+}
+
+input, textarea, select {
+    border: 1px solid #A9A9A9 !important; 
+}
+
+input#ContentPlaceHolderDefault_ContentContainer_ctl00_Apply_2_btnSubmitApp {
+    width: 15vw;
+}
+a, p, h1,h2, h3, h4, h5, h6, li, ul, a {
+    font-family: 'Roboto Slab', serif;  
+}
+body {
+    background: #eee;
+	background-image: url('/wwwroot/subsites/MrApple/images/apples_bkgd.jpg');
+	background-color: #ee3a43;
+    background-size: 100% auto;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    padding: 0px !important;
+    float: none !important;
+}
+
+h1.title {
+	padding-top: 20px;
+    margin-top: -110px;
+    margin-left: 10px;
+    color: rgb(34,34,34);
+}
+
+div.form {
+	background: white;
+	border-bottom: 20px solid #EEEEEE;
+}
+input, textarea, select {
+	border: 1px solid #505050;
+}
+
+@media screen and (min-width: 481px) {
+	fieldset.basic.register-form {
+		margin-top: 110px;
+	}
+	div.form {
+		margin-top: 110px !important;
+	}
+	.inner {
+		margin-bottom: 0px; 
+	}
+	div.form {
+		width: 70%;
+		margin: 0px auto;
+		background-color: white;
+		margin-bottom: 0px;
+	}
+
+	#registration-of-interest {
+		width: 70%;
+		margin: 0px auto;
+		background-color: white;
+		margin-bottom: 0px;
+		padding-bottom: 5px;
+	}
+
+	.fa {
+		display: inline-block;
+		font: normal normal normal 14px/1 FontAwesome;
+		font-size: 20px;
+		font-weight: 400;
+		margin: -3px 0px 2px -1px;
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	fielset.basic {
+		background: #fff;
+	}
+	h1.title {
+		margin-left: 30vw;
+		position: relative;
+		font-size: 6vw;
+		margin-top: -110px;
+		margin-bottom: -100px;
+	}
+}
+
+#mobnav {
+	display:block;
+}
+#mobnav.clicked {
+	display: block;
+}
+@media screen and (min-width: 891px) {
+	.fa {
+		display: none:
+	}
+
+	h1.title {
+    margin-left: 0px;
+    text-align: center;
+    left: 0px;
+    position: relative;
+    font-size: 3.7em;
+    width: 100%;
+	}
+
+	ul.children {
+    margin-left: 0px;
+	}
+
+	div.form {
+	margin-top: 110px;
+	}
+}
+select{
+	height:32px;
+}
+.findpostcode{
+	float:right;
+}
+.postcode label{
+	width: 50%;
+	float:left;
+}
+#regionbox{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+.result-item{
+	margin-bottom: 20px;
+}
