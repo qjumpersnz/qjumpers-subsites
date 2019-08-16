@@ -1,0 +1,12 @@
+.result-item{margin-bottom: 20px;}
+.result-item .row{padding-bottom: 20px; border-bottom: 1px solid #A9A9A9;}
+h1{font-size: 30px; font-weight: normal; text-transform: capitalize;}
+h2{font-size: 30px; font-weight: normal; line-height: 3rem; }
+.form-group{margin-bottom: 0 !important; padding-left: 0 !important;}
+input,select, textarea{max-width: 100% !important;} 
+ul{list-style:none; padding-left: 0;}
+#job-inof ul{}
+.checkbox-inline{padding-left: 0; font-weight: 700;}
+.checkbox-inline input[type=checkbox]{position:relative;}
+#postcode label{width: 50%; display:inline-block;}
+.findpostcode{float:right;}
