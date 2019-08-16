@@ -573,7 +573,7 @@
     display: block;
     margin-top: 30px;
     padding-top: 8px;
-    background: url(../images/ragged_line.svg) left / contain no-repeat;
+    background: url(../images/ragged_line_green.svg) left / contain no-repeat;
 }
 .qjumpers .dashboard-list-item > .row:not(.dashboard-list-item--content) {
     display: flex;
