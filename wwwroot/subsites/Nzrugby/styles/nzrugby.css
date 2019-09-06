@@ -1,0 +1,162 @@
+
+/* Custom nav */
+.qjumpers_custom-crumb {
+  float: right;
+}
+.breadcrumb>.qjumpers_custom-crumb:before {
+  content: '';
+  padding: 0 10px;
+}
+
+.qjumpers .dashboard-list--header,
+.qjumpers .dashboard-list-item .text-right,
+.qjumpers .dashboard-list-item--content,
+.qjumpers .job-detail--sidebar .job-summary-wrap,
+.qjumpers .job-detail--sidebar .cta-wrap .text-center,
+.qjumpers .job-detail--header .time-icon {
+  display: none;
+}
+
+.qjumpers#bodyHere {
+  padding-top: 15px;
+}
+.qjumpers .row {
+  margin: 0 -10px;
+}
+.qjumpers .dashboard-list--inner .container {
+  padding: 0;
+  width: 100%;
+}
+
+/* List page */
+.qjumpers .dashboard-list--inner:before {
+  content: 'Current Vacancies';
+  margin: 5px 0;
+  font: 400 22px/25px 'FuturaTL-ExtraBlackItalic';
+  display: block;
+}
+.qjumpers .dashboard-list-item > .row {
+  flex-grow: 1;
+}
+.qjumpers .dashboard-list-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 3px solid #C2C0C0;
+  padding: 20px 12px 7px;
+  margin-bottom: 4px;
+  background: #fff;
+}
+.qjumpers .dashboard-list-item:after {
+  content: 'View Job';
+  flex-shrink: 0;
+  margin: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 112px;
+  height: 24px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 10px;
+  color: #fff;
+  background: #030303;
+  border-radius: 2px;
+  box-sizing: border-box;
+  border: 1px solid #030303;
+}
+.qjumpers .dashboard-list-item:hover {
+  text-decoration: none;
+}
+.qjumpers .dashboard-list-item h4 {
+  margin: 0 0 6px;
+  font: 400 25px/29px 'FuturaTL-ExtraBlackItalic';
+  color: #555;
+}
+.qjumpers .dashboard-list-item .col-xs-12 {
+  width: 100%;
+}
+.qjumpers .dashboard-list-item .location-icon {
+  color: #2F2E2E;
+  font: 400 15px/17px 'FuturaTL-ExtraBlackItalic';
+}
+
+/* Detail page */
+.qjumpers .job-detail--header,
+.qjumpers .job-detail--body {
+  background: #fff;
+  color: #000;
+  padding: 5px 0;
+}
+.qjumpers .job-detail--header .container,
+.qjumpers .job-detail--body .container {
+  width: 100%;
+}
+.qjumpers .job-detail--header h1 {
+  margin: 0;
+  font: 400 25px/29px 'FuturaTL-ExtraBlackItalic';
+  color: #000;
+}
+.qjumpers .job-detail--body .container > .row > .col-xs-12,
+.qjumpers .job-detail--header .container > .row > [class^="col-"] {
+  width: 100%;
+}
+.qjumpers .job-detail--body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+}
+.qjumpers .job-detail--body li {
+  list-style: inside disc;
+}
+.qjumpers .job-detail--header .container > .row > [class^="col-"] {
+  font: 400 20px/23px 'FuturaTL-ExtraBlackItalic';
+}
+.qjumpers .job-detail--header .container > .row > [class^="col-"] strong {
+  font-weight: 400;
+}
+
+.qjumpers .job-detail--body .btn {
+  font: inherit;
+  font-size: 12px;
+  line-height: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  color: #fff;
+  height: 38px;
+  width: 186px;
+  text-transform: uppercase;
+  border-radius: 0;
+  margin-top: 15px;
+}
+.qjumpers .job-detail--body .btn:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+  .qjumpers#bodyHere {
+    margin: 0 -10px;
+    width: calc(100% + 20px);
+  }
+  .qjumpers .dashboard-list--inner:before {
+    padding: 0 10px;
+  }
+  .qjumpers .dashboard-list-item {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid #C2C0C0;
+    padding: 20px 10px;
+    margin: 0;
+  }
+  .qjumpers .dashboard-list-item:after {
+    display: none;
+  }
+  .qjumpers .dashboard-list-item h4 {
+    color: #009BE7;
+    text-decoration: underline;
+  }
+  .qjumpers .job-detail--header, .qjumpers .job-detail--body {
+    background: transparent;
+  }
+}
