@@ -1,0 +1,145 @@
+.qjumpers-background-image:before {
+  display: none;
+}
+.qjumpers-intro {
+  min-height: 28.3vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.qjumpers-footer .contact-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 25px;
+}
+.qjumpers-footer .contact-info p,
+.qjumpers-footer .contact-info img,
+.qjumpers-footer .contact-info .button-group {
+  margin: 0;
+}
+.qjumpers-footer .contact-info a {
+  display: inline-block;
+}
+
+.qjumpers .dashboard-list--header,
+.qjumpers .dashboard-list-item .img-wrap,
+.qjumpers .job-detail--sidebar .cta-wrap > div:not(:first-child),
+.qjumpers .job-detail--sidebar .job-summary-wrap,
+.qjumpers .job-detail--header .row:not(.border-bottom),
+.qjumpers .job-detail--header .border-bottom .text-right {
+  display: none;
+}
+
+/* List page */
+.qjumpers .dashboard-list--inner:before {
+  content: 'Current Vacancies';
+  font: 400 36px/1.36 "hypatia-sans-pro",sans-serif;
+  display: block;
+  margin-bottom: 32px;
+  color: #009BD5;
+}
+.qjumpers .dashboard-list-item {
+  display: flex;
+  align-items: center;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 3px;
+  margin-bottom: 30px;
+}
+.qjumpers .dashboard-list-item:last-child {
+  margin-bottom: 0;
+}
+.qjumpers .dashboard-list-item .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1 0 45%;
+}
+.qjumpers .dashboard-list-item .row.dashboard-list-item--content {
+  flex-basis: 55%;
+}
+.qjumpers .dashboard-list-item [class*='col-'] {
+  padding: 25px 20px;
+  flex-grow: 1;
+}
+.qjumpers .dashboard-list-item .text-wrap {
+  flex-grow: 1;
+}
+
+.qjumpers .dashboard-list-item .col-sm-7 {
+  max-width: 37.25%;
+}
+.qjumpers .dashboard-list-item .col-sm-3 {
+  max-width: 33%;
+}
+.qjumpers .dashboard-list-item .col-sm-2 {
+  max-width: 29.75%;
+}
+.qjumpers .dashboard-list-item [class*='col-'],
+.qjumpers .dashboard-list-item [class*='col-'] * {
+  font-size: 12px;
+  line-height: 1.33;
+  font-family: 'Open Sans';
+  margin: 0;
+}
+.qjumpers .dashboard-list-item [class*='col-'] .location-icon,
+.qjumpers .dashboard-list-item [class*='col-'] .time-icon {
+  font-weight: 400;
+}
+
+/* Detail page */
+.qjumpers .job-detail--header *,
+.qjumpers .job-detail--body * {
+  font-family: 'Open Sans', sans-serif;
+}
+.qjumpers .job-detail--header h1 {
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+.qjumpers .job-detail--body * {
+  font-size: 12px;
+}
+.qjumpers .job-detail--body .list-unstyled strong {
+  font-weight: 400;
+}
+.qjumpers .job-detail--sidebar .cta-wrap .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 186px;
+  background: #009BD5;
+  border-radius: 5px;
+  height: 38px;
+  padding: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+
+  .qjumpers-intro {
+    min-height: 47vw;
+    padding-top: 20px;
+  }
+  .qjumpers-intro .intro-copy h1 {
+    font-size: 38px;
+  }
+
+  .qjumpers .dashboard-list-item,
+  .qjumpers .dashboard-list-item .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .qjumpers .dashboard-list-item {
+    padding: 17px 22px;
+  }
+  .qjumpers .dashboard-list-item [class*='col-'] {
+    padding: 0;
+  }
+  .qjumpers .dashboard-list-item [class*='col-']:not(:last-child):not(.text-wrap),
+  .qjumpers .dashboard-list-item .row:not(:last-child) {
+    margin-bottom: 11px;
+  }
+}

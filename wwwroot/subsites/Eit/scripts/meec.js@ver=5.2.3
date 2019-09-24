@@ -1,0 +1,133 @@
+/** MES Front End Javascript **/
+
+jQuery(document).ready(function($) {// Document Ready
+
+
+    //Analytics EEC tracking
+
+    /**
+     * Send an EEC hit to the plugin to forward on to GA
+     * @param  string type The type of hit, eg 'detail' or 'add' - legit GA Product action values only
+     * @param  array products An array of product IDs
+     * @return void
+     */
+    function meec_eec_send_hit(type, products) {
+        console.log('sending hit')
+        var client_id = meec_get_client_id();
+        $.post('/wp-admin/admin-ajax.php?action=meec_eec', {eec_action:type, products:products, client_id:client_id});
+        console.log({eec_action:type, products:products, client_id:client_id});
+    }//meec_eec_send_hit
+
+    /****************
+     * Auto tracking
+     * When the two variables meec_eec_action and meec_eec_products are not empty, send a hit on page load
+     *****************/
+    if(typeof meec_eec_action != 'undefined' && typeof meec_eec_products != 'undefined'){
+        meec_eec_send_hit(meec_eec_action, meec_eec_products);
+    }
+
+    if(typeof meec_eec_action != 'undefined' && typeof meec_eec_order_id != 'undefined'){
+        var client_id = meec_get_client_id();
+        $.post('/wp-admin/admin-ajax.php?action=meec_eec', {eec_action: 'purchase', order_id: meec_eec_order_id, client_id:client_id});
+        console.log({eec_action: 'purchase', order_id: meec_eec_order_id, client_id:client_id});
+    }
+
+    /****************
+    Manual tracking on clicks
+    ******************/
+    //add to cart link from category page
+    $('body').on('click', "a[href*='add-to-cart']", function(){
+        if($(this).attr('data-product_id')){
+            console.log('sending hit')
+            var product_id = $(this).attr('data-product_id');
+            meec_eec_send_hit('add', [product_id]);
+        }
+    });
+
+    //add to cart button on product page
+    $('.single-product .cart').on('submit', function(){
+        var product_id = $(this).find('[name="add-to-cart"]').val();
+        console.log(product_id)
+        if($(this).find('input[name="variation_id"]').length){ //variable products, variation_id is the product id to record
+            product_id = $(this).find('input[name="variation_id"]').val();
+        }
+        var qty = 1;
+        if($(this).find('input[name="quantity"]').length){
+            qty = $(this).find('input[name="quantity"]').val();
+        }
+
+        var products = [];
+        for(var i = 0; i < qty; i++){ //push the product id into the products array as many times as qty
+            products.push(product_id);
+        }
+        meec_eec_send_hit('add', products);
+    });
+
+    //remove from cart
+    $('.woocommerce-cart-form').on('click','a.remove', function(){
+        if(!$(this).attr('data-product_id')){
+            return false;
+        }
+        var product_id = $(this).attr('data-product_id');
+        meec_eec_send_hit('remove', [product_id]);
+    });
+
+    //checkout
+    $('form[name="checkout"]').on('submit', function(){
+        if(typeof meec_eec_products != 'undefined'){
+            meec_eec_send_hit('checkout',meec_eec_products);
+        }
+    });
+
+    /*********************
+        Helper functions
+    ***********************/
+
+    //generate a v4 uuid
+    function uuidv4() {
+      return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+      });
+    }
+
+    //Cookie helpers
+    function setCookie(name,value) {
+        var expires = "";
+        var date = new Date();
+        date.setTime(date.getTime() + (365*24*60*60*1000));
+        expires = "; expires=" + date.toUTCString();
+        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+
+    //get and maybe set a client id
+    function meec_get_client_id(){
+        var client_id = getCookie('meec_client_id');
+        if(!client_id){
+            //first try to get one from GA
+            if(typeof meec_ga_cid != 'undefined' && meec_ga_cid != ''){
+                client_id = meec_ga_cid;
+            }
+            else{//otherwise make one
+                client_id = uuidv4();
+            }
+            setCookie('meec_client_id', client_id);
+        }
+        console.log('Client id:' +  client_id)
+        return client_id;
+    }
+
+
+
+});

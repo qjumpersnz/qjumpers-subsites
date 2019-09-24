@@ -1,0 +1,65 @@
+
+@page {margin: 1cm;}
+
+body {width:100% !important;margin:0 !important;padding:0 !important;line-height: 1.45;font-family: 'Open Sans', sans-serif;color: #000;background: none;font-size: 10pt;}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {page-break-after:avoid;display: block !important;}
+h1{font-size: 22pt;}
+h2{font-size:13pt;}
+h3{font-size:12pt;}
+h4,h5,h6{font-size:11pt;margin: 0.4em 0;display: block;}
+
+
+p, h2, h3 { orphans: 3; widows: 3; }
+
+code { font: 12pt Courier, monospace; }
+blockquote { margin: 1.2em; padding: 1em;  font-size: 12pt; }
+hr { background-color: #ccc; }
+
+/* Images */
+img {float: left;margin: 1em 1.5em 1.5em 0;max-width: 20% !important;height:auto;}
+a img {border: none;filter: grayscale(100%);}
+
+/* Links */
+a:link, a:visited {background: transparent;font-weight: 700;text-decoration: underline;color:#333;display: block;}
+a[href]:after {
+  content: " (" attr(href) ")";
+  font-size:8pt;
+  display: block;
+}
+abbr[title]:after { content: " (" attr(title) ")"; }
+a.post-thumb:after{display:none;}
+.fitting > a:first-child:after{display:none;}
+
+
+/* Don't show linked images  */
+a[href^="http://"] {color:#000; }
+a[href$=".jpg"]:after, a[href$=".jpeg"]:after, a[href$=".gif"]:after, a[href$=".png"]:after { content: " (" attr(href) ") "; display:none; }
+
+/* Don't show links that are fragment identifiers, or use the `javascript:` pseudo protocol .. taken from html5boilerplate */
+a[href^="#"]:after, a[href^="javascript:"]:after {content: "";}
+
+
+
+/* Table */
+table { margin: 1px; text-align:left; }
+th { border-bottom: 1px solid #333;  font-weight: bold; }
+td { border-bottom: 1px solid #333; }
+th,td { padding: 4px 10px 4px 0; }
+tfoot { font-style: italic; }
+caption { background: #fff; margin-bottom:2em; text-align:left; }
+thead {display: table-header-group;}
+img,tr {page-break-inside: avoid;}
+
+
+/* Template specific */
+.header-top, .search, .main-header, .nav, .entry-cats, svg, .footer, .big-search,.breadcrumbs,.breadcumbs{display:none;}
+*{background:transparent !important;}
+.col{clear:both;margin-top:0.6cm;}
+.tile-gallery:after{content:' ';display:block;clear:both;}
+[class^="icon-"]:before, [class*=" icon-"]:before{display:none;}
+.section-head{border-top:1px solid black;}
+.post{clear:both;}
+.accordion-body{display:block !important;}
+.button.btn-print{display:none;}
