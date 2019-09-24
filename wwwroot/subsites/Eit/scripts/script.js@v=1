@@ -1,0 +1,288 @@
+jQuery(document).ready(function($){
+
+	//mobile - open lateral menu clicking on the menu icon
+	$('.nav-trigger').on('click', function(event){
+		event.preventDefault();
+		if( $('.main-content').hasClass('nav-is-visible') ) {
+			closeNav();
+		} else {
+			$(this).addClass('nav-is-visible');
+			$('.primary-nav').addClass('nav-is-visible');
+			$('.main-header').addClass('nav-is-visible');
+			$('.header-top').addClass('nav-is-visible');
+			$('.search').addClass('nav-is-visible');
+			$('.main-content').addClass('nav-is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+				$('body').addClass('overflow-hidden');
+			});
+		}
+	});
+
+	//Entry categories accordions for mobile
+	if (window.matchMedia("(max-width: 400px)").matches) {
+    $('.entry-cats h5').click(function(){
+			$(this).siblings('.button-group').slideToggle();
+			$(this).toggleClass('active');
+		});
+  }
+
+	//open search form
+	$('.search-trigger').on('click', function(event){
+		event.preventDefault();
+		$('.search').toggleClass('is-visible').slideToggle();
+		$(this).toggleClass('search-is-visible');
+	});
+
+	//open submenu
+	$('.has-children').children('a').on('click', function(event){
+		console.log('firing')
+		var selected = $(this);
+		if( selected.next('ul').hasClass('is-hidden') ) {
+			//desktop version only
+			selected.addClass('selected').next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('moves-out');
+			selected.parent('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
+			$('.overlay').addClass('is-visible');
+
+		} else {
+			selected.removeClass('selected').next('ul').addClass('is-hidden').end().parent('.has-children').parent('ul').removeClass('moves-out');
+			$('.overlay').removeClass('is-visible');
+		}
+	});
+
+	//submenu items - go back link
+	$('.go-back').on('click', function(){
+		$(this).parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('moves-out');
+	});
+
+	function closeNav() {
+		$('.nav-trigger').removeClass('nav-is-visible');
+		$('.main-header').removeClass('nav-is-visible');
+		$('.primary-nav').removeClass('nav-is-visible');
+		$('.search').removeClass('nav-is-visible');
+		$('.header-top').removeClass('nav-is-visible');
+		$('.has-children ul').addClass('is-hidden');
+		$('.has-children a').removeClass('selected');
+		$('.moves-out').removeClass('moves-out');
+		$('.main-content').removeClass('nav-is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+			$('body').removeClass('overflow-hidden');
+		});
+	}
+
+
+	//Flexslider go
+	$('.flexslider').flexslider({
+    	animation: "fade"
+
+  	});
+
+  	// FitVids go
+    $(".main-content").fitVids();
+
+    //Social Accordion
+	$('.social-item').children('span').on('click', function(event){
+		event.preventDefault();
+		$('.social-item').removeClass('active');
+		$(this).parent('.social-item').addClass('active');
+
+	});
+
+	// FAQ Accordions
+	$('.accordion').find('.accordion-head').click(function(){
+		if( $(this).hasClass('open') ){
+        	$(this).removeClass('open');
+        	$(this).next().slideToggle('fast');
+        }
+		else{
+			$('.accordion-head').removeClass('open');
+			$(this).addClass('open');
+			$(this).next().slideToggle('fast');
+		    $('.accordion-body').not($(this).next()).slideUp('fast');
+		}
+    });
+
+	//'Choose a programme' section on subject pages
+	$('.programme-toggle').click(function(e){
+
+		e.preventDefault();
+
+		$(this).toggleClass('open');
+		$(this).parents('.choose-programme').find('.programme-expand').slideToggle();
+
+	});
+
+
+	//Category and Archive Dropdown
+	$('.bar-nav .nav-layer1 a[data-filter]').click(function(event){
+
+		event.preventDefault();
+
+		if( !$(this).hasClass('open') ){
+
+			//slider others up first
+			$('.bar-nav .nav-layer1 a').removeClass('open');
+			$('.bar-nav .nav-layer2.open').removeClass('open').slideUp();
+
+
+		}
+
+		//change the target element
+		var target = '#'+$(this).attr('data-filter');
+		$(this).toggleClass('open');
+		console.log('toggle');
+
+		$(target).slideToggle(function(){
+
+			$(target).addClass('open');
+
+		});
+
+	});
+
+
+	//intro button dropdowns
+	$('.dropdown-wrap a.dropdown').click(function(e){
+		e.preventDefault();
+		$btn = $(this);
+
+		$btn.find('.dropdown-icon').toggleClass('icon-caret-down')
+		$btn.find('.dropdown-icon').toggleClass('icon-caret-right');
+		$btn.siblings('.dropdown-menu').slideToggle();
+
+	});
+
+
+
+
+	// Magnific popup
+	$('.gallery').each(function() { // the containers for all your galleries
+	    $(this).magnificPopup({
+	        delegate: 'a', // the selector for gallery item
+	        type: 'image',
+	        gallery: {
+	          enabled:true
+	        }
+	    });
+	});
+
+	$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+		disableOn: 700,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+		fixedContentPos: false
+    });
+
+	$('.popup-videojs').magnificPopup({
+		disableOn: 700,
+		type: 'inline',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+		fixedContentPos: false,
+		callbacks: {
+			open: function() {
+				var player = videojs('intro-video-js');
+				player.play();
+			},
+			close: function() {
+				var player = videojs('intro-video-js');
+				player.pause();
+				player.currentTime(0);
+			}
+		}
+    });
+
+	//'load next' button for featured content
+
+	$('a.loadnext, a.loadprev').click(function(e){
+		e.preventDefault();
+		var $btn = $(this);
+		var target = $btn.attr('href');
+		$btn.parents('.content-wrap').hide();
+		$(target).show();
+	});
+
+
+	//Print button change dom structure
+	if ( $('body').is('.page-template-template-landing-page') ) {
+	    $('.button.btn-print').prependTo(".choose-programme");
+	}
+
+	$('#feedbackButton').magnificPopup({
+	  type: 'iframe',
+	  iframe: {
+	    patterns: {
+	      formstack: {
+	        index: 'https://easterninstituteoftechnology.formstack.com/forms/website_feedback_form',
+	        src: '%id%'
+	      }
+	    },
+	    markup: '<div class="mfp-iframe-scaler">'+
+            '<div class="mfp-close"></div>'+
+            '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+          	'</div>',
+	  },
+	  mainClass: 'mfp-fade formstack',
+	  removalDelay: 160,
+	  preloader: false,
+	  fixedContentPos: false
+	});
+
+
+    //video page filters
+    $('.video-filter').change(function(){
+
+        //$('.video-list .tile').show();
+
+        var filter = '';
+        $('.video-filter').each(function(){
+            if($(this).val() != 'All'){
+                filter += ('.' + $(this).val());
+            }
+        });
+        console.log(filter)
+        if(filter == '') {
+            $('.video-list .tile').show();
+        }
+        else {
+
+            $('.video-list .tile' + filter).fadeIn();
+
+            $('.video-list .tile').not(filter).hide(function(){
+                $('.video-list .tile' + filter).fadeIn();
+            });
+
+            if($('.video-list .tile' + filter).length == 0){
+                $('#video-no-results').show();
+            }
+            else{
+                $('#video-no-results').hide();
+            }
+
+        }
+
+    });
+
+    /* Events page */
+
+
+    $('.event-date-nav a').click(function(e){
+        e.preventDefault();
+        var href = $(this).attr('href');
+        if($(href).length){
+            window.location.hash = href;
+            $('.event-date-nav a').not($(this)).removeClass('active');
+            $(this).addClass('active');
+            $('div.month-events').not(href).hide();
+            $(href).show();
+        }
+    });
+    if($(':target()').length){
+        var id = $(':target()')[0].id;
+        if( $('a[href="#' + id + '"]').length ){
+            $('a[href="#' + id + '"]').click();
+        }
+    }
+
+
+});//document.ready()
