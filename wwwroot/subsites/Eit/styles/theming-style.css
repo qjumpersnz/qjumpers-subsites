@@ -1,3 +1,9 @@
+body {
+  position: relative;
+}
+.primary-nav, .primary-nav ul {
+  height: 100%;
+}
 .qjumpers-background-image:before {
   display: none;
 }
@@ -6,6 +12,23 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.qjumpers-extra-nav {
+  float: right;
+  display: flex;
+  align-items: center;
+  margin: 10px -10px 0 0 !important;
+  padding: 0;
+}
+.qjumpers-extra-nav li {
+  list-style: none !important;
+}
+.qjumpers-extra-nav li a {
+  font-size: 12px;
+  color: #000;
+  display: inline-block;
+  padding: 10px;
+  line-height: 1.2;
 }
 .qjumpers-footer .contact-info {
   display: flex;
@@ -125,6 +148,10 @@
   }
   .qjumpers-intro .intro-copy h1 {
     font-size: 38px;
+  }
+  .qjumpers-extra-nav {
+    float: none;
+    margin: 0 !important;
   }
 
   .qjumpers .dashboard-list-item,
