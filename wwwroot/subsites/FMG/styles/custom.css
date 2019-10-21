@@ -1,0 +1,27 @@
+﻿.result-item {background: #eee;padding: 10px;margin-bottom: 20px;}
+.result-item h2{border-bottom:none !important;margin-bottom:0 !important;}
+.result-item h2 a{color: #006938 !important;}
+.result-item h5{margin-top:0;font-weight:bold;}
+#postcode label{display: inline-block;	width: 50%;}
+.findpostcode{float:right;}
+.btn, .apply-btn{
+	background: none no-repeat scroll 0 0 #00a8cb;
+    border: medium none;
+    color: #fff;
+    font-family: NationalWeb-RegularItalic, Helvetica, Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: background-color .25s ease-in-out;
+    -moz-transition: background-color .25s ease-in-out;
+    -webkit-transition: background-color .25s ease-in-out;
+    -webkit-border-radius: 2px!important;
+    -moz-border-radius: 2px!important;
+    border-radius: 2px!important;
+}
+.btn.focus, .apply-btn:focus, .btn:hover, .apply-btn:hover {
+    color: #333;
+    text-decoration: none;
+}
+.checkbox-work{margin-bottom: 15px;}
+.basic ul li {margin:0 !important;padding:0 !important;}
