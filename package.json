@@ -15,7 +15,7 @@
   "author": "Andrew Ford andrew@qjumpers.co.nz",
   "license": "ISC",
   "devDependencies": {
-    "http-server": "^0.11.1",
+    "http-server": "^0.11.2",
     "ecstatic": "^3.3.2"
   },
   "dependencies": {
